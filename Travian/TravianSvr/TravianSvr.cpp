@@ -1,8 +1,5 @@
 #include "TravianSvr.h"
 
-
-
-
 #pragma comment(lib,"libmysql.lib")
 #pragma comment(lib,"libzmq.lib")
 #ifdef _DEBUG
@@ -25,10 +22,14 @@ int main(int argc, char* argv[])
 	socket.bind ("tcp://*:5555");
 	zmq::message_t request;
 	zmq::message_t reply (5);
+	int rc;
 	while (true) 
 	{
 		//  Wait for next request from client
-		socket.recv (&request);
+		rc  = socket.recv (&request);
+		
+		printf("client terminate %d\n", rc);
+	
 		//std::cout << "Received Hello" << std::endl;
 		//  Do some 'work'
 		//Sleep(1);

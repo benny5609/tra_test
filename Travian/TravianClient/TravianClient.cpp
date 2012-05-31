@@ -34,7 +34,7 @@ int main(int argc, char* argv[])
 
 	zmq_msg_t query, resultset;
 	const char *query_string = "hello ZeroMQ.";
-	for (int i =0; i < 1000000; ++i)
+	for (int i =0; i < 1; ++i)
 	{
 		// send
 		rc = zmq_msg_init_size(&query, strlen(query_string)+1);
