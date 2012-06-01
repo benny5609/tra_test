@@ -135,6 +135,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
+				OutputFile="../Bin\$(ProjectName).exe"
 				LinkIncremental="1"
 				AdditionalLibraryDirectories="../Third/mysql-5.0.92/lib;../Third/zeromq-2.1.11/lib;../Third/protobuf-2.4.1/lib;"
 				GenerateDebugInformation="true"

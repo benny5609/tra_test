@@ -11,10 +11,7 @@
 #define __MYSQLDB_H__
 
 
-#include <zmq.hpp>
-#include <string>
-#include <iostream>
-#include <windows.h>
+
 
 #include "my_global.h"
 #include "mysql.h"

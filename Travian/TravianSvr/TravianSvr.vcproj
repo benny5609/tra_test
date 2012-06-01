@@ -41,7 +41,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="../Third/mysql-5.0.92/include;../Third/zeromq-2.1.11/include;../Third/protobuf-2.4.1/include;"
+				AdditionalIncludeDirectories="&quot;../Third/mysql-5.0.92/include&quot;;&quot;../Third/zeromq-2.1.11/include&quot;;&quot;../Third/protobuf-2.4.1/include&quot;;&quot;../Third\libevent-2.0.19\include&quot;"
 				PreprocessorDefinitions="WIN32;_DEBUG;_CONSOLE;_WIN32"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
@@ -62,7 +62,8 @@
 			<Tool
 				Name="VCLinkerTool"
 				LinkIncremental="2"
-				AdditionalLibraryDirectories="../Third/mysql-5.0.92/lib;../Third/zeromq-2.1.11/lib;../Third/protobuf-2.4.1/lib;"
+				AdditionalLibraryDirectories="&quot;../Third/mysql-5.0.92/lib&quot;;&quot;../Third/zeromq-2.1.11/lib&quot;;&quot;../Third/protobuf-2.4.1/lib&quot;;&quot;../Third\libevent-2.0.19\lib&quot;"
+				IgnoreDefaultLibraryNames="libcmt.lib"
 				GenerateDebugInformation="true"
 				SubSystem="1"
 				TargetMachine="1"
@@ -116,7 +117,7 @@
 				Name="VCCLCompilerTool"
 				Optimization="2"
 				EnableIntrinsicFunctions="true"
-				AdditionalIncludeDirectories="../Third/mysql-5.0.92/include;../Third/zeromq-2.1.11/include;../Third/protobuf-2.4.1/include;"
+				AdditionalIncludeDirectories="&quot;../Third/mysql-5.0.92/include&quot;;&quot;../Third/zeromq-2.1.11/include&quot;;&quot;../Third/protobuf-2.4.1/include&quot;;&quot;../Third\libevent-2.0.19\include&quot;"
 				PreprocessorDefinitions="WIN32;NDEBUG;_CONSOLE"
 				RuntimeLibrary="2"
 				EnableFunctionLevelLinking="true"
@@ -136,7 +137,8 @@
 			<Tool
 				Name="VCLinkerTool"
 				LinkIncremental="1"
-				AdditionalLibraryDirectories="../Third/mysql-5.0.92/lib;../Third/zeromq-2.1.11/lib;../Third/protobuf-2.4.1/lib;"
+				AdditionalLibraryDirectories="&quot;../Third/mysql-5.0.92/lib&quot;;&quot;../Third/zeromq-2.1.11/lib&quot;;&quot;../Third/protobuf-2.4.1/lib&quot;;&quot;../Third\libevent-2.0.19\lib&quot;"
+				IgnoreDefaultLibraryNames="libcmt.lib"
 				GenerateDebugInformation="true"
 				SubSystem="1"
 				OptimizeReferences="2"

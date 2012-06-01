@@ -56,10 +56,10 @@ int main(int argc, char* argv[])
 	double d = (double)(end - start) / CLOCKS_PER_SEC;
 
 	printf("start:%ld end:%ld total:%lf sec\n",start,end, d);
-
+	system("pause");
 	zmq_close(s);
 	zmq_term(ctx);
 
-	system("pause");
+	//
 	return 0;
 };
