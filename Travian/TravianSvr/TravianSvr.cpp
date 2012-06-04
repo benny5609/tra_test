@@ -43,6 +43,7 @@ static void timeout_cb_ten(evutil_socket_t fd, short event, void*arg)
 
 static void read_cb(evutil_socket_t fd, short event, void*sock)
 {
+	getpeeraddr(fd);
 	printf("µ÷ÓÃ read_cn read\n");
 
 	zmq_msg_t msg;
@@ -62,7 +63,7 @@ static void read_cb(evutil_socket_t fd, short event, void*sock)
 				printf("socket [%d] read end\n", fd);
 				break;
 			}
-			getpeeraddr(fd);
+			
 			printf("socket [%d] recv: %s\n", fd, (char *)zmq_msg_data(&msg));
 			zmq_msg_close(&msg);
 		}
@@ -70,8 +71,102 @@ static void read_cb(evutil_socket_t fd, short event, void*sock)
 	else
 	{
 		printf("socket [%d ] event else %d \n", fd , events);
+		if( events & ZMQ_POLLOUT)
+		{
+
+		}
 	}
 }
+
+
+// void
+// on_read(int fd, short ev, void *arg)
+// {
+//         struct client *client = (struct client *)arg;
+//         u_char buf[8196];
+//         int len, wlen;
+// 
+//         len = read(fd, buf, sizeof(buf));
+//         if (len == 0) {
+//                 /* Client disconnected, remove the read event and the
+//                  * free the client structure. */
+//                 printf("Client disconnected.\n");
+//                 close(fd);
+//                 event_del(&client->ev_read);
+//                 free(client);
+//                 return;
+//         }
+//         else if (len < 0) {
+//                 /* Some other error occurred, close the socket, remove
+//                  * the event and free the client structure. */
+//                 printf("Socket failure, disconnecting client: %s",
+//                     strerror(errno));
+//                 close(fd);
+//                 event_del(&client->ev_read);
+//                 free(client);
+//                 return;
+//         }
+// 
+//         /* XXX For the sake of simplicity we'll echo the data write
+//          * back to the client.  Normally we shouldn't do this in a
+//          * non-blocking app, we should queue the data and wait to be
+//          * told that we can write.
+//          */
+//         wlen = write(fd, buf, len);
+//         if (wlen < len) {
+//                 /* We didn't write all our data.  If we had proper
+//                  * queueing/buffering setup, we'd finish off the write
+//                  * when told we can write again.  For this simple case
+//                  * we'll just lose the data that didn't make it in the
+//                  * write.
+//                  */
+//                 printf("Short write, not all data echoed back to client.\n");
+//         }
+// }
+// 
+// /**
+//  * This function will be called by libevent when there is a connection
+//  * ready to be accepted.
+//  */
+// void
+// on_accept(int fd, short ev, void *arg)
+// {
+//         int client_fd;
+//         struct sockaddr_in client_addr;
+//         socklen_t client_len = sizeof(client_addr);
+//         struct client *client;
+// 
+//         /* Accept the new connection. */
+//         client_fd = accept(fd, (struct sockaddr *)&client_addr, &client_len);
+//         if (client_fd == -1) {
+//                 warn("accept failed");
+//                 return;
+//         }
+// 
+//         /* Set the client socket to non-blocking mode. */
+//         if (setnonblock(client_fd) < 0)
+//                 warn("failed to set client socket non-blocking");
+// 
+//         /* We've accepted a new client, allocate a client object to
+//          * maintain the state of this client. */
+//         client = calloc(1, sizeof(*client));
+//         if (client == NULL)
+//                 err(1, "malloc failed");
+// 
+//         /* Setup the read event, libevent will call on_read() whenever
+//          * the clients socket becomes read ready.  We also make the
+//          * read event persistent so we don't have to re-add after each
+//          * read. */
+//         event_set(&client->ev_read, client_fd, EV_READ|EV_PERSIST, on_read, 
+//             client);
+// 
+//         /* Setting up the event does not activate, add the event so it
+//          * becomes active. */
+//         event_add(&client->ev_read, NULL);
+// 
+//         printf("Accepted connection from %s\n",
+//                inet_ntoa(client_addr.sin_addr));
+// }
 
 App::App(){}
 
