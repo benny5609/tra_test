@@ -11,8 +11,6 @@
 #define __MYSQLDB_H__
 
 
-
-
 #include "my_global.h"
 #include "mysql.h"
 

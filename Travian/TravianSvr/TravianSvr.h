@@ -10,16 +10,16 @@
 #ifndef __TRAVIANSVR_H__
 #define __TRAVIANSVR_H__
 
-#include <zmq.hpp>
-#include <string>
-#include <iostream>
-#include <vector>
-#include <windows.h>
 
+#include "ace/ace.h"
+#include "ace/Reactor.h"
+#include "ace/Svc_Handler.h"
+#include "ace/Acceptor.h"
+#include "ace/Synch.h"
+#include "ace/SOCK_Acceptor.h"
+#include "ace/TP_Reactor.h"
 #include "mysqlDB.h"
 
-#include "event2/event.h"
-#include "event2/event_struct.h"
 
 class App
 {
@@ -31,13 +31,7 @@ public:
 	bool run();
 
 public:
-	event* add_timer(bool, event_callback_fn, void *, timeval&);
-	event* add_read(evutil_socket_t, event_callback_fn, void*);
-
 	Mysql_DB* _db;
-	event_base* _base ;
-	void *_ctx, *_mainSock;
-	std::vector<event*> _events;
 };
 
 #endif  // end of guard TravianSvr.h

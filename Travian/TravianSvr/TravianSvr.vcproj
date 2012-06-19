@@ -181,7 +181,31 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Threading.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\TravianSvr.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\World.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\WorldRunnable.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\WorldSession.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\WorldSocket.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\WorldSocketMgr.cpp"
 				>
 			</File>
 		</Filter>
@@ -191,11 +215,51 @@
 			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
 			>
 			<File
+				RelativePath=".\common.h"
+				>
+			</File>
+			<File
+				RelativePath=".\LockedQueue.h"
+				>
+			</File>
+			<File
 				RelativePath=".\mysqlDB.h"
 				>
 			</File>
 			<File
+				RelativePath=".\Opcodes.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Threading.h"
+				>
+			</File>
+			<File
 				RelativePath=".\TravianSvr.h"
+				>
+			</File>
+			<File
+				RelativePath=".\World.h"
+				>
+			</File>
+			<File
+				RelativePath=".\WorldPacket.h"
+				>
+			</File>
+			<File
+				RelativePath=".\WorldRunnable.h"
+				>
+			</File>
+			<File
+				RelativePath=".\WorldSession.h"
+				>
+			</File>
+			<File
+				RelativePath=".\WorldSocket.h"
+				>
+			</File>
+			<File
+				RelativePath=".\WorldSocketMgr.h"
 				>
 			</File>
 		</Filter>
