@@ -29,7 +29,7 @@ int main(int argc, char* argv[])
 	s = zmq_socket(ctx, ZMQ_REQ);
 	assert(s);
 
-	rc = zmq_connect(s, "tcp://192.168.1.202:5555");
+	rc = zmq_connect(s, "tcp://192.168.1.202:3000");
 	assert(rc == 0);
 
 	zmq_msg_t query, resultset;
