@@ -125,7 +125,7 @@ typedef unsigned int	uint;
 typedef unsigned __int64 ulonglong;	/* Microsofts 64 bit types */
 typedef __int64 longlong;
 #ifndef HAVE_SIGSET_T
-typedef int sigset_t;
+typedef unsigned int sigset_t;
 #endif
 #define longlong_defined
 /*
