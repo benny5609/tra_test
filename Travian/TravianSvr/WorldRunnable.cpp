@@ -2,7 +2,7 @@
 #include "Common.h"
 #include "World.h"
 #include "WorldRunnable.h"
-
+#include <conio.h>
 #define WORLD_SLEEP_CONST 50
 
 inline uint32 getMSTimeDiff(uint32 oldMSTime, uint32 newMSTime)
@@ -26,6 +26,11 @@ void WorldRunnable::run()
     ///- While we have not World::m_stopEvent, update the world
     while (!World::IsStopped())
     {
+		if(_kbhit())
+		{
+			if(_getch() == '=')
+				sWorld->StopNow(0);
+		}
         realCurrTime = GetTickCount();
 
         uint32 diff = getMSTimeDiff(realPrevTime,realCurrTime);
