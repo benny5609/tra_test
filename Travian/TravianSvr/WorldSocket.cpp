@@ -528,8 +528,6 @@ int WorldSocket::handle_input_missing_data (void)
 	char* msgBase = message_block.base();
 	printf(">>>recv: %s\n",message_block.base());
 
-	if(message_block.length() ==5)
-		sWorld->StopNow(0);
 	//return n == recv_size ? 1 : 2;
 
     while (message_block.length () > 0)
