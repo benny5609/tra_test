@@ -907,9 +907,9 @@ typedef int		int32;
 typedef unsigned int	uint32; /* Short for unsigned integer >= 32 bits */
 #elif SIZEOF_LONG == 4
 #ifndef HAVE_INT_8_16_32
-typedef long		int32;
+typedef int		int32;
 #endif
-typedef unsigned long	uint32; /* Short for unsigned integer >= 32 bits */
+typedef unsigned int	uint32; /* Short for unsigned integer >= 32 bits */
 #else
 #error "Neither int or long is of 4 bytes width"
 #endif

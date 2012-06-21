@@ -15,6 +15,13 @@
 #include "WorldSession.h"
 #include "WorldSocketMgr.h"
 #include "World.h"
+#include "WorldPacket.h"
+
+#include "echo.pb.h"
+#include "msg_login.pb.h"
+#include <ostream>
+#include <google/protobuf/io/zero_copy_stream_impl.h>
+#include <google/protobuf/io/gzip_stream.h>
 #if defined( __GNUC__ )
 #pragma pack(1)
 #else
@@ -32,6 +39,10 @@ struct ServerPktHeader
         {
             header[headerIndex++] = 0x80|(0xFF &(size>>16));
         }
+		else
+		{
+			header[4] = 0;
+		}
         header[headerIndex++] = 0xFF &(size>>8);
         header[headerIndex++] = 0xFF &size;
 
@@ -147,7 +158,7 @@ const std::string& WorldSocket::GetRemoteAddress (void) const
 int WorldSocket::SendPacket (const WorldPacket& pct)
 {
     ACE_GUARD_RETURN (LockType, Guard, m_OutBufferLock, -1);
-/*
+
     if (closing_)
         return -1;
 
@@ -182,8 +193,17 @@ int WorldSocket::SendPacket (const WorldPacket& pct)
             return -1;
         }
     }
-*/
+
     return 0;
+}
+
+int WorldSocket::SendPacket(uint16 opcode, const google::protobuf::Message& message)
+{
+	std::string strMsg;
+ 	message.SerializeToString(&strMsg);
+ 	WorldPacket packet(opcode, strMsg.size());
+ 	packet<<strMsg;
+	return SendPacket(packet);
 }
 
 long WorldSocket::AddReference (void)
@@ -240,10 +260,9 @@ int WorldSocket::open (void *a)
     // reactor takes care of the socket from now on
     remove_reference ();
 
-//  	WorldPacket packet(SMSG_DBLOOKUP, 100);
-//  	packet << uint32(0x11223344);                                // team id
-//  	packet << uint8(0x55); 
-//  	m_Session->SendPacket(&packet);
+	echo::EchoRequest msg;
+	msg.set_message("hello nreq");
+	SendPacket(123, msg);
     return 0;
 }
 
@@ -445,33 +464,33 @@ int WorldSocket::handle_input_header (void)
 
     ACE_ASSERT (m_Header.length () == sizeof (ClientPktHeader));
 
-//     ClientPktHeader& header = *((ClientPktHeader*) m_Header.rd_ptr ());
-// 
-//     //EndianConvertReverse(header.size);
-//     //EndianConvert(header.cmd);
-// 
-//     if ((header.size < 4) || (header.size > 10240) || (header.cmd  > 10240))
-//     {
-//         printf("WorldSocket::handle_input_header: client sent malformed packet size = %d , cmd = %d\n",
-//                        header.size, header.cmd);
-// 
-//         errno = EINVAL;
-//         return -1;
-//     }
-// 
-//     header.size -= 4;
-// 
-//     ACE_NEW_RETURN (m_RecvWPct, WorldPacket ((uint16) header.cmd, header.size), -1);
-// 
-//     if(header.size > 0)
-//     {
-//          m_RecvWPct->resize (header.size);
-//          m_RecvPct.base ((char*) m_RecvWPct->contents (), m_RecvWPct->size ());
-//     }
-//     else
-//     {
-//         ACE_ASSERT(m_RecvPct.space() == 0);
-//     }
+     ClientPktHeader& header = *((ClientPktHeader*) m_Header.rd_ptr ());
+ 
+     //EndianConvertReverse(header.size);
+     //EndianConvert(header.cmd);
+ 
+     if ((header.size < 4) || (header.size > 10240) || (header.cmd  > 10240))
+     {
+         printf("WorldSocket::handle_input_header: client sent malformed packet size = %d , cmd = %d\n",
+                        header.size, header.cmd);
+ 
+         errno = EINVAL;
+         return -1;
+     }
+ 
+     header.size -= 4;
+ 
+     ACE_NEW_RETURN (m_RecvWPct, WorldPacket ((uint16) header.cmd, header.size), -1);
+ 
+     if(header.size > 0)
+     {
+          m_RecvWPct->resize (header.size);
+          m_RecvPct.base ((char*) m_RecvWPct->contents (), m_RecvWPct->size ());
+     }
+     else
+     {
+         ACE_ASSERT(m_RecvPct.space() == 0);
+     }
 
     return 0;
 }
@@ -687,6 +706,13 @@ int WorldSocket::ProcessIncoming (WorldPacket* new_pct)
                  sLog.outError ("WorldSocket::ProcessIncoming: Client not authed opcode = %u", uint32(opcode));
                  return -1;
              }*/
+	case 0x036:
+		{
+			login::login log;
+			google::protobuf::io::ArrayInputStream istream (new_pct->contents(), new_pct->size());
+			log.ParseFromZeroCopyStream(&istream);
+			break;
+		}
 	default:
 			{
 				ACE_GUARD_RETURN (LockType, Guard, m_SessionLock, -1);

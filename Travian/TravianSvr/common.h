@@ -15,22 +15,28 @@
 #include <string>
 #include <iostream>
 #include <vector>
+#include <map>
+#include <algorithm>
 
 #include <ace/Basic_Types.h>
 #include <ace/Default_Constants.h>
 #include <ace/OS_NS_dlfcn.h>
 #include <ace/ACE_export.h>
 
+#include <google/protobuf/stubs/common.h>
+#include <google/protobuf/message.h>
+
 #include <unordered_map>
 #define UNORDERED_MAP std::tr1::unordered_map
 
-typedef ACE_INT64 int64;
-typedef ACE_INT16 int16;
-typedef ACE_INT8 int8;
-typedef ACE_UINT64 uint64;
-typedef ACE_UINT16 uint16;
-typedef ACE_UINT8 uint8;
-typedef ACE_INT32 int32;
-typedef ACE_UINT32 uint32;
+typedef signed __int64 int64;
+typedef signed __int32 int32;
+typedef signed __int16 int16;
+typedef signed __int8 int8;
+
+typedef unsigned __int64 uint64;
+typedef unsigned __int32 uint32;
+typedef unsigned __int16 uint16;
+typedef unsigned __int8 uint8;
 
 #endif  // end of guard common.h
