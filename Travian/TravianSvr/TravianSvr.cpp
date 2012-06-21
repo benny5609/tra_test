@@ -1,6 +1,7 @@
 #include "TravianSvr.h"
 #include "WorldSocketMgr.h"
 #include "WorldRunnable.h"
+#include "WorldPacket.h"
 
 #pragma comment(lib,"libmysql.lib")
 #ifdef _DEBUG
@@ -22,6 +23,7 @@ App::~App(){}
 
 bool App::init()
 {
+	GOOGLE_PROTOBUF_VERIFY_VERSION;
 	//init mysql 
 	_db = new Mysql_DB;
 	bool bRet = _db->connect_db();
@@ -34,6 +36,8 @@ bool App::init()
 
 bool App::uninit()
 {
+	google::protobuf::ShutdownProtobufLibrary();
+
 	if(_db)
 		delete _db;
 

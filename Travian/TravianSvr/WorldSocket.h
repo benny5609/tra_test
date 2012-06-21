@@ -85,6 +85,7 @@ class WorldSocket : protected WorldHandler
         /// @param pct packet to send
         /// @return -1 of failure
         int SendPacket (const WorldPacket& pct);
+		int SendPacket(uint16 opcode, const google::protobuf::Message& message);
 
         /// Add reference to this object.
         long AddReference (void);

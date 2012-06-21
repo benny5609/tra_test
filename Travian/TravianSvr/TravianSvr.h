@@ -19,6 +19,7 @@
 #include "ace/SOCK_Acceptor.h"
 #include "ace/TP_Reactor.h"
 #include "mysqlDB.h"
+#include "common.h"
 
 
 class App
