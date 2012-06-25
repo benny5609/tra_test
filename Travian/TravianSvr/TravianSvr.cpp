@@ -6,8 +6,8 @@
 #pragma comment(lib,"libmysql.lib")
 #ifdef _DEBUG
 #pragma comment(lib,"libprotobuf_d.lib")
-#include <vld.h>
-#pragma comment(lib,"vld.lib")
+//#include <vld.h>
+//#pragma comment(lib,"vld.lib")
 #pragma comment(lib, "aced.lib")
 #else
 #pragma comment(lib,"libprotobuf.lib")

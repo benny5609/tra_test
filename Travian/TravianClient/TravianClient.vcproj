@@ -176,7 +176,15 @@
 			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}"
 			>
 			<File
-				RelativePath=".\TravianClient.cpp"
+				RelativePath=".\echo.pb.cc"
+				>
+			</File>
+			<File
+				RelativePath=".\main.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\msg_login.pb.cc"
 				>
 			</File>
 		</Filter>
@@ -186,7 +194,15 @@
 			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
 			>
 			<File
-				RelativePath=".\TravianClient.h"
+				RelativePath=".\echo.pb.h"
+				>
+			</File>
+			<File
+				RelativePath=".\msg_login.pb.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Opcodes.h"
 				>
 			</File>
 		</Filter>
