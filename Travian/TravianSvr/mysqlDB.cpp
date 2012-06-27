@@ -2,7 +2,7 @@
 #define DB_ADDR "localhost"
 #define DB_USER "root"
 #define DB_PASSWORD ""
-#define DB_NAME "travian"
+#define DB_NAME "s2"
 
 Mysql_DB::Mysql_DB()
 {
@@ -30,5 +30,11 @@ bool Mysql_DB::connect_db()
 		return false;
 	}
 
+	return true;
+}
+
+
+bool Mysql_DB::usr_register(const std::string& usr, const std::string& pwd, const std::string& email, E_TRIBE tribe, E_LOCATE locate, E_ACTIVE act)
+{
 	return true;
 }

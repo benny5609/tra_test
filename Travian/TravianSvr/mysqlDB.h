@@ -20,6 +20,7 @@ public:
 	Mysql_DB();
 	virtual ~Mysql_DB();
 	bool connect_db();
+	bool usr_register(const std::string& usr, const std::string& pwd, const std::string& email, E_TRIBE tribe, E_LOCATE locate, E_ACTIVE act);
 protected:
 	MYSQL *conn;
 };
