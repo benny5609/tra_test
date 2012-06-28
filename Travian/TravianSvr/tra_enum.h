@@ -29,4 +29,11 @@ enum E_ACTIVE{
 	Deleting = 2,
 	Deleted =3
 };
+
+enum E_RESOURCE{
+	Wood =0,
+	Clay = 1,
+	Iron = 2,
+	Crop = 3
+};
 #endif  // end of guard tra_enum.h
