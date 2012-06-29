@@ -10,7 +10,8 @@
 #ifndef __MYSQLDB_H__
 #define __MYSQLDB_H__
 
-
+#include "common.h"
+#include "tra_enum.h"
 #include "my_global.h"
 #include "mysql.h"
 
@@ -34,7 +35,35 @@ public:
 	bool setDeleting(int uid, bool setDel);
 	bool isDeleting(int uid);
 	bool modifyGold(int uid, int gold);
-
+	bool getUserArrayByName(const std::string& userName);
+	bool getUserArrayByID(int usrID);
+	bool activeModifyByName(const std::string& userName);
+	bool activeModifyByID(int usrID);
+	bool addActiveUser(const std::string& username, int time);
+	bool updateActiveUser(const std::string& username, int time);
+	bool checkactiveSession(const std::string& username, const std::string& sessid);
+	bool getOnline(int uid);
+	bool UpdateOnline(const std::string& username, int time, int uid, int mode);
+	bool generateBase(E_LOCATE locate);
+	bool setFieldTaken(int wid);
+	bool addVillage(int wid, int uid, const std::string& username,int capital);
+	//µØÐÎ?
+	bool addResourceFields(int vid, int resType);
+	bool isVillageOases(int wid);
+	bool countOasisTroops(int vid);
+	bool canConquerOasis(int vid, int wid);
+	bool conquerOasis(int vid, int wid);
+	bool modifyOasisLoyalty(int wid);
+	bool populateOasis();
+	bool populateOasisUnitsLow();
+	bool populateOasisUnitsHigh();
+	bool removeOases(int wid);
+	int	 getVillageType(int wid);
+	bool getVillageState(int wid);
+	bool getVillagesID(int uid);
+	bool getVillage(int vid);
+	bool getVillageBattleData(int vid);
+	int getPopulation(int uid);
 protected:
 	MYSQL *conn;
 };
