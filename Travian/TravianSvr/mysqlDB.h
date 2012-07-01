@@ -64,6 +64,16 @@ public:
 	bool getVillage(int vid);
 	bool getVillageBattleData(int vid);
 	int getPopulation(int uid);
+	bool getVillageBattleData(int vid);
+	bool getPopulation(int uid);
+	bool getOasisV(int vid);
+	bool getOasis(int vid);
+	bool getOasisInfo(int wid);
+	bool getVillageField(int field, int wid);
+	bool setVillageField(int field, int wid, int value);
+	bool setVillageLevel(int vid, int field, int value);
+	bool getResourceLevel(int vid);
+	bool getOasisField(int field, int wid);
 protected:
 	MYSQL *conn;
 };
