@@ -296,6 +296,14 @@
 				RelativePath=".\tra_enum.h"
 				>
 			</File>
+			<File
+				RelativePath=".\tra_village.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\tra_village.h"
+				>
+			</File>
 		</Filter>
 	</Files>
 	<Globals>
