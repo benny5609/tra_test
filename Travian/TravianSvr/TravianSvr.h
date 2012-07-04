@@ -36,4 +36,6 @@ public:
 	TravianDB* _db;
 };
 
+extern App* app;
+
 #endif  // end of guard TravianSvr.h

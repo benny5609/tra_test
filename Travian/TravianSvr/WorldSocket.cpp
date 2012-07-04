@@ -24,7 +24,6 @@
 #include <google/protobuf/io/gzip_stream.h>
 
 #include "TravianSvr.h"
-extern App* app;
 
 #if defined( __GNUC__ )
 #pragma pack(1)
