@@ -235,6 +235,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\field.h"
+				>
+			</File>
+			<File
 				RelativePath=".\LockedQueue.h"
 				>
 			</File>
@@ -292,6 +296,14 @@
 		<Filter
 			Name="Game"
 			>
+			<File
+				RelativePath=".\tra_db.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\tra_db.h"
+				>
+			</File>
 			<File
 				RelativePath=".\tra_enum.h"
 				>

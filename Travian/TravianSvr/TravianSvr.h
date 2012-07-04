@@ -19,6 +19,7 @@
 #include "ace/SOCK_Acceptor.h"
 #include "ace/TP_Reactor.h"
 #include "mysqlDB.h"
+#include "tra_db.h"
 #include "common.h"
 
 
@@ -32,7 +33,7 @@ public:
 	bool run();
 
 public:
-	Mysql_DB* _db;
+	TravianDB* _db;
 };
 
 #endif  // end of guard TravianSvr.h

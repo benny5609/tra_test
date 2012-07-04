@@ -22,6 +22,10 @@
 #include <ostream>
 #include <google/protobuf/io/zero_copy_stream_impl.h>
 #include <google/protobuf/io/gzip_stream.h>
+
+#include "TravianSvr.h"
+extern App* app;
+
 #if defined( __GNUC__ )
 #pragma pack(1)
 #else
@@ -711,6 +715,19 @@ int WorldSocket::ProcessIncoming (WorldPacket* new_pct)
 			login::login log;
 			google::protobuf::io::ArrayInputStream istream (new_pct->contents(), new_pct->size());
 			log.ParseFromZeroCopyStream(&istream);
+			QueryResult* res = app->_db->Query("select * from s2_vdata ");
+			if(res != NULL)
+			{
+				do
+				{
+					int wref = res->Fetch()[0].GetUInt32();
+					int x = res->Fetch()[2].GetUInt32();
+					int y = res->Fetch()[3].GetUInt32();
+					//printf("%d__x:%d, y%d\n", wref, x, y);
+				}
+				while(res->NextRow());
+				delete res;
+			};
 			break;
 		}
 	default:
