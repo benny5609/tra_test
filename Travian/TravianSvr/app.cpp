@@ -1,6 +1,6 @@
 #include "preCompile.h"
 #include "app.h"
-
+#include "md5.h"
 
 #pragma comment(lib,"libmysql.lib")
 #ifdef _DEBUG
@@ -39,11 +39,10 @@ bool App::init()
 
 bool App::uninit()
 {
-	google::protobuf::ShutdownProtobufLibrary();
-
 	if(g_db)
 		delete g_db;
 
+	google::protobuf::ShutdownProtobufLibrary();
 	return true;
 }
 

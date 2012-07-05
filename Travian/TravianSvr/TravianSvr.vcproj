@@ -182,6 +182,18 @@
 				>
 			</File>
 			<File
+				RelativePath=".\md5.cpp"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						UsePrecompiledHeader="0"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
 				RelativePath=".\mysqlDB.cpp"
 				>
 			</File>
@@ -261,6 +273,10 @@
 			</File>
 			<File
 				RelativePath=".\LockedQueue.h"
+				>
+			</File>
+			<File
+				RelativePath=".\md5.h"
 				>
 			</File>
 			<File

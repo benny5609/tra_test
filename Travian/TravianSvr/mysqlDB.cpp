@@ -1,5 +1,6 @@
 #include "preCompile.h"
 #include "mysqlDB.h"
+#include "field.h"
 
 #define DB_ADDR "localhost"
 #define DB_USER "root"
@@ -55,6 +56,7 @@ bool Mysql_DB::connect_db()
 		printf("Error %u: %s\n", mysql_errno(conn), mysql_error(conn));
 		return false;
 	}
+
 	return true;
 }
 
