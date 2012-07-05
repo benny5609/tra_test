@@ -46,7 +46,8 @@
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
 				RuntimeLibrary="3"
-				UsePrecompiledHeader="0"
+				UsePrecompiledHeader="2"
+				PrecompiledHeaderThrough="preCompile.h"
 				WarningLevel="3"
 				DebugInformationFormat="4"
 			/>
@@ -177,11 +178,7 @@
 			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}"
 			>
 			<File
-				RelativePath=".\echo.pb.cc"
-				>
-			</File>
-			<File
-				RelativePath=".\msg_login.pb.cc"
+				RelativePath=".\app.cpp"
 				>
 			</File>
 			<File
@@ -189,8 +186,28 @@
 				>
 			</File>
 			<File
+				RelativePath=".\preCompile.cpp"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						UsePrecompiledHeader="1"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
 				RelativePath=".\Threading.cpp"
 				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						UsePrecompiledHeader="0"
+					/>
+				</FileConfiguration>
 			</File>
 			<File
 				RelativePath=".\TravianSvr.cpp"
@@ -223,6 +240,10 @@
 			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
 			>
 			<File
+				RelativePath=".\app.h"
+				>
+			</File>
+			<File
 				RelativePath=".\ByteBuffer.h"
 				>
 			</File>
@@ -252,6 +273,10 @@
 			</File>
 			<File
 				RelativePath=".\Opcodes.h"
+				>
+			</File>
+			<File
+				RelativePath=".\preCompile.h"
 				>
 			</File>
 			<File
@@ -315,6 +340,34 @@
 			<File
 				RelativePath=".\tra_village.h"
 				>
+			</File>
+		</Filter>
+		<Filter
+			Name="protobuf"
+			>
+			<File
+				RelativePath=".\echo.pb.cc"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						UsePrecompiledHeader="0"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\msg_login.pb.cc"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						UsePrecompiledHeader="0"
+					/>
+				</FileConfiguration>
 			</File>
 		</Filter>
 	</Files>

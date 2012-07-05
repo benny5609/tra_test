@@ -11,7 +11,7 @@
 #define __TRA_DB_H__
 
 #include "mysqlDB.h"
-
+#include "field.h"
 class TravianDB:public Mysql_DB
 {
 public:

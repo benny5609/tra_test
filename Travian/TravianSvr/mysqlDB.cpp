@@ -1,3 +1,4 @@
+#include "preCompile.h"
 #include "mysqlDB.h"
 
 #define DB_ADDR "localhost"

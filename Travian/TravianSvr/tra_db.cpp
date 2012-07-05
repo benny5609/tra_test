@@ -1,3 +1,4 @@
+#include "preCompile.h"
 #include "tra_db.h"
 
 bool TravianDB::usr_register(const std::string& usr, const std::string& pwd, const std::string& email, E_TRIBE tribe, E_LOCATE locate, E_ACTIVE act)

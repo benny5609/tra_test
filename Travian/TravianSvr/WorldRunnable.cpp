@@ -1,3 +1,4 @@
+#include "preCompile.h"
 #include "WorldSocketMgr.h"
 #include "Common.h"
 #include "World.h"

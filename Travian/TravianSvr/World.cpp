@@ -19,7 +19,7 @@
 /** \file
     \ingroup world
 */
-
+#include "preCompile.h"
 #include "Common.h"
 #include "Opcodes.h"
 #include "WorldSession.h"

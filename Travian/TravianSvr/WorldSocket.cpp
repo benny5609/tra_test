@@ -1,3 +1,4 @@
+#include "preCompile.h"
 #include <ace/Message_Block.h>
 #include <ace/OS_NS_string.h>
 #include <ace/OS_NS_unistd.h>
@@ -23,7 +24,7 @@
 #include <google/protobuf/io/zero_copy_stream_impl.h>
 #include <google/protobuf/io/gzip_stream.h>
 
-#include "TravianSvr.h"
+#include "app.h"
 
 #if defined( __GNUC__ )
 #pragma pack(1)
@@ -714,7 +715,7 @@ int WorldSocket::ProcessIncoming (WorldPacket* new_pct)
 			login::login log;
 			google::protobuf::io::ArrayInputStream istream (new_pct->contents(), new_pct->size());
 			log.ParseFromZeroCopyStream(&istream);
-			QueryResult* res = app->_db->Query("select * from s2_vdata ");
+			QueryResult* res = sDB.Query("select * from s2_vdata ");
 			if(res != NULL)
 			{
 				do
