@@ -134,6 +134,10 @@ class WorldSocket : protected WorldHandler
         /// process one incoming packet.
         /// @param new_pct received packet ,note that you need to delete it.
         int ProcessIncoming (WorldPacket* new_pct);
+
+		/// Called by ProcessIncoming() on CMSG_AUTH_SESSION.
+		int HandleAuthSession (WorldPacket& recvPacket);
+
     private:
         /// Time in which the last ping was received
         ACE_Time_Value m_LastPingTime;

@@ -11,7 +11,7 @@
 #define __PRECOMPILE_H__
 
 #include "common.h"
-
+#include "Opcodes.h"
 #include "ace/ace.h"
 #include "ace/Reactor.h"
 #include "ace/Svc_Handler.h"

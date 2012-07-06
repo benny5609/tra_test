@@ -8,7 +8,7 @@
 
 /// WorldSession constructor
 WorldSession::WorldSession(uint32 id, WorldSocket *sock) :
-/*_player(NULL),*/ m_Socket(sock),_accountId(id)
+	_player(NULL), m_Socket(sock),_accountId(id),m_playerLoading(false),m_playerLogout(false)
 {
     if (sock)
     {
@@ -32,6 +32,21 @@ WorldSession::~WorldSession()
     WorldPacket* packet;
     while(_recvQueue.next(packet))
         delete packet;
+}
+
+void WorldSession::InitPacketHandlerTable()
+{
+	// Nullify Everything, default to STATUS_LOGGEDIN
+	for(uint32 i = 0; i < NUM_MSG_TYPES; ++i)
+	{
+		WorldPacketHandlers[i].status = STATUS_LOGGEDIN;
+		WorldPacketHandlers[i].handler = 0;
+	}
+	// Login
+	WorldPacketHandlers[CMSG_PLAYER_LOGIN].handler =
+		&WorldSession::HandlePlayerLoginOpcode;
+	WorldPacketHandlers[CMSG_PLAYER_LOGIN].status = STATUS_AUTHED;
+
 }
 
 void WorldSession::Handle_NULL( WorldPacket& recvPacket )
@@ -63,41 +78,21 @@ bool WorldSession::Update(uint32 /*diff*/)
     WorldPacket* packet;
     while (m_Socket && !m_Socket->IsClosed() && _recvQueue.next(packet))
     {
-//          OpcodeHandler& opHandle = opcodeTable[packet->GetOpcode()];
-//          switch (opHandle.status)
-//          {
-//              case STATUS_LOGGEDIN:
-//                  // lag can cause STATUS_LOGGEDIN opcodes to arrive after the player started a transfer
-//                  break;
-//              case STATUS_LOGGEDIN_OR_RECENTLY_LOGGEDOUT:
-// 
-//                  break;
-//              case STATUS_TRANSFER:
-// 
-//                  break;
-//              case STATUS_AUTHED:
-//                  // single from authed time opcodes send in to after logout time
-//                  // and before other STATUS_LOGGEDIN_OR_RECENTLY_LOGGOUT opcodes.
-// 
-//                  (this->*opHandle.handler)(*packet);
-// 
-//                  break;
-//              case STATUS_NEVER:
-//                  sLog.outError( "SESSION: received not allowed opcode %s (0x%.4X)",
-//                      LookupOpcodeName(packet->GetOpcode()),
-//                      packet->GetOpcode());
-//                  break;
-//              case STATUS_UNHANDLED:
-//                  sLog.outDebug("SESSION: received not handled opcode %s (0x%.4X)",
-//                      LookupOpcodeName(packet->GetOpcode()),
-//                      packet->GetOpcode());
-//                  break;
-//              default:
-//                  sLog.outError("SESSION: received wrong-status-req opcode %s (0x%.4X)",
-//                      LookupOpcodeName(packet->GetOpcode()),
-//                      packet->GetOpcode());
-//                  break;
-//         }
+          OpcodeHandler& opHandle = WorldPacketHandlers[packet->GetOpcode()];
+          switch (opHandle.status)
+          {
+              case STATUS_LOGGEDIN:
+                  // lag can cause STATUS_LOGGEDIN opcodes to arrive after the player started a transfer
+                  break;
+              case STATUS_AUTHED:
+                  (this->*opHandle.handler)(*packet);
+                  break;
+              default:
+//                   sLog.outError("SESSION: received wrong-status-req opcode %s (0x%.4X)",
+//                       LookupOpcodeName(packet->GetOpcode()),
+//                       packet->GetOpcode());
+                  break;
+         }
         delete packet;
     }
 

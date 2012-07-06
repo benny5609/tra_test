@@ -32,6 +32,8 @@
 #pragma pack(push,1)
 #endif
 
+OpcodeHandler WorldPacketHandlers[NUM_MSG_TYPES];
+
 struct ServerPktHeader
 {
 	//size is the length of the payload _plus_ the length of the opcode
@@ -657,59 +659,36 @@ int WorldSocket::schedule_wakeup_output (GuardType& g)
 
 int WorldSocket::ProcessIncoming (WorldPacket* new_pct)
 {
-    ACE_ASSERT (new_pct);
+	ACE_ASSERT (new_pct);
 
-    // manage memory ;)
-    ACE_Auto_Ptr<WorldPacket> aptr (new_pct);
+	// manage memory ;)
+	ACE_Auto_Ptr<WorldPacket> aptr (new_pct);
 
-    const ACE_UINT16 opcode = new_pct->GetOpcode ();
+	const ACE_UINT16 opcode = new_pct->GetOpcode ();
 
-//      if (opcode >= NUM_MSG_TYPES)
-//      {
-//          printf( "SESSION: received non-existed opcode 0x%.4X\n", opcode);
-//          return -1;
-//      }
+	if (opcode >= NUM_MSG_TYPES)
+	{
+		printf( "SESSION: received non-existed opcode 0x%.4X\n", opcode);
+		return -1;
+	}
 
-    if (closing_)
-        return -1;
+	if (closing_)
+		return -1;
 
-    // Dump received packet.
-    //sLog.outWorldPacketDump(uint32(get_handle()), new_pct->GetOpcode(), LookupOpcodeName(new_pct->GetOpcode()), new_pct, true);
+	// Dump received packet.
+	//sLog.outWorldPacketDump(uint32(get_handle()), new_pct->GetOpcode(), LookupOpcodeName(new_pct->GetOpcode()), new_pct, true);
 
-    switch(opcode)
-    {
-       /* case CMSG_PING:
-            return HandlePing (*new_pct);
-        case CMSG_AUTH_SESSION:
-             if (m_Session)
-             {
-                 sLog.outError ("WorldSocket::ProcessIncoming: Player send CMSG_AUTH_SESSION again");
-                 return -1;
-             }
-
-            return HandleAuthSession (*new_pct);
-        case CMSG_KEEP_ALIVE:
-            DEBUG_LOG ("CMSG_KEEP_ALIVE ,size: "SIZEFMTD" ", new_pct->size ());
-
-            return 0;
-        default:
-        {
-            ACE_GUARD_RETURN (LockType, Guard, m_SessionLock, -1);
-
-             if (m_Session != NULL)
-             {
-                 // OK ,give the packet to WorldSession
-                 aptr.release ();
-                 // WARNINIG here we call it with locks held.
-                 // Its possible to cause deadlock if QueuePacket calls back
-                 m_Session->QueuePacket (new_pct);
-                 return 0;
-             }
-             else
-             {
-                 sLog.outError ("WorldSocket::ProcessIncoming: Client not authed opcode = %u", uint32(opcode));
-                 return -1;
-             }*/
+	switch(opcode)
+	{
+	case CMSG_AUTH_SESSION:
+		{
+			if (m_Session)
+			{
+				printf("WorldSocket::ProcessIncoming: Player send CMSG_AUTH_SESSION again\n");
+				return -1;
+			}
+			return HandleAuthSession (*new_pct);
+		}
 	case 0x036:
 		{
 			login::login log;
@@ -731,20 +710,27 @@ int WorldSocket::ProcessIncoming (WorldPacket* new_pct)
 			break;
 		}
 	default:
+		{
+			ACE_GUARD_RETURN (LockType, Guard, m_SessionLock, -1);
+			if (m_Session != NULL)
 			{
-				ACE_GUARD_RETURN (LockType, Guard, m_SessionLock, -1);
-				if (m_Session != NULL)
-				{
-					// OK ,give the packet to WorldSession
-					aptr.release ();
-					// WARNINIG here we call it with locks held.
-					// Its possible to cause deadlock if QueuePacket calls back
-					m_Session->QueuePacket (new_pct);
-				}
-				return 0;
+				// OK ,give the packet to WorldSession
+				aptr.release ();
+				// WARNINIG here we call it with locks held.
+				// Its possible to cause deadlock if QueuePacket calls back
+				m_Session->QueuePacket (new_pct);
 			}
-    }
+			return 0;
+		}
+	}
 
 	return 0;
-    ACE_NOTREACHED (return 0);
+	ACE_NOTREACHED (return 0);
+}
+
+int WorldSocket::HandleAuthSession(WorldPacket& recvPacket)
+{
+// 	QueryResult *result =
+// 		sDB.Query ("SELECT * FROM account WHERE username = '%s'",safe_account.c_str ());
+	return 0;
 }

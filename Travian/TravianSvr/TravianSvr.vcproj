@@ -182,6 +182,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\CharacterHandler.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\md5.cpp"
 				>
 				<FileConfiguration
@@ -195,6 +199,10 @@
 			</File>
 			<File
 				RelativePath=".\mysqlDB.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Player.cpp"
 				>
 			</File>
 			<File
@@ -289,6 +297,10 @@
 			</File>
 			<File
 				RelativePath=".\Opcodes.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Player.h"
 				>
 			</File>
 			<File

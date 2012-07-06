@@ -27,6 +27,7 @@
 #include "LockedQueue.h"
 #include "WorldSocket.h"
 #include "World.h"
+#include "Player.h"
 class Player;
 class WorldPacket;
 class WorldSocket;
@@ -136,6 +137,19 @@ enum ChatRestrictionType
     ERR_YELL_RESTRICTED = 3
 };
 */
+enum SessionStatus
+{
+	STATUS_AUTHED = 0,
+	STATUS_LOGGEDIN
+};
+
+struct OpcodeHandler
+{
+	uint16 status;
+	void (WorldSession::*handler)(WorldPacket & recvPacket);
+};
+
+extern OpcodeHandler WorldPacketHandlers[NUM_MSG_TYPES];
 
 /// Player session in the World
 class WorldSession
@@ -145,20 +159,26 @@ class WorldSession
         WorldSession(uint32 id, WorldSocket *sock);
         ~WorldSession();
 
+		bool PlayerLoading() const { return m_playerLoading; }
+		bool PlayerLogout() const { return m_playerLogout; }
 		uint32 GetAccountId() const { return _accountId; }
+		Player* GetPlayer() const { return _player; }
 		void QueuePacket(WorldPacket* new_packet);
 		void SendPacket(WorldPacket const* packet);
 		void KickPlayer();
 		bool Update(uint32 diff);
+		static void InitPacketHandlerTable();
 
 public:                                                 // opcodes handlers
 
 	void Handle_NULL(WorldPacket& recvPacket);          // not used
-
+	void HandlePlayerLoginOpcode(WorldPacket& recvPacket);
 		uint32 _accountId;
 		std::string m_Address;
-    //    Player *_player;
+		Player *_player;
         WorldSocket *m_Socket;
+		bool m_playerLoading;                               // code processed in LoginPlayer
+		bool m_playerLogout;                                // code processed in LogoutPlayer
 
         ACE_Based::LockedQueue<WorldPacket*, ACE_Thread_Mutex> _recvQueue;
 };
