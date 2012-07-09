@@ -173,14 +173,15 @@ public:                                                 // opcodes handlers
 
 	void Handle_NULL(WorldPacket& recvPacket);          // not used
 	void HandlePlayerLoginOpcode(WorldPacket& recvPacket);
-		uint32 _accountId;
-		std::string m_Address;
-		Player *_player;
-        WorldSocket *m_Socket;
-		bool m_playerLoading;                               // code processed in LoginPlayer
-		bool m_playerLogout;                                // code processed in LogoutPlayer
+	bool NewPlayer();
+	uint32 _accountId;
+	std::string m_Address;
+	Player *_player;
+    WorldSocket *m_Socket;
+	bool m_playerLoading;                               // code processed in LoginPlayer
+	bool m_playerLogout;                                // code processed in LogoutPlayer
 
-        ACE_Based::LockedQueue<WorldPacket*, ACE_Thread_Mutex> _recvQueue;
+    ACE_Based::LockedQueue<WorldPacket*, ACE_Thread_Mutex> _recvQueue;
 };
 #endif
 /// @}

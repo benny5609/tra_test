@@ -16,7 +16,7 @@ class Village
 {
 public:
 	Village(uint32 vid);
-	bool LoadTown();
+	bool LoadVillageData();
 protected:
 	//from db_vdata
 	uint32 wref;

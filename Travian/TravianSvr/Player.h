@@ -10,8 +10,19 @@
 #ifndef __PLAYER_H__
 #define __PLAYER_H__
 
+class Village;
+class Hero;
+class WorldSession;
+
 class Player
 {
 public:
+	explicit Player(WorldSession* session);
+	bool LoadVillage();
+	bool LoadHero();
+protected:
+	WorldSession* m_session;
+	std::vector<Village*> m_villages;
 };
+
 #endif  // end of guard Player.h

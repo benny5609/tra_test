@@ -450,7 +450,7 @@ private:
 
 		// Dump received packet.
 		//sLog.outWorldPacketDump(uint32(get_handle()), new_pct->GetOpcode(), LookupOpcodeName(new_pct->GetOpcode()), new_pct, true);
-
+		printf("client get msg %d\n", opcode);
 		switch(opcode)
 		{
 		case SMSG_AUTH_CHALLENGE:

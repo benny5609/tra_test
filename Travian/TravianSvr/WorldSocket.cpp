@@ -17,6 +17,7 @@
 #include "WorldSocketMgr.h"
 #include "World.h"
 #include "WorldPacket.h"
+#include <ace/OS_NS_unistd.h>
 
 //#include "echo.pb.h"
 #include "msg_login.pb.h"
@@ -734,15 +735,31 @@ int WorldSocket::ProcessIncoming (WorldPacket* new_pct)
 
 int WorldSocket::HandleAuthSession(WorldPacket& recvPacket)
 {
+	WorldPacket packet;
 	protocol::login::cmsg_auth_session cmsg;
 	google::protobuf::io::ArrayInputStream istream (recvPacket.contents(), recvPacket.size());
-	cmsg.ParseFromZeroCopyStream(&istream);
+	if(!cmsg.ParseFromZeroCopyStream(&istream))
+	{
+		packet.Initialize(SMSG_AUTH_RESPONSE, 1);
+		packet << uint8 (PROTOBUF_PARSE_FAIL);
+		SendPacket(packet);
+	}
 
  	QueryResult *result =
  		sDB.Query ("SELECT * FROM s2_users WHERE username = '%s'",cmsg.account().c_str());
 	if(!result)
+	{
+		packet.Initialize(SMSG_AUTH_RESPONSE, 1);
+		packet << uint8 (AUTH_UNKNOWN_ACCOUNT);
+		SendPacket(packet);
 		return 0;
+	}
 
-	//ACE_NEW_RETURN (m_Session, WorldSession (id, this, AccountTypes(security), expansion, mutetime, locale), -1);
+	Field* fields = result->Fetch();
+	ACE_NEW_RETURN (m_Session, WorldSession (fields[0].GetUInt32(), this), -1);
+	result->Delete();
+
+	//ACE_Based::Thread::Sleep (1);
+	sWorld->AddSession (m_Session);
 	return 0;
 }

@@ -49,6 +49,11 @@ void WorldSession::InitPacketHandlerTable()
 
 }
 
+bool WorldSession::NewPlayer()
+{
+	_player = new Player(this);
+	return true;
+}
 void WorldSession::Handle_NULL( WorldPacket& recvPacket )
 {
 

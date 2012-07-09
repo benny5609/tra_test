@@ -12,6 +12,11 @@
 
 enum ResponseCodes
 {
+	//msg or packet
+	PROTOBUF_SERIAL_FAIL,
+	PROTOBUF_PARSE_FAIL,
+
+	//auth
 	AUTH_BAD_SERVER_PROOF,      
 	AUTH_UNAVAILABLE,       
 	AUTH_SYSTEM_ERROR,   
