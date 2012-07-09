@@ -18,7 +18,7 @@
 #include "World.h"
 #include "WorldPacket.h"
 
-#include "echo.pb.h"
+//#include "echo.pb.h"
 #include "msg_login.pb.h"
 #include <ostream>
 #include <google/protobuf/io/zero_copy_stream_impl.h>
@@ -59,7 +59,7 @@ struct ServerPktHeader
     uint8 getHeaderLength()
     {
         // cmd = 2 bytes, size= 2||3bytes
-        return 2+(isLargePacket()?3:2);
+        return 5;
     }
 
     bool isLargePacket()
@@ -168,7 +168,7 @@ int WorldSocket::SendPacket (const WorldPacket& pct)
     if (closing_)
         return -1;
 
-    ServerPktHeader header(pct.size()+2, pct.GetOpcode());
+    ServerPktHeader header(pct.size()+5, pct.GetOpcode());
 
      if (m_OutBuffer->space () >= pct.size () + header.getHeaderLength() && msg_queue()->is_empty())
      {
@@ -251,8 +251,12 @@ int WorldSocket::open (void *a)
     }
 
     m_Address = remote_addr.get_host_addr ();
-
- 
+	protocol::login::smsg_auth_challenge msg;
+	msg.set_svrseed("travian svr, hello");
+	msg.set_svrtime(GetTickCount());
+	SendPacket(SMSG_AUTH_CHALLENGE, msg);
+	
+	
     // Register with ACE Reactor
     if (reactor ()->register_handler(this, ACE_Event_Handler::READ_MASK | ACE_Event_Handler::WRITE_MASK) == -1)
     {
@@ -260,15 +264,15 @@ int WorldSocket::open (void *a)
         return -1;
     }
 
-	ACE_NEW_RETURN (m_Session, WorldSession (123456, this), -1);
+//  	ACE_NEW_RETURN (m_Session, WorldSession (123456, this), -1); 
+//  	sWorld->AddSession (m_Session);
 
-	sWorld->AddSession (m_Session);
     // reactor takes care of the socket from now on
     remove_reference ();
 
-	echo::EchoRequest msg;
-	msg.set_message("hello nreq");
-	SendPacket(123, msg);
+//  	echo::EchoRequest msg;
+//  	msg.set_message("hello nreq");
+//  	SendPacket(123, msg);
     return 0;
 }
 
@@ -691,22 +695,22 @@ int WorldSocket::ProcessIncoming (WorldPacket* new_pct)
 		}
 	case 0x036:
 		{
-			login::login log;
-			google::protobuf::io::ArrayInputStream istream (new_pct->contents(), new_pct->size());
-			log.ParseFromZeroCopyStream(&istream);
-			QueryResult* res = sDB.Query("select * from s2_vdata ");
-			if(res != NULL)
-			{
-				do
-				{
-					int wref = res->Fetch()[0].GetUInt32();
-					int x = res->Fetch()[2].GetUInt32();
-					int y = res->Fetch()[3].GetUInt32();
-					//printf("%d__x:%d, y%d\n", wref, x, y);
-				}
-				while(res->NextRow());
-				delete res;
-			};
+// 			login::login log;
+// 			google::protobuf::io::ArrayInputStream istream (new_pct->contents(), new_pct->size());
+// 			log.ParseFromZeroCopyStream(&istream);
+// 			QueryResult* res = sDB.Query("select * from s2_vdata ");
+// 			if(res != NULL)
+// 			{
+// 				do
+// 				{
+// 					int wref = res->Fetch()[0].GetUInt32();
+// 					int x = res->Fetch()[2].GetUInt32();
+// 					int y = res->Fetch()[3].GetUInt32();
+// 					//printf("%d__x:%d, y%d\n", wref, x, y);
+// 				}
+// 				while(res->NextRow());
+// 				delete res;
+// 			};
 			break;
 		}
 	default:
@@ -730,7 +734,15 @@ int WorldSocket::ProcessIncoming (WorldPacket* new_pct)
 
 int WorldSocket::HandleAuthSession(WorldPacket& recvPacket)
 {
-// 	QueryResult *result =
-// 		sDB.Query ("SELECT * FROM account WHERE username = '%s'",safe_account.c_str ());
+	protocol::login::cmsg_auth_session cmsg;
+	google::protobuf::io::ArrayInputStream istream (recvPacket.contents(), recvPacket.size());
+	cmsg.ParseFromZeroCopyStream(&istream);
+
+ 	QueryResult *result =
+ 		sDB.Query ("SELECT * FROM s2_users WHERE username = '%s'",cmsg.account().c_str());
+	if(!result)
+		return 0;
+
+	//ACE_NEW_RETURN (m_Session, WorldSession (id, this, AccountTypes(security), expansion, mutetime, locale), -1);
 	return 0;
 }

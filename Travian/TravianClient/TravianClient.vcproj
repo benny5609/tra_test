@@ -41,7 +41,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="../Third/mysql-5.0.92/include;../Third/zeromq-2.1.11/include;../Third/protobuf-2.4.1/include;"
+				AdditionalIncludeDirectories="&quot;../Third/mysql-5.0.92/include&quot;;&quot;../Third/zeromq-2.1.11/include&quot;;&quot;../Third/protobuf-2.4.1/include&quot;;../TravianSvr;../protobuf\lang\cpp"
 				PreprocessorDefinitions="WIN32;_DEBUG;_CONSOLE;_WIN32"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
@@ -176,15 +176,7 @@
 			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}"
 			>
 			<File
-				RelativePath=".\echo.pb.cc"
-				>
-			</File>
-			<File
 				RelativePath=".\main.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\msg_login.pb.cc"
 				>
 			</File>
 		</Filter>
@@ -194,15 +186,7 @@
 			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
 			>
 			<File
-				RelativePath=".\echo.pb.h"
-				>
-			</File>
-			<File
-				RelativePath=".\msg_login.pb.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Opcodes.h"
+				RelativePath="..\TravianSvr\Opcodes.h"
 				>
 			</File>
 		</Filter>
@@ -211,6 +195,18 @@
 			Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav"
 			UniqueIdentifier="{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}"
 			>
+		</Filter>
+		<Filter
+			Name="protobuf"
+			>
+			<File
+				RelativePath="..\protobuf\lang\cpp\msg_login.pb.cc"
+				>
+			</File>
+			<File
+				RelativePath="..\protobuf\lang\cpp\msg_login.pb.h"
+				>
+			</File>
 		</Filter>
 	</Files>
 	<Globals>

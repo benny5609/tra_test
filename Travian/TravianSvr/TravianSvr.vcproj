@@ -41,7 +41,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="&quot;../Third/mysql-5.0.92/include&quot;;&quot;../Third/zeromq-2.1.11/include&quot;;&quot;../Third/protobuf-2.4.1/include&quot;;&quot;../Third\libevent-2.0.19\include&quot;"
+				AdditionalIncludeDirectories="&quot;../Third/mysql-5.0.92/include&quot;;&quot;../Third/zeromq-2.1.11/include&quot;;&quot;../Third/protobuf-2.4.1/include&quot;;&quot;../Third\libevent-2.0.19\include&quot;;../protobuf\lang\cpp"
 				PreprocessorDefinitions="WIN32;_DEBUG;_CONSOLE;_WIN32"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
@@ -272,10 +272,6 @@
 				>
 			</File>
 			<File
-				RelativePath=".\echo.pb.h"
-				>
-			</File>
-			<File
 				RelativePath=".\field.h"
 				>
 			</File>
@@ -285,10 +281,6 @@
 			</File>
 			<File
 				RelativePath=".\md5.h"
-				>
-			</File>
-			<File
-				RelativePath=".\msg_login.pb.h"
 				>
 			</File>
 			<File
@@ -305,6 +297,10 @@
 			</File>
 			<File
 				RelativePath=".\preCompile.h"
+				>
+			</File>
+			<File
+				RelativePath=".\sharedDefines.h"
 				>
 			</File>
 			<File
@@ -374,7 +370,7 @@
 			Name="protobuf"
 			>
 			<File
-				RelativePath=".\echo.pb.cc"
+				RelativePath="..\protobuf\lang\cpp\msg_login.pb.cc"
 				>
 				<FileConfiguration
 					Name="Debug|Win32"
@@ -386,16 +382,8 @@
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath=".\msg_login.pb.cc"
+				RelativePath="..\protobuf\lang\cpp\msg_login.pb.h"
 				>
-				<FileConfiguration
-					Name="Debug|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						UsePrecompiledHeader="0"
-					/>
-				</FileConfiguration>
 			</File>
 		</Filter>
 	</Files>

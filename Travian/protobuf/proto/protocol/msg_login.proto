@@ -1,0 +1,13 @@
+package protocol.login;
+
+message smsg_auth_challenge{
+    required bytes svrSeed = 1;
+    optional uint32 svrTime = 2;
+};
+
+message cmsg_auth_session{
+    required uint32 clientBuid = 1;
+    required bytes clientSeed = 2;
+    optional uint32 clientTime = 3;
+    required bytes account = 4;
+};

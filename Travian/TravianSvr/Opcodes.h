@@ -13,8 +13,10 @@
 enum Opcodes
 {
 	MSG_NULL_ACTION                                 = 0x000,
+	SMSG_AUTH_CHALLENGE							= 0x049,
 	CMSG_AUTH_SESSION								= 0x050,
-	CMSG_PLAYER_LOGIN								= 0x051,
+	SMSG_AUTH_RESPONSE							= 0x051,
+	CMSG_PLAYER_LOGIN								= 0x052,
 	NUM_MSG_TYPES	
 };
 #endif  // end of guard Opcodes.h
