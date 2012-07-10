@@ -20,6 +20,10 @@ public:
 	void SetValue(char* value) { mValue = value; }
 
 	const char* GetString() { return mValue; }
+	std::string GetCppString() const
+	{
+		return mValue ? mValue : "";                    // std::string s = 0 have undefine result in C++
+	}
 	float GetFloat() { return mValue ? static_cast<float>(atof(mValue)) : 0; }
 	bool GetBool() { return mValue ? atoi(mValue) > 0 : false; }
 	uint8 GetUInt8() { return mValue ? static_cast<uint8>(atol(mValue)) : 0; }

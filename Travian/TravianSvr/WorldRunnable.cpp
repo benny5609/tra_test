@@ -30,7 +30,10 @@ void WorldRunnable::run()
 		if(_kbhit())
 		{
 			if(_getch() == '=')
+			{
 				sWorld->StopNow(0);
+				ACE_Based::Thread::Sleep(50);
+			}
 		}
         realCurrTime = GetTickCount();
 

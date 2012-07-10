@@ -12,7 +12,6 @@
 
 #include "common.h"
 #include "field.h"
-#include "tra_enum.h"
 #include "my_global.h"
 #include "mysql.h"
 #include "ace/Thread_Mutex.h"

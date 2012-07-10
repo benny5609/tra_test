@@ -39,6 +39,7 @@ typedef unsigned __int32 uint32;
 typedef unsigned __int16 uint16;
 typedef unsigned __int8 uint8;
 
+#include "tra_enum.h"
 #include "sharedDefines.h"
 
 #endif  // end of guard common.h

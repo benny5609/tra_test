@@ -6,10 +6,26 @@
 
 Player::Player(WorldSession* session):m_session(session)
 {
-
+	LoadVillages();
 }
 
-bool Player::LoadVillage()
+Player::~Player()
+{
+	for(size_t i=0; i<m_villages.size(); i++)
+	{
+		delete m_villages[i];
+	}
+	m_villages.clear();
+}
+
+uint32 Player::GetID()
+{
+	if(!m_session)
+		return 0;
+	return m_session->_accountId;
+}
+
+bool Player::LoadVillages()
 {
 	QueryResult *result =
 		sDB.Query ("SELECT wref FROM s2_vdata WHERE owner = %d",m_session->GetAccountId());
@@ -24,7 +40,7 @@ bool Player::LoadVillage()
 	}
 	while(result->NextRow());
 
-	delete result;
+	result->Delete();
 	return true;
 }
 

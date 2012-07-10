@@ -10,16 +10,14 @@
 #ifndef __TRA_VILLAGE_H__
 #define __TRA_VILLAGE_H__
 #include "common.h"
-#include "tra_enum.h"
+#include "tra_worldPlace.h"
 
-class Village
+class Village:public WorldPlace
 {
 public:
 	Village(uint32 vid);
 	bool LoadVillageData();
-protected:
-	//from db_vdata
-	uint32 wref;
+
 	uint32 owner;
 	uint32 capital;
 	uint32 pop;

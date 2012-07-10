@@ -373,6 +373,14 @@
 				RelativePath=".\tra_village.h"
 				>
 			</File>
+			<File
+				RelativePath=".\tra_worldPlace.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\tra_worldPlace.h"
+				>
+			</File>
 		</Filter>
 		<Filter
 			Name="protobuf"

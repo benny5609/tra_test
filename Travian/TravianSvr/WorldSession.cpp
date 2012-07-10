@@ -15,6 +15,8 @@ WorldSession::WorldSession(uint32 id, WorldSocket *sock) :
         m_Address = sock->GetRemoteAddress ();
         sock->AddReference ();
     }
+
+	NewPlayer();
 }
 
 /// WorldSession destructor
@@ -51,9 +53,11 @@ void WorldSession::InitPacketHandlerTable()
 
 bool WorldSession::NewPlayer()
 {
+	//new player and load the villages from db
 	_player = new Player(this);
 	return true;
 }
+
 void WorldSession::Handle_NULL( WorldPacket& recvPacket )
 {
 
@@ -88,6 +92,14 @@ bool WorldSession::Update(uint32 /*diff*/)
           {
               case STATUS_LOGGEDIN:
                   // lag can cause STATUS_LOGGEDIN opcodes to arrive after the player started a transfer
+				  if(!_player)
+				  {
+					  printf("player has not login!\n");
+				  }
+				  else if(_player)
+				  {
+					   (this->*opHandle.handler)(*packet);
+				  }
                   break;
               case STATUS_AUTHED:
                   (this->*opHandle.handler)(*packet);

@@ -18,8 +18,10 @@ class Player
 {
 public:
 	explicit Player(WorldSession* session);
-	bool LoadVillage();
+	~Player();
+	bool LoadVillages();
 	bool LoadHero();
+	uint32 GetID();
 protected:
 	WorldSession* m_session;
 	std::vector<Village*> m_villages;
