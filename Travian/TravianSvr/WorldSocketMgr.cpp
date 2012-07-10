@@ -274,7 +274,7 @@ WorldSocketMgr::StopNetwork ()
         for (size_t i = 0; i < m_NetThreadsCount; ++i)
             m_NetThreads[i].Stop ();
     }
-
+	ACE_Based::Thread::Sleep(50);
     Wait ();
 }
 

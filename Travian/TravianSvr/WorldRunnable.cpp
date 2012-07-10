@@ -58,6 +58,6 @@ void WorldRunnable::run()
 
 	sWorld->KickAll();
     sWorld->UpdateSessions( 1 );                             // real players unload required UpdateSessions call
-
+	
     sWorldSocketMgr->StopNetwork();
 }
