@@ -3,10 +3,12 @@
 #include "tra_village.h"
 #include "tra_hero.h"
 #include "WorldSession.h"
+#include "entity.pb.h"
 
 Player::Player(WorldSession* session):m_session(session)
 {
 	LoadVillages();
+	SendVillagesPacket();
 }
 
 Player::~Player()
@@ -41,6 +43,41 @@ bool Player::LoadVillages()
 	while(result->NextRow());
 
 	result->Delete();
+	return true;
+}
+
+bool Player::SendVillagesPacket()
+{
+	entity::Villages villages;
+	for(size_t i=0; i<m_villages.size();i++)
+	{
+		entity::Village* entityVil = villages.add_vil();
+		Village* village = m_villages[i];
+		entityVil->mutable_place()->set_wref(village->wref);
+		entityVil->mutable_place()->set_fieldtype(village->fieldtype);
+		entityVil->mutable_place()->set_oasistype(village->oasistype);
+		entityVil->mutable_place()->set_x(village->x);
+		entityVil->mutable_place()->set_y(village->y);
+		entityVil->mutable_place()->set_occupied(village->occupied);
+		entityVil->mutable_place()->set_image(village->image);
+		entityVil->set_owner(village->owner);
+		entityVil->set_capital(village->capital);
+		entityVil->set_pop(village->pop);
+		entityVil->set_cp(village->cp);
+		entityVil->set_celebration(village->celebration);
+		entityVil->set_type(village->type);
+		entityVil->set_wood(village->wood);
+		entityVil->set_clay(village->clay);
+		entityVil->set_iron(village->iron);
+		entityVil->set_crop(village->crop);
+		entityVil->set_maxstore(village->maxstore);
+		entityVil->set_maxcrop(village->maxcrop);
+		entityVil->set_lastupdate(village->lastupdate);
+		entityVil->set_name(village->name);
+		entityVil->set_loyalty(village->loyalty);
+		//int byteSize = entityVil->ByteSize(); //92
+	}
+	m_session->SendPacket(SMSG_LOAD_VILLAGES,villages);
 	return true;
 }
 

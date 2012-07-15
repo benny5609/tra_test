@@ -27,7 +27,7 @@ public:
 	float wood;
 	float clay;
 	float iron;
-	uint32 crop;
+	float crop;
 	uint32 maxstore;
 	uint32 maxcrop;
 	uint32 lastupdate;

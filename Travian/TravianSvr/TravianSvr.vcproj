@@ -312,6 +312,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\UpdateMask.h"
+				>
+			</File>
+			<File
 				RelativePath=".\World.h"
 				>
 			</File>
@@ -402,6 +406,10 @@
 				>
 			</File>
 			<File
+				RelativePath="..\protobuf\proto\entity\entity.proto"
+				>
+			</File>
+			<File
 				RelativePath="..\protobuf\lang\cpp\msg_login.pb.cc"
 				>
 				<FileConfiguration
@@ -415,6 +423,10 @@
 			</File>
 			<File
 				RelativePath="..\protobuf\lang\cpp\msg_login.pb.h"
+				>
+			</File>
+			<File
+				RelativePath="..\protobuf\proto\protocol\msg_login.proto"
 				>
 			</File>
 		</Filter>

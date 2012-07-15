@@ -165,6 +165,7 @@ class WorldSession
 		Player* GetPlayer() const { return _player; }
 		void QueuePacket(WorldPacket* new_packet);
 		void SendPacket(WorldPacket const* packet);
+		void SendPacket(uint16 opcode, const google::protobuf::Message& message);
 		void KickPlayer();
 		bool Update(uint32 diff);
 		static void InitPacketHandlerTable();

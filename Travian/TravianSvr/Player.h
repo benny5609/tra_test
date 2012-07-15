@@ -23,6 +23,7 @@ public:
 	bool LoadHero();
 	uint32 GetID();
 protected:
+	bool SendVillagesPacket();
 	WorldSession* m_session;
 	std::vector<Village*> m_villages;
 };

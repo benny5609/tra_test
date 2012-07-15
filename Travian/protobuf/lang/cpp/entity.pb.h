@@ -34,6 +34,7 @@ void protobuf_ShutdownFile_entity_2eproto();
 
 class WorldPlace;
 class Village;
+class Villages;
 
 // ===================================================================
 
@@ -308,12 +309,12 @@ class Village : public ::google::protobuf::Message {
   inline float iron() const;
   inline void set_iron(float value);
   
-  // required uint32 crop = 11;
+  // required float crop = 11;
   inline bool has_crop() const;
   inline void clear_crop();
   static const int kCropFieldNumber = 11;
-  inline ::google::protobuf::uint32 crop() const;
-  inline void set_crop(::google::protobuf::uint32 value);
+  inline float crop() const;
+  inline void set_crop(float value);
   
   // required uint32 maxstore = 12;
   inline bool has_maxstore() const;
@@ -464,7 +465,7 @@ class Village : public ::google::protobuf::Message {
   float wood_;
   float clay_;
   float iron_;
-  ::google::protobuf::uint32 crop_;
+  float crop_;
   ::google::protobuf::uint32 maxstore_;
   ::google::protobuf::uint32 maxcrop_;
   ::google::protobuf::uint32 lastupdate_;
@@ -487,6 +488,91 @@ class Village : public ::google::protobuf::Message {
   
   void InitAsDefaultInstance();
   static Village* default_instance_;
+};
+// -------------------------------------------------------------------
+
+class Villages : public ::google::protobuf::Message {
+ public:
+  Villages();
+  virtual ~Villages();
+  
+  Villages(const Villages& from);
+  
+  inline Villages& operator=(const Villages& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
+  
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
+  
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const Villages& default_instance();
+  
+  void Swap(Villages* other);
+  
+  // implements Message ----------------------------------------------
+  
+  Villages* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const Villages& from);
+  void MergeFrom(const Villages& from);
+  void Clear();
+  bool IsInitialized() const;
+  
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
+  
+  ::google::protobuf::Metadata GetMetadata() const;
+  
+  // nested types ----------------------------------------------------
+  
+  // accessors -------------------------------------------------------
+  
+  // repeated .entity.Village vil = 1;
+  inline int vil_size() const;
+  inline void clear_vil();
+  static const int kVilFieldNumber = 1;
+  inline const ::entity::Village& vil(int index) const;
+  inline ::entity::Village* mutable_vil(int index);
+  inline ::entity::Village* add_vil();
+  inline const ::google::protobuf::RepeatedPtrField< ::entity::Village >&
+      vil() const;
+  inline ::google::protobuf::RepeatedPtrField< ::entity::Village >*
+      mutable_vil();
+  
+  // @@protoc_insertion_point(class_scope:entity.Villages)
+ private:
+  
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
+  
+  ::google::protobuf::RepeatedPtrField< ::entity::Village > vil_;
+  
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(1 + 31) / 32];
+  
+  friend void  protobuf_AddDesc_entity_2eproto();
+  friend void protobuf_AssignDesc_entity_2eproto();
+  friend void protobuf_ShutdownFile_entity_2eproto();
+  
+  void InitAsDefaultInstance();
+  static Villages* default_instance_;
 };
 // ===================================================================
 
@@ -916,7 +1002,7 @@ inline void Village::set_iron(float value) {
   iron_ = value;
 }
 
-// required uint32 crop = 11;
+// required float crop = 11;
 inline bool Village::has_crop() const {
   return (_has_bits_[0] & 0x00000400u) != 0;
 }
@@ -927,13 +1013,13 @@ inline void Village::clear_has_crop() {
   _has_bits_[0] &= ~0x00000400u;
 }
 inline void Village::clear_crop() {
-  crop_ = 0u;
+  crop_ = 0;
   clear_has_crop();
 }
-inline ::google::protobuf::uint32 Village::crop() const {
+inline float Village::crop() const {
   return crop_;
 }
-inline void Village::set_crop(::google::protobuf::uint32 value) {
+inline void Village::set_crop(float value) {
   set_has_crop();
   crop_ = value;
 }
@@ -1236,6 +1322,35 @@ inline ::google::protobuf::uint32 Village::loyalty() const {
 inline void Village::set_loyalty(::google::protobuf::uint32 value) {
   set_has_loyalty();
   loyalty_ = value;
+}
+
+// -------------------------------------------------------------------
+
+// Villages
+
+// repeated .entity.Village vil = 1;
+inline int Villages::vil_size() const {
+  return vil_.size();
+}
+inline void Villages::clear_vil() {
+  vil_.Clear();
+}
+inline const ::entity::Village& Villages::vil(int index) const {
+  return vil_.Get(index);
+}
+inline ::entity::Village* Villages::mutable_vil(int index) {
+  return vil_.Mutable(index);
+}
+inline ::entity::Village* Villages::add_vil() {
+  return vil_.Add();
+}
+inline const ::google::protobuf::RepeatedPtrField< ::entity::Village >&
+Villages::vil() const {
+  return vil_;
+}
+inline ::google::protobuf::RepeatedPtrField< ::entity::Village >*
+Villages::mutable_vil() {
+  return &vil_;
 }
 
 

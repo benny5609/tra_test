@@ -23,6 +23,9 @@ const ::google::protobuf::internal::GeneratedMessageReflection*
 const ::google::protobuf::Descriptor* Village_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
   Village_reflection_ = NULL;
+const ::google::protobuf::Descriptor* Villages_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  Villages_reflection_ = NULL;
 
 }  // namespace
 
@@ -91,6 +94,21 @@ void protobuf_AssignDesc_entity_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(Village));
+  Villages_descriptor_ = file->message_type(2);
+  static const int Villages_offsets_[1] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Villages, vil_),
+  };
+  Villages_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      Villages_descriptor_,
+      Villages::default_instance_,
+      Villages_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Villages, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Villages, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(Villages));
 }
 
 namespace {
@@ -107,6 +125,8 @@ void protobuf_RegisterTypes(const ::std::string&) {
     WorldPlace_descriptor_, &WorldPlace::default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
     Village_descriptor_, &Village::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    Villages_descriptor_, &Villages::default_instance());
 }
 
 }  // namespace
@@ -116,6 +136,8 @@ void protobuf_ShutdownFile_entity_2eproto() {
   delete WorldPlace_reflection_;
   delete Village::default_instance_;
   delete Village_reflection_;
+  delete Villages::default_instance_;
+  delete Villages_reflection_;
 }
 
 void protobuf_AddDesc_entity_2eproto() {
@@ -133,18 +155,21 @@ void protobuf_AddDesc_entity_2eproto() {
     "\002 \002(\r\022\017\n\007capital\030\003 \002(\r\022\013\n\003pop\030\004 \002(\r\022\n\n\002c"
     "p\030\005 \002(\r\022\023\n\013celebration\030\006 \002(\005\022\014\n\004type\030\007 \002"
     "(\005\022\014\n\004wood\030\010 \002(\002\022\014\n\004clay\030\t \002(\002\022\014\n\004iron\030\n"
-    " \002(\002\022\014\n\004crop\030\013 \002(\r\022\020\n\010maxstore\030\014 \002(\r\022\017\n\007"
+    " \002(\002\022\014\n\004crop\030\013 \002(\002\022\020\n\010maxstore\030\014 \002(\r\022\017\n\007"
     "maxcrop\030\r \002(\r\022\022\n\nlastupdate\030\016 \002(\r\022\014\n\004exp"
     "1\030\017 \001(\005\022\014\n\004exp2\030\020 \001(\005\022\014\n\004exp3\030\021 \001(\005\022\017\n\007c"
     "reated\030\022 \001(\005\022\r\n\005natar\030\023 \001(\r\022\r\n\005starv\030\024 \001"
     "(\r\022\017\n\007evasion\030\025 \001(\r\022\014\n\004name\030\026 \002(\014\022\017\n\007loy"
-    "alty\030\027 \002(\r", 530);
+    "alty\030\027 \002(\r\"(\n\010Villages\022\034\n\003vil\030\001 \003(\0132\017.en"
+    "tity.Village", 572);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "entity.proto", &protobuf_RegisterTypes);
   WorldPlace::default_instance_ = new WorldPlace();
   Village::default_instance_ = new Village();
+  Villages::default_instance_ = new Villages();
   WorldPlace::default_instance_->InitAsDefaultInstance();
   Village::default_instance_->InitAsDefaultInstance();
+  Villages::default_instance_->InitAsDefaultInstance();
   ::google::protobuf::internal::OnShutdown(&protobuf_ShutdownFile_entity_2eproto);
 }
 
@@ -667,7 +692,7 @@ void Village::SharedCtor() {
   wood_ = 0;
   clay_ = 0;
   iron_ = 0;
-  crop_ = 0u;
+  crop_ = 0;
   maxstore_ = 0u;
   maxcrop_ = 0u;
   lastupdate_ = 0u;
@@ -732,7 +757,7 @@ void Village::Clear() {
   if (_has_bits_[8 / 32] & (0xffu << (8 % 32))) {
     clay_ = 0;
     iron_ = 0;
-    crop_ = 0u;
+    crop_ = 0;
     maxstore_ = 0u;
     maxcrop_ = 0u;
     lastupdate_ = 0u;
@@ -915,17 +940,17 @@ bool Village::MergePartialFromCodedStream(
         } else {
           goto handle_uninterpreted;
         }
-        if (input->ExpectTag(88)) goto parse_crop;
+        if (input->ExpectTag(93)) goto parse_crop;
         break;
       }
       
-      // required uint32 crop = 11;
+      // required float crop = 11;
       case 11: {
         if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_FIXED32) {
          parse_crop:
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                   float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
                  input, &crop_)));
           set_has_crop();
         } else {
@@ -1194,9 +1219,9 @@ void Village::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteFloat(10, this->iron(), output);
   }
   
-  // required uint32 crop = 11;
+  // required float crop = 11;
   if (has_crop()) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt32(11, this->crop(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(11, this->crop(), output);
   }
   
   // required uint32 maxstore = 12;
@@ -1320,9 +1345,9 @@ void Village::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(10, this->iron(), target);
   }
   
-  // required uint32 crop = 11;
+  // required float crop = 11;
   if (has_crop()) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(11, this->crop(), target);
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(11, this->crop(), target);
   }
   
   // required uint32 maxstore = 12;
@@ -1464,11 +1489,9 @@ int Village::ByteSize() const {
       total_size += 1 + 4;
     }
     
-    // required uint32 crop = 11;
+    // required float crop = 11;
     if (has_crop()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::UInt32Size(
-          this->crop());
+      total_size += 1 + 4;
     }
     
     // required uint32 maxstore = 12;
@@ -1718,6 +1741,211 @@ void Village::Swap(Village* other) {
   ::google::protobuf::Metadata metadata;
   metadata.descriptor = Village_descriptor_;
   metadata.reflection = Village_reflection_;
+  return metadata;
+}
+
+
+// ===================================================================
+
+#ifndef _MSC_VER
+const int Villages::kVilFieldNumber;
+#endif  // !_MSC_VER
+
+Villages::Villages()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+}
+
+void Villages::InitAsDefaultInstance() {
+}
+
+Villages::Villages(const Villages& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+}
+
+void Villages::SharedCtor() {
+  _cached_size_ = 0;
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
+
+Villages::~Villages() {
+  SharedDtor();
+}
+
+void Villages::SharedDtor() {
+  if (this != default_instance_) {
+  }
+}
+
+void Villages::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* Villages::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return Villages_descriptor_;
+}
+
+const Villages& Villages::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_entity_2eproto();  return *default_instance_;
+}
+
+Villages* Villages::default_instance_ = NULL;
+
+Villages* Villages::New() const {
+  return new Villages;
+}
+
+void Villages::Clear() {
+  vil_.Clear();
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
+
+bool Villages::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!(EXPRESSION)) return false
+  ::google::protobuf::uint32 tag;
+  while ((tag = input->ReadTag()) != 0) {
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // repeated .entity.Village vil = 1;
+      case 1: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_vil:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+                input, add_vil()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(10)) goto parse_vil;
+        if (input->ExpectAtEnd()) return true;
+        break;
+      }
+      
+      default: {
+      handle_uninterpreted:
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          return true;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+  return true;
+#undef DO_
+}
+
+void Villages::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // repeated .entity.Village vil = 1;
+  for (int i = 0; i < this->vil_size(); i++) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, this->vil(i), output);
+  }
+  
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+}
+
+::google::protobuf::uint8* Villages::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // repeated .entity.Village vil = 1;
+  for (int i = 0; i < this->vil_size(); i++) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        1, this->vil(i), target);
+  }
+  
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  return target;
+}
+
+int Villages::ByteSize() const {
+  int total_size = 0;
+  
+  // repeated .entity.Village vil = 1;
+  total_size += 1 * this->vil_size();
+  for (int i = 0; i < this->vil_size(); i++) {
+    total_size +=
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+        this->vil(i));
+  }
+  
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void Villages::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const Villages* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const Villages*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
+
+void Villages::MergeFrom(const Villages& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  vil_.MergeFrom(from.vil_);
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
+
+void Villages::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void Villages::CopyFrom(const Villages& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool Villages::IsInitialized() const {
+  
+  for (int i = 0; i < vil_size(); i++) {
+    if (!this->vil(i).IsInitialized()) return false;
+  }
+  return true;
+}
+
+void Villages::Swap(Villages* other) {
+  if (other != this) {
+    vil_.Swap(&other->vil_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
+
+::google::protobuf::Metadata Villages::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = Villages_descriptor_;
+  metadata.reflection = Villages_reflection_;
   return metadata;
 }
 

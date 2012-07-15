@@ -17,6 +17,7 @@ enum Opcodes
 	CMSG_AUTH_SESSION								= 0x050,
 	SMSG_AUTH_RESPONSE							= 0x051,
 	CMSG_PLAYER_LOGIN								= 0x052,
+	SMSG_LOAD_VILLAGES								= 0x053,
 	NUM_MSG_TYPES	
 };
 #endif  // end of guard Opcodes.h

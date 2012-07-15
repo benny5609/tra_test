@@ -82,6 +82,15 @@ void WorldSession::SendPacket(WorldPacket const* packet)
         m_Socket->CloseSocket ();
 }
 
+void WorldSession::SendPacket(uint16 opcode, const google::protobuf::Message& message)
+{
+	if (!m_Socket)
+		return;
+
+	if (m_Socket->SendPacket (opcode, message) == -1)
+		m_Socket->CloseSocket ();
+}
+
 /// Add an incoming packet to the queue
 void WorldSession::QueuePacket(WorldPacket* new_packet)
 {

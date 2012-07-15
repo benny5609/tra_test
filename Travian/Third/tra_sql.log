@@ -1,0 +1,2227 @@
+E:\PHPnow-1.5.6\MySQL-5.1.50\bin\mysqld.exe, Version: 5.1.50-community-log (MySQL Community Server (GPL)). started with:
+TCP Port: 3306, Named Pipe: /tmp/mysql.sock
+Time                 Id Command    Argument
+120716  3:28:29	    1 Connect	root@localhost on 
+		    1 Init DB	s2
+		    1 Query	DELETE from s2_users where timestamp >= 1342380509 and act != ''
+		    1 Query	SELECT * FROM s2_odata WHERE wood < 800 OR clay < 800 OR iron < 800 OR crop < 800
+		    1 Query	SELECT * FROM s2_vdata WHERE maxstore < 800 OR maxcrop < 800
+		    1 Query	SELECT * FROM s2_vdata WHERE wood > maxstore OR clay > maxstore OR iron > maxstore OR crop > maxstore
+		    1 Query	SELECT * FROM s2_vdata WHERE wood < 0 OR clay < 0 OR iron < 0 OR crop < 0
+		    1 Query	SELECT * FROM s2_odata WHERE maxstore < 800 OR maxcrop < 800
+		    1 Query	SELECT * FROM s2_odata WHERE wood > maxstore OR clay > maxstore OR iron > maxstore OR crop > maxstore
+		    1 Query	SELECT * FROM s2_odata WHERE wood < 0 OR clay < 0 OR iron < 0 OR crop < 0
+		    1 Query	SELECT * FROM `s2_ww_attacks` WHERE `attack_time` <= 1342380509
+		    1 Query	SELECT id, lastupdate FROM s2_users WHERE lastupdate < 1342379909
+		    1 Query	SELECT sum(cp) FROM s2_vdata where owner = 6
+		    1 Query	UPDATE s2_users set cp = cp + 4.2093981481481, lastupdate = 1342380509 where id = '6'
+		    1 Query	SELECT sum(cp) FROM s2_vdata where owner = 7
+		    1 Query	UPDATE s2_users set cp = cp + 0.44130787037037, lastupdate = 1342380509 where id = '7'
+		    1 Query	SELECT sum(cp) FROM s2_vdata where owner = 8
+		    1 Query	UPDATE s2_users set cp = cp + 0.27157407407407, lastupdate = 1342380509 where id = '8'
+		    1 Query	SELECT sum(cp) FROM s2_vdata where owner = 9
+		    1 Query	UPDATE s2_users set cp = cp + 0.10184027777778, lastupdate = 1342380509 where id = '9'
+		    1 Query	SELECT * FROM s2_hero
+		    1 Query	SELECT uid FROM s2_deleting where timestamp < 1342380509
+		    1 Query	SELECT * FROM s2_bdata where timestamp < 1342380509 and master = 0
+		    1 Query	UPDATE s2_fdata set f1 = 8, f1t = 1 where vref = 43435
+		    1 Query	SELECT f1 from s2_fdata where vref = 43435
+		    1 Query	UPDATE s2_vdata set pop = pop + 2 where wref = 43435
+		    1 Query	UPDATE s2_vdata set cp = cp + 4 where wref = 43435
+		    1 Query	UPDATE s2_bdata set loopcon = 0 where loopcon = 1 and wid = 43435
+		    1 Query	DELETE FROM s2_bdata where id = 79
+		    1 Query	SELECT * FROM s2_bdata WHERE master = 1
+		    1 Query	SELECT * FROM s2_demolition WHERE timetofinish<=1342380509
+		    1 Query	SELECT * FROM `s2_fdata`
+		    1 Query	UPDATE `s2_vdata` SET `maxstore` = 11800, `maxcrop` = 5000 WHERE `wref` = 43435
+		    1 Query	UPDATE `s2_vdata` SET `maxstore` = 800, `maxcrop` = 1200 WHERE `wref` = 74687
+		    1 Query	UPDATE `s2_vdata` SET `maxstore` = 1700, `maxcrop` = 1200 WHERE `wref` = 4930
+		    1 Query	UPDATE `s2_vdata` SET `maxstore` = 800, `maxcrop` = 800 WHERE `wref` = 122531
+		    1 Query	DELETE from s2_route where timeleft < 1342380509
+		    1 Query	SELECT * FROM s2_route where timestamp < 1342380509
+		    1 Query	SELECT * FROM s2_movement, s2_send where s2_movement.ref = s2_send.id and s2_movement.proc = 0 and sort_type = 0 and endtime < 1342380509
+		    1 Query	SELECT * FROM s2_movement where proc = 0 and sort_type = 2 and endtime < 1342380509
+		    1 Query	SELECT * FROM s2_research where timestamp < 1342380509
+		    1 Query	SELECT * FROM s2_training where vref != ''
+		    1 Query	SELECT * FROM s2_vdata where starv != 0
+		    1 Query	SELECT * FROM s2_vdata where celebration < 1342380509 AND celebration != 0
+		    1 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.ref = s2_attacks.id and s2_movement.proc = '0' and s2_movement.sort_type = '3' and s2_attacks.attack_type != '2' and endtime < 1342380509 ORDER BY endtime ASC
+		    1 Query	SELECT * FROM s2_vdata WHERE loyalty<>100
+		    1 Query	SELECT * FROM s2_odata WHERE loyalty<>100
+		    1 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.ref = s2_attacks.id and s2_movement.proc = '0' and s2_movement.sort_type = '3' and s2_attacks.attack_type = '2' and endtime < 1342380509
+		    1 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.ref = s2_attacks.id and s2_movement.proc = '0' and s2_movement.sort_type = '4' and endtime < 1342380509
+		    1 Query	SELECT * FROM s2_movement, s2_send where s2_movement.ref = s2_send.id and s2_movement.proc = 0 and sort_type = 6 and endtime < 1342380509
+		    1 Query	SELECT * FROM s2_vdata WHERE maxstore < 800 OR maxcrop < 800
+		    1 Query	SELECT * FROM s2_vdata WHERE wood > maxstore OR clay > maxstore OR iron > maxstore OR crop > maxstore
+		    1 Query	SELECT * FROM s2_vdata WHERE wood < 0 OR clay < 0 OR iron < 0 OR crop < 0
+		    1 Query	SELECT * FROM s2_movement where ref = 0 and proc = '0' and sort_type = '4' and endtime < 1342380509
+		    1 Query	SELECT * FROM s2_movement where proc = 0 and sort_type = 5 and endtime < 1342380509
+		    1 Query	SELECT * FROM s2_general WHERE shown = 1
+		    1 Query	SELECT * FROM s2_users WHERE invited != 0
+		    1 Query	SELECT * FROM `s2_fdata`
+		    1 Query	UPDATE `s2_vdata` SET `maxstore` = 11800, `maxcrop` = 5000 WHERE `wref` = 43435
+		    1 Query	UPDATE `s2_vdata` SET `maxstore` = 800, `maxcrop` = 1200 WHERE `wref` = 74687
+		    1 Query	UPDATE `s2_vdata` SET `maxstore` = 1700, `maxcrop` = 1200 WHERE `wref` = 4930
+		    1 Query	UPDATE `s2_vdata` SET `maxstore` = 800, `maxcrop` = 800 WHERE `wref` = 122531
+		    1 Query	SELECT * FROM s2_users WHERE access < 8
+		    1 Query	SELECT count(id) FROM s2_users where id > 5
+		    1 Query	SELECT s2_users.id userid, s2_users.username username,s2_users.alliance alliance, (
+
+			SELECT SUM( s2_vdata.pop )
+			FROM s2_vdata
+			WHERE s2_vdata.owner = userid
+			)totalpop, (
+
+			SELECT COUNT( s2_vdata.wref )
+			FROM s2_vdata
+			WHERE s2_vdata.owner = userid AND type != 99
+			)totalvillages, (
+
+			SELECT s2_alidata.tag
+			FROM s2_alidata, s2_users
+			WHERE s2_alidata.id = s2_users.alliance
+			AND s2_users.id = userid
+			)allitag
+			FROM s2_users
+			WHERE s2_users.access < 8
+			ORDER BY totalpop DESC, totalvillages DESC
+		    1 Query	SELECT * FROM s2_medal order by week DESC LIMIT 0, 1
+		    1 Query	UPDATE s2_users set clp = '4' where id = 6
+		    1 Query	UPDATE s2_users set oldrank = '1' where id = 6
+		    1 Query	UPDATE s2_users set oldrank = '1' where id = 6
+		    1 Query	UPDATE s2_users set clp = '3' where id = 7
+		    1 Query	UPDATE s2_users set oldrank = '2' where id = 7
+		    1 Query	UPDATE s2_users set oldrank = '2' where id = 7
+		    1 Query	UPDATE s2_users set clp = '2' where id = 8
+		    1 Query	UPDATE s2_users set oldrank = '3' where id = 8
+		    1 Query	UPDATE s2_users set oldrank = '3' where id = 8
+		    1 Query	UPDATE s2_users set clp = '1' where id = 9
+		    1 Query	UPDATE s2_users set oldrank = '4' where id = 9
+		    1 Query	UPDATE s2_users set oldrank = '4' where id = 9
+		    1 Query	SELECT id,name,tag FROM s2_alidata where id != '' ORDER BY id DESC
+		    1 Query	SELECT id,name,tag FROM s2_alidata where id != '' ORDER BY id DESC
+		    1 Query	SELECT * FROM s2_banlist WHERE active = 1 and end < 1342380509
+		    1 Query	SELECT username FROM s2_users where username = 'benny' and sessid = '9e674bc03e21bcf8cb620ed5c4d2141f' LIMIT 1
+		    1 Query	SELECT * FROM s2_users where username = 'benny'
+		    1 Query	SELECT wref from s2_vdata where owner = 6 order by capital DESC,pop DESC
+		    1 Query	SELECT sit FROM s2_online where uid = 6
+		    1 Query	REPLACE into s2_active values ('benny',1342380509)
+		    1 Query	UPDATE s2_users set timestamp = '1342380509' where username = 'benny'
+		    1 Query	SELECT * FROM s2_mdata WHERE target = 6 and send = 0 and archived = 0 ORDER BY time DESC
+		    1 Query	SELECT * FROM s2_mdata WHERE owner = 6 ORDER BY time DESC
+		    1 Query	SELECT * FROM s2_mdata WHERE target = 6 and send = 0 and archived = 0 and deltarget = 0 ORDER BY time DESC
+		    1 Query	SELECT * FROM s2_mdata WHERE owner = 6 and delowner = 0 ORDER BY time DESC
+		    1 Query	SELECT * FROM s2_ndata where uid = 6 ORDER BY time DESC
+		    1 Query	SELECT * FROM s2_ndata where uid = 6 and del = 0 ORDER BY time DESC
+		    1 Query	SELECT * FROM s2_vdata where wref = 43435
+		    1 Query	SELECT * from s2_fdata where vref = 43435
+		    1 Query	SELECT x,y FROM s2_wdata where id = 43435
+		    1 Query	SELECT id, fieldtype FROM s2_wdata where id = 43435
+		    1 Query	SELECT * FROM s2_odata where conqured = 43435
+		    1 Query	SELECT * from s2_units where vref = 43435
+		    1 Query	SELECT * from s2_enforcement where vref = 43435
+		    1 Query	SELECT * from s2_enforcement where `from` = 43435
+		    1 Query	SELECT * from s2_units where vref = 43435
+		    1 Query	SELECT * from s2_enforcement where vref = 43435
+		    1 Query	SELECT * FROM s2_vdata where wref = 43435
+		    1 Query	SELECT tribe FROM s2_users where id = '6'
+		    1 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.from = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 3 ORDER BY endtime ASC
+		    1 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.to = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 4 ORDER BY endtime ASC
+		    1 Query	SELECT * FROM s2_movement where s2_movement.from = 43435 and sort_type = 5 and proc = 0 ORDER BY endtime ASC
+		    1 Query	SELECT * from s2_tdata where vref = 43435
+		    1 Query	SELECT * FROM s2_abdata where vref = 43435
+		    1 Query	SELECT * FROM s2_research where vref = 43435
+		    1 Query	SELECT * FROM s2_bdata where wid = 43435 and master = 1 order by master,timestamp ASC
+		    1 Query	SELECT * FROM s2_artefacts WHERE vref = 43435 AND type = 4 order by size
+		    1 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND type = 4 AND size=2
+		    1 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND type = 4 AND size=3
+		    1 Query	SELECT * from s2_fdata where vref = 43435
+		    1 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND owner != 3 AND type = 4 AND size=3
+		    1 Query	SELECT * FROM s2_artefacts WHERE vref = 43435 AND owner != 3 AND type = 4 AND size=1
+		    1 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND owner != 3 AND type = 4 AND size=2
+		    1 Query	UPDATE s2_vdata set wood = wood + 2287.1833333333, clay = clay + 2664.8833333333, iron = iron + 1238.0166666667, crop = crop + 1195.3505555556 where wref = 43435
+		    1 Query	UPDATE s2_vdata set lastupdate = 1342380509 where wref = 43435
+		    1 Query	SELECT * FROM s2_vdata where wref = 43435
+		    1 Query	SELECT * from s2_fdata where vref = 43435
+		    1 Query	SELECT x,y FROM s2_wdata where id = 43435
+		    1 Query	SELECT id, fieldtype FROM s2_wdata where id = 43435
+		    1 Query	SELECT * FROM s2_odata where conqured = 43435
+		    1 Query	SELECT * from s2_units where vref = 43435
+		    1 Query	SELECT * from s2_enforcement where vref = 43435
+		    1 Query	SELECT * from s2_enforcement where `from` = 43435
+		    1 Query	SELECT * from s2_units where vref = 43435
+		    1 Query	SELECT * from s2_enforcement where vref = 43435
+		    1 Query	SELECT * FROM s2_vdata where wref = 43435
+		    1 Query	SELECT tribe FROM s2_users where id = '6'
+		    1 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.from = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 3 ORDER BY endtime ASC
+		    1 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.to = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 4 ORDER BY endtime ASC
+		    1 Query	SELECT * FROM s2_movement where s2_movement.from = 43435 and sort_type = 5 and proc = 0 ORDER BY endtime ASC
+		    1 Query	SELECT * from s2_tdata where vref = 43435
+		    1 Query	SELECT * FROM s2_abdata where vref = 43435
+		    1 Query	SELECT * FROM s2_research where vref = 43435
+		    1 Query	SELECT * FROM s2_bdata where wid = 43435 and master = 1 order by master,timestamp ASC
+		    1 Query	SELECT * FROM s2_bdata where wid = 43435 order by master,timestamp ASC
+		    1 Query	SELECT timestamp from s2_deleting where uid = 6
+		    1 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.to = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 4 ORDER BY endtime ASC
+		    1 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.from = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 4 ORDER BY endtime ASC
+		    1 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.to = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 3 ORDER BY endtime ASC
+		    1 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.from = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 3 ORDER BY endtime ASC
+		    1 Query	SELECT * FROM s2_movement where s2_movement.to = 43435 and sort_type = 4 and ref = 0 and proc = 0 ORDER BY endtime ASC
+		    1 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.to = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 3 and s2_attacks.attack_type = 1 ORDER BY endtime ASC
+		    1 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.to = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 4 ORDER BY endtime ASC
+		    1 Query	SELECT * FROM s2_movement where s2_movement.to = 43435 and sort_type = 4 and ref = 0 and proc = 0 ORDER BY endtime ASC
+		    1 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.to = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 4 ORDER BY endtime ASC
+		    1 Query	SELECT * FROM s2_movement where s2_movement.to = 43435 and sort_type = 4 and ref = 0 and proc = 0 ORDER BY endtime ASC
+		    1 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.to = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 3 ORDER BY endtime ASC
+		    1 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.to = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 3 ORDER BY endtime ASC
+		    1 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.to = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 3 ORDER BY endtime ASC
+		    1 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.to = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 3 ORDER BY endtime ASC
+		    1 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.to = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 3 ORDER BY endtime ASC
+		    1 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.from = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 3 ORDER BY endtime ASC
+		    1 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.from = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 3 ORDER BY endtime ASC
+		    1 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.from = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 3 ORDER BY endtime ASC
+		    1 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.from = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 3 ORDER BY endtime ASC
+		    1 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.from = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 3 ORDER BY endtime ASC
+		    1 Query	SELECT * from s2_units where vref = 43435
+		    1 Query	SELECT * from s2_enforcement where vref = 43435
+		    1 Query	SELECT * from s2_units where vref = 43435
+		    1 Query	SELECT * FROM `s2_links` WHERE `userid` = 6 ORDER BY `pos` ASC
+		    1 Query	SELECT * from s2_fdata where vref = 43435
+		    1 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND owner != 3 AND type = 4 AND size=3
+		    1 Query	SELECT * FROM s2_artefacts WHERE vref = 43435 AND owner != 3 AND type = 4 AND size=1
+		    1 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND owner != 3 AND type = 4 AND size=2
+		    1 Quit	
+120716  3:29:25	    2 Connect	root@localhost on 
+		    2 Init DB	s2
+		    2 Query	DELETE from s2_users where timestamp >= 1342380565 and act != ''
+		    2 Query	SELECT * FROM s2_odata WHERE wood < 800 OR clay < 800 OR iron < 800 OR crop < 800
+		    2 Query	SELECT * FROM s2_vdata WHERE maxstore < 800 OR maxcrop < 800
+		    2 Query	SELECT * FROM s2_vdata WHERE wood > maxstore OR clay > maxstore OR iron > maxstore OR crop > maxstore
+		    2 Query	SELECT * FROM s2_vdata WHERE wood < 0 OR clay < 0 OR iron < 0 OR crop < 0
+		    2 Query	SELECT * FROM s2_odata WHERE maxstore < 800 OR maxcrop < 800
+		    2 Query	SELECT * FROM s2_odata WHERE wood > maxstore OR clay > maxstore OR iron > maxstore OR crop > maxstore
+		    2 Query	SELECT * FROM s2_odata WHERE wood < 0 OR clay < 0 OR iron < 0 OR crop < 0
+		    2 Query	SELECT * FROM `s2_ww_attacks` WHERE `attack_time` <= 1342380565
+		    2 Query	SELECT id, lastupdate FROM s2_users WHERE lastupdate < 1342379965
+		    2 Query	SELECT * FROM s2_hero
+		    2 Query	SELECT uid FROM s2_deleting where timestamp < 1342380565
+		    2 Query	SELECT * FROM s2_bdata where timestamp < 1342380565 and master = 0
+		    2 Query	SELECT * FROM s2_bdata WHERE master = 1
+		    2 Query	SELECT * FROM s2_demolition WHERE timetofinish<=1342380565
+		    2 Query	SELECT * FROM `s2_fdata`
+		    2 Query	UPDATE `s2_vdata` SET `maxstore` = 11800, `maxcrop` = 5000 WHERE `wref` = 43435
+		    2 Query	UPDATE `s2_vdata` SET `maxstore` = 800, `maxcrop` = 1200 WHERE `wref` = 74687
+		    2 Query	UPDATE `s2_vdata` SET `maxstore` = 1700, `maxcrop` = 1200 WHERE `wref` = 4930
+		    2 Query	UPDATE `s2_vdata` SET `maxstore` = 800, `maxcrop` = 800 WHERE `wref` = 122531
+		    2 Query	DELETE from s2_route where timeleft < 1342380565
+		    2 Query	SELECT * FROM s2_route where timestamp < 1342380565
+		    2 Query	SELECT * FROM s2_movement, s2_send where s2_movement.ref = s2_send.id and s2_movement.proc = 0 and sort_type = 0 and endtime < 1342380565
+		    2 Query	SELECT * FROM s2_movement where proc = 0 and sort_type = 2 and endtime < 1342380565
+		    2 Query	SELECT * FROM s2_research where timestamp < 1342380565
+		    2 Query	SELECT * FROM s2_training where vref != ''
+		    2 Query	SELECT * FROM s2_vdata where starv != 0
+		    2 Query	SELECT * FROM s2_vdata where celebration < 1342380565 AND celebration != 0
+		    2 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.ref = s2_attacks.id and s2_movement.proc = '0' and s2_movement.sort_type = '3' and s2_attacks.attack_type != '2' and endtime < 1342380565 ORDER BY endtime ASC
+		    2 Query	SELECT * FROM s2_vdata WHERE loyalty<>100
+		    2 Query	SELECT * FROM s2_odata WHERE loyalty<>100
+		    2 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.ref = s2_attacks.id and s2_movement.proc = '0' and s2_movement.sort_type = '3' and s2_attacks.attack_type = '2' and endtime < 1342380565
+		    2 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.ref = s2_attacks.id and s2_movement.proc = '0' and s2_movement.sort_type = '4' and endtime < 1342380565
+		    2 Query	SELECT * FROM s2_movement, s2_send where s2_movement.ref = s2_send.id and s2_movement.proc = 0 and sort_type = 6 and endtime < 1342380565
+		    2 Query	SELECT * FROM s2_vdata WHERE maxstore < 800 OR maxcrop < 800
+		    2 Query	SELECT * FROM s2_vdata WHERE wood > maxstore OR clay > maxstore OR iron > maxstore OR crop > maxstore
+		    2 Query	SELECT * FROM s2_vdata WHERE wood < 0 OR clay < 0 OR iron < 0 OR crop < 0
+		    2 Query	SELECT * FROM s2_movement where ref = 0 and proc = '0' and sort_type = '4' and endtime < 1342380565
+		    2 Query	SELECT * FROM s2_movement where proc = 0 and sort_type = 5 and endtime < 1342380565
+		    2 Query	SELECT * FROM s2_general WHERE shown = 1
+		    2 Query	SELECT * FROM s2_users WHERE invited != 0
+		    2 Query	SELECT * FROM `s2_fdata`
+		    2 Query	UPDATE `s2_vdata` SET `maxstore` = 11800, `maxcrop` = 5000 WHERE `wref` = 43435
+		    2 Query	UPDATE `s2_vdata` SET `maxstore` = 800, `maxcrop` = 1200 WHERE `wref` = 74687
+		    2 Query	UPDATE `s2_vdata` SET `maxstore` = 1700, `maxcrop` = 1200 WHERE `wref` = 4930
+		    2 Query	UPDATE `s2_vdata` SET `maxstore` = 800, `maxcrop` = 800 WHERE `wref` = 122531
+		    2 Query	SELECT * FROM s2_users WHERE access < 8
+		    2 Query	SELECT count(id) FROM s2_users where id > 5
+		    2 Query	SELECT s2_users.id userid, s2_users.username username,s2_users.alliance alliance, (
+
+			SELECT SUM( s2_vdata.pop )
+			FROM s2_vdata
+			WHERE s2_vdata.owner = userid
+			)totalpop, (
+
+			SELECT COUNT( s2_vdata.wref )
+			FROM s2_vdata
+			WHERE s2_vdata.owner = userid AND type != 99
+			)totalvillages, (
+
+			SELECT s2_alidata.tag
+			FROM s2_alidata, s2_users
+			WHERE s2_alidata.id = s2_users.alliance
+			AND s2_users.id = userid
+			)allitag
+			FROM s2_users
+			WHERE s2_users.access < 8
+			ORDER BY totalpop DESC, totalvillages DESC
+		    2 Query	SELECT * FROM s2_medal order by week DESC LIMIT 0, 1
+		    2 Query	UPDATE s2_users set clp = '4' where id = 6
+		    2 Query	UPDATE s2_users set oldrank = '1' where id = 6
+		    2 Query	UPDATE s2_users set oldrank = '1' where id = 6
+		    2 Query	UPDATE s2_users set clp = '3' where id = 7
+		    2 Query	UPDATE s2_users set oldrank = '2' where id = 7
+		    2 Query	UPDATE s2_users set oldrank = '2' where id = 7
+		    2 Query	UPDATE s2_users set clp = '2' where id = 8
+		    2 Query	UPDATE s2_users set oldrank = '3' where id = 8
+		    2 Query	UPDATE s2_users set oldrank = '3' where id = 8
+		    2 Query	UPDATE s2_users set clp = '1' where id = 9
+		    2 Query	UPDATE s2_users set oldrank = '4' where id = 9
+		    2 Query	UPDATE s2_users set oldrank = '4' where id = 9
+		    2 Query	SELECT id,name,tag FROM s2_alidata where id != '' ORDER BY id DESC
+		    2 Query	SELECT id,name,tag FROM s2_alidata where id != '' ORDER BY id DESC
+		    2 Query	SELECT * FROM s2_banlist WHERE active = 1 and end < 1342380565
+		    2 Query	SELECT username FROM s2_users where username = 'benny' and sessid = '9e674bc03e21bcf8cb620ed5c4d2141f' LIMIT 1
+		    2 Query	SELECT * FROM s2_users where username = 'benny'
+		    2 Query	SELECT wref from s2_vdata where owner = 6 order by capital DESC,pop DESC
+		    2 Query	SELECT sit FROM s2_online where uid = 6
+		    2 Query	REPLACE into s2_active values ('benny',1342380565)
+		    2 Query	UPDATE s2_users set timestamp = '1342380565' where username = 'benny'
+		    2 Query	SELECT * FROM s2_mdata WHERE target = 6 and send = 0 and archived = 0 ORDER BY time DESC
+		    2 Query	SELECT * FROM s2_mdata WHERE owner = 6 ORDER BY time DESC
+		    2 Query	SELECT * FROM s2_mdata WHERE target = 6 and send = 0 and archived = 0 and deltarget = 0 ORDER BY time DESC
+		    2 Query	SELECT * FROM s2_mdata WHERE owner = 6 and delowner = 0 ORDER BY time DESC
+		    2 Query	SELECT * FROM s2_ndata where uid = 6 ORDER BY time DESC
+		    2 Query	SELECT * FROM s2_ndata where uid = 6 and del = 0 ORDER BY time DESC
+		    2 Query	SELECT * FROM s2_vdata where wref = 43435
+		    2 Query	SELECT * from s2_fdata where vref = 43435
+		    2 Query	SELECT x,y FROM s2_wdata where id = 43435
+		    2 Query	SELECT id, fieldtype FROM s2_wdata where id = 43435
+		    2 Query	SELECT * FROM s2_odata where conqured = 43435
+		    2 Query	SELECT * from s2_units where vref = 43435
+		    2 Query	SELECT * from s2_enforcement where vref = 43435
+		    2 Query	SELECT * from s2_enforcement where `from` = 43435
+		    2 Query	SELECT * from s2_units where vref = 43435
+		    2 Query	SELECT * from s2_enforcement where vref = 43435
+		    2 Query	SELECT * FROM s2_vdata where wref = 43435
+		    2 Query	SELECT tribe FROM s2_users where id = '6'
+		    2 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.from = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 3 ORDER BY endtime ASC
+		    2 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.to = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 4 ORDER BY endtime ASC
+		    2 Query	SELECT * FROM s2_movement where s2_movement.from = 43435 and sort_type = 5 and proc = 0 ORDER BY endtime ASC
+		    2 Query	SELECT * from s2_tdata where vref = 43435
+		    2 Query	SELECT * FROM s2_abdata where vref = 43435
+		    2 Query	SELECT * FROM s2_research where vref = 43435
+		    2 Query	SELECT * FROM s2_bdata where wid = 43435 and master = 1 order by master,timestamp ASC
+		    2 Query	SELECT * FROM s2_artefacts WHERE vref = 43435 AND type = 4 order by size
+		    2 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND type = 4 AND size=2
+		    2 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND type = 4 AND size=3
+		    2 Query	SELECT * from s2_fdata where vref = 43435
+		    2 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND owner != 3 AND type = 4 AND size=3
+		    2 Query	SELECT * FROM s2_artefacts WHERE vref = 43435 AND owner != 3 AND type = 4 AND size=1
+		    2 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND owner != 3 AND type = 4 AND size=2
+		    2 Query	UPDATE s2_vdata set wood = wood + 50.866666666667, clay = clay + 59.266666666667, iron = iron + 27.533333333333, crop = crop + 26.584444444444 where wref = 43435
+		    2 Query	UPDATE s2_vdata set lastupdate = 1342380565 where wref = 43435
+		    2 Query	SELECT * FROM s2_vdata where wref = 43435
+		    2 Query	SELECT * from s2_fdata where vref = 43435
+		    2 Query	SELECT x,y FROM s2_wdata where id = 43435
+		    2 Query	SELECT id, fieldtype FROM s2_wdata where id = 43435
+		    2 Query	SELECT * FROM s2_odata where conqured = 43435
+		    2 Query	SELECT * from s2_units where vref = 43435
+		    2 Query	SELECT * from s2_enforcement where vref = 43435
+		    2 Query	SELECT * from s2_enforcement where `from` = 43435
+		    2 Query	SELECT * from s2_units where vref = 43435
+		    2 Query	SELECT * from s2_enforcement where vref = 43435
+		    2 Query	SELECT * FROM s2_vdata where wref = 43435
+		    2 Query	SELECT tribe FROM s2_users where id = '6'
+		    2 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.from = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 3 ORDER BY endtime ASC
+		    2 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.to = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 4 ORDER BY endtime ASC
+		    2 Query	SELECT * FROM s2_movement where s2_movement.from = 43435 and sort_type = 5 and proc = 0 ORDER BY endtime ASC
+		    2 Query	SELECT * from s2_tdata where vref = 43435
+		    2 Query	SELECT * FROM s2_abdata where vref = 43435
+		    2 Query	SELECT * FROM s2_research where vref = 43435
+		    2 Query	SELECT * FROM s2_bdata where wid = 43435 and master = 1 order by master,timestamp ASC
+		    2 Query	SELECT * FROM s2_bdata where wid = 43435 order by master,timestamp ASC
+		    2 Query	SELECT * FROM s2_movement, s2_send where s2_movement.to = 43435 and s2_movement.ref = s2_send.id and s2_movement.proc = 0 and s2_movement.sort_type = 0 ORDER BY endtime ASC
+		    2 Query	SELECT * FROM s2_movement, s2_send where s2_movement.from = 43435 and s2_movement.ref = s2_send.id and s2_movement.proc = 0 and s2_movement.sort_type = 0 ORDER BY endtime ASC
+		    2 Query	SELECT * FROM s2_movement where s2_movement.to = 43435 and s2_movement.proc = 0 and s2_movement.sort_type = 2 ORDER BY endtime ASC
+		    2 Query	SELECT sum(s2_send.merchant) from s2_send, s2_movement where s2_movement.from = 43435 and s2_send.id = s2_movement.ref and s2_movement.proc = 0 and sort_type = 0
+		    2 Query	SELECT sum(ref) from s2_movement where sort_type = 2 and s2_movement.to = 43435 and proc = 0
+		    2 Query	SELECT sum(merchant) from s2_market where vref = 43435 and accept = 0
+		    2 Query	SELECT owner FROM s2_vdata where wref = 43435
+		    2 Query	SELECT alliance FROM s2_users where id = '6'
+		    2 Query	SELECT * FROM s2_market where vref = 43435 and accept = 0
+		    2 Query	SELECT vref FROM s2_fdata WHERE f99 = '100' and f99t = '40'
+		    2 Query	SELECT timestamp from s2_deleting where uid = 6
+		    2 Query	SELECT * FROM s2_bdata where wid = 43435 and field = 5 and master = 1 order by master,timestamp ASC
+		    2 Query	SELECT * FROM s2_demolition WHERE vref=43435
+		    2 Query	SELECT * FROM s2_bdata where wid = 43435 order by master,timestamp ASC
+		    2 Query	SELECT * FROM s2_bdata where wid = 43435 and field = 5 and master = 1 order by master,timestamp ASC
+		    2 Query	SELECT * FROM `s2_links` WHERE `userid` = 6 ORDER BY `pos` ASC
+		    2 Query	SELECT * from s2_fdata where vref = 43435
+		    2 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND owner != 3 AND type = 4 AND size=3
+		    2 Query	SELECT * FROM s2_artefacts WHERE vref = 43435 AND owner != 3 AND type = 4 AND size=1
+		    2 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND owner != 3 AND type = 4 AND size=2
+		    2 Quit	
+120716  3:29:27	    3 Connect	root@localhost on 
+		    3 Init DB	s2
+		    3 Query	DELETE from s2_users where timestamp >= 1342380567 and act != ''
+		    3 Query	SELECT * FROM s2_odata WHERE wood < 800 OR clay < 800 OR iron < 800 OR crop < 800
+		    3 Query	SELECT * FROM s2_vdata WHERE maxstore < 800 OR maxcrop < 800
+		    3 Query	SELECT * FROM s2_vdata WHERE wood > maxstore OR clay > maxstore OR iron > maxstore OR crop > maxstore
+		    3 Query	SELECT * FROM s2_vdata WHERE wood < 0 OR clay < 0 OR iron < 0 OR crop < 0
+		    3 Query	SELECT * FROM s2_odata WHERE maxstore < 800 OR maxcrop < 800
+		    3 Query	SELECT * FROM s2_odata WHERE wood > maxstore OR clay > maxstore OR iron > maxstore OR crop > maxstore
+		    3 Query	SELECT * FROM s2_odata WHERE wood < 0 OR clay < 0 OR iron < 0 OR crop < 0
+		    3 Query	SELECT * FROM `s2_ww_attacks` WHERE `attack_time` <= 1342380567
+		    3 Query	SELECT id, lastupdate FROM s2_users WHERE lastupdate < 1342379967
+		    3 Query	SELECT * FROM s2_hero
+		    3 Query	SELECT uid FROM s2_deleting where timestamp < 1342380567
+		    3 Query	SELECT * FROM s2_bdata where timestamp < 1342380567 and master = 0
+		    3 Query	SELECT * FROM s2_bdata WHERE master = 1
+		    3 Query	SELECT * FROM s2_demolition WHERE timetofinish<=1342380567
+		    3 Query	SELECT * FROM `s2_fdata`
+		    3 Query	UPDATE `s2_vdata` SET `maxstore` = 11800, `maxcrop` = 5000 WHERE `wref` = 43435
+		    3 Query	UPDATE `s2_vdata` SET `maxstore` = 800, `maxcrop` = 1200 WHERE `wref` = 74687
+		    3 Query	UPDATE `s2_vdata` SET `maxstore` = 1700, `maxcrop` = 1200 WHERE `wref` = 4930
+		    3 Query	UPDATE `s2_vdata` SET `maxstore` = 800, `maxcrop` = 800 WHERE `wref` = 122531
+		    3 Query	DELETE from s2_route where timeleft < 1342380567
+		    3 Query	SELECT * FROM s2_route where timestamp < 1342380567
+		    3 Query	SELECT * FROM s2_movement, s2_send where s2_movement.ref = s2_send.id and s2_movement.proc = 0 and sort_type = 0 and endtime < 1342380567
+		    3 Query	SELECT * FROM s2_movement where proc = 0 and sort_type = 2 and endtime < 1342380567
+		    3 Query	SELECT * FROM s2_research where timestamp < 1342380567
+		    3 Query	SELECT * FROM s2_training where vref != ''
+		    3 Query	SELECT * FROM s2_vdata where starv != 0
+		    3 Query	SELECT * FROM s2_vdata where celebration < 1342380567 AND celebration != 0
+		    3 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.ref = s2_attacks.id and s2_movement.proc = '0' and s2_movement.sort_type = '3' and s2_attacks.attack_type != '2' and endtime < 1342380567 ORDER BY endtime ASC
+		    3 Query	SELECT * FROM s2_vdata WHERE loyalty<>100
+		    3 Query	SELECT * FROM s2_odata WHERE loyalty<>100
+		    3 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.ref = s2_attacks.id and s2_movement.proc = '0' and s2_movement.sort_type = '3' and s2_attacks.attack_type = '2' and endtime < 1342380567
+		    3 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.ref = s2_attacks.id and s2_movement.proc = '0' and s2_movement.sort_type = '4' and endtime < 1342380567
+		    3 Query	SELECT * FROM s2_movement, s2_send where s2_movement.ref = s2_send.id and s2_movement.proc = 0 and sort_type = 6 and endtime < 1342380567
+		    3 Query	SELECT * FROM s2_vdata WHERE maxstore < 800 OR maxcrop < 800
+		    3 Query	SELECT * FROM s2_vdata WHERE wood > maxstore OR clay > maxstore OR iron > maxstore OR crop > maxstore
+		    3 Query	SELECT * FROM s2_vdata WHERE wood < 0 OR clay < 0 OR iron < 0 OR crop < 0
+		    3 Query	SELECT * FROM s2_movement where ref = 0 and proc = '0' and sort_type = '4' and endtime < 1342380567
+		    3 Query	SELECT * FROM s2_movement where proc = 0 and sort_type = 5 and endtime < 1342380567
+		    3 Query	SELECT * FROM s2_general WHERE shown = 1
+		    3 Query	SELECT * FROM s2_users WHERE invited != 0
+		    3 Query	SELECT * FROM `s2_fdata`
+		    3 Query	UPDATE `s2_vdata` SET `maxstore` = 11800, `maxcrop` = 5000 WHERE `wref` = 43435
+		    3 Query	UPDATE `s2_vdata` SET `maxstore` = 800, `maxcrop` = 1200 WHERE `wref` = 74687
+		    3 Query	UPDATE `s2_vdata` SET `maxstore` = 1700, `maxcrop` = 1200 WHERE `wref` = 4930
+		    3 Query	UPDATE `s2_vdata` SET `maxstore` = 800, `maxcrop` = 800 WHERE `wref` = 122531
+		    3 Query	SELECT * FROM s2_users WHERE access < 8
+		    3 Query	SELECT count(id) FROM s2_users where id > 5
+		    3 Query	SELECT s2_users.id userid, s2_users.username username,s2_users.alliance alliance, (
+
+			SELECT SUM( s2_vdata.pop )
+			FROM s2_vdata
+			WHERE s2_vdata.owner = userid
+			)totalpop, (
+
+			SELECT COUNT( s2_vdata.wref )
+			FROM s2_vdata
+			WHERE s2_vdata.owner = userid AND type != 99
+			)totalvillages, (
+
+			SELECT s2_alidata.tag
+			FROM s2_alidata, s2_users
+			WHERE s2_alidata.id = s2_users.alliance
+			AND s2_users.id = userid
+			)allitag
+			FROM s2_users
+			WHERE s2_users.access < 8
+			ORDER BY totalpop DESC, totalvillages DESC
+		    3 Query	SELECT * FROM s2_medal order by week DESC LIMIT 0, 1
+		    3 Query	UPDATE s2_users set clp = '4' where id = 6
+		    3 Query	UPDATE s2_users set oldrank = '1' where id = 6
+		    3 Query	UPDATE s2_users set oldrank = '1' where id = 6
+		    3 Query	UPDATE s2_users set clp = '3' where id = 7
+		    3 Query	UPDATE s2_users set oldrank = '2' where id = 7
+		    3 Query	UPDATE s2_users set oldrank = '2' where id = 7
+		    3 Query	UPDATE s2_users set clp = '2' where id = 8
+		    3 Query	UPDATE s2_users set oldrank = '3' where id = 8
+		    3 Query	UPDATE s2_users set oldrank = '3' where id = 8
+		    3 Query	UPDATE s2_users set clp = '1' where id = 9
+		    3 Query	UPDATE s2_users set oldrank = '4' where id = 9
+		    3 Query	UPDATE s2_users set oldrank = '4' where id = 9
+		    3 Query	SELECT id,name,tag FROM s2_alidata where id != '' ORDER BY id DESC
+		    3 Query	SELECT id,name,tag FROM s2_alidata where id != '' ORDER BY id DESC
+		    3 Query	SELECT * FROM s2_banlist WHERE active = 1 and end < 1342380567
+		    3 Query	SELECT username FROM s2_users where username = 'benny' and sessid = '9e674bc03e21bcf8cb620ed5c4d2141f' LIMIT 1
+		    3 Query	SELECT * FROM s2_users where username = 'benny'
+		    3 Query	SELECT wref from s2_vdata where owner = 6 order by capital DESC,pop DESC
+		    3 Query	SELECT sit FROM s2_online where uid = 6
+		    3 Query	REPLACE into s2_active values ('benny',1342380567)
+		    3 Query	UPDATE s2_users set timestamp = '1342380567' where username = 'benny'
+		    3 Query	SELECT * FROM s2_mdata WHERE target = 6 and send = 0 and archived = 0 ORDER BY time DESC
+		    3 Query	SELECT * FROM s2_mdata WHERE owner = 6 ORDER BY time DESC
+		    3 Query	SELECT * FROM s2_mdata WHERE target = 6 and send = 0 and archived = 0 and deltarget = 0 ORDER BY time DESC
+		    3 Query	SELECT * FROM s2_mdata WHERE owner = 6 and delowner = 0 ORDER BY time DESC
+		    3 Query	SELECT * FROM s2_ndata where uid = 6 ORDER BY time DESC
+		    3 Query	SELECT * FROM s2_ndata where uid = 6 and del = 0 ORDER BY time DESC
+		    3 Query	SELECT * FROM s2_vdata where wref = 43435
+		    3 Query	SELECT * from s2_fdata where vref = 43435
+		    3 Query	SELECT x,y FROM s2_wdata where id = 43435
+		    3 Query	SELECT id, fieldtype FROM s2_wdata where id = 43435
+		    3 Query	SELECT * FROM s2_odata where conqured = 43435
+		    3 Query	SELECT * from s2_units where vref = 43435
+		    3 Query	SELECT * from s2_enforcement where vref = 43435
+		    3 Query	SELECT * from s2_enforcement where `from` = 43435
+		    3 Query	SELECT * from s2_units where vref = 43435
+		    3 Query	SELECT * from s2_enforcement where vref = 43435
+		    3 Query	SELECT * FROM s2_vdata where wref = 43435
+		    3 Query	SELECT tribe FROM s2_users where id = '6'
+		    3 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.from = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 3 ORDER BY endtime ASC
+		    3 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.to = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 4 ORDER BY endtime ASC
+		    3 Query	SELECT * FROM s2_movement where s2_movement.from = 43435 and sort_type = 5 and proc = 0 ORDER BY endtime ASC
+		    3 Query	SELECT * from s2_tdata where vref = 43435
+		    3 Query	SELECT * FROM s2_abdata where vref = 43435
+		    3 Query	SELECT * FROM s2_research where vref = 43435
+		    3 Query	SELECT * FROM s2_bdata where wid = 43435 and master = 1 order by master,timestamp ASC
+		    3 Query	SELECT * FROM s2_artefacts WHERE vref = 43435 AND type = 4 order by size
+		    3 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND type = 4 AND size=2
+		    3 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND type = 4 AND size=3
+		    3 Query	SELECT * from s2_fdata where vref = 43435
+		    3 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND owner != 3 AND type = 4 AND size=3
+		    3 Query	SELECT * FROM s2_artefacts WHERE vref = 43435 AND owner != 3 AND type = 4 AND size=1
+		    3 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND owner != 3 AND type = 4 AND size=2
+		    3 Query	UPDATE s2_vdata set wood = wood + 1.8166666666667, clay = clay + 2.1166666666667, iron = iron + 0.98333333333333, crop = crop + 0.94944444444444 where wref = 43435
+		    3 Query	UPDATE s2_vdata set lastupdate = 1342380567 where wref = 43435
+		    3 Query	SELECT * FROM s2_vdata where wref = 43435
+		    3 Query	SELECT * from s2_fdata where vref = 43435
+		    3 Query	SELECT x,y FROM s2_wdata where id = 43435
+		    3 Query	SELECT id, fieldtype FROM s2_wdata where id = 43435
+		    3 Query	SELECT * FROM s2_odata where conqured = 43435
+		    3 Query	SELECT * from s2_units where vref = 43435
+		    3 Query	SELECT * from s2_enforcement where vref = 43435
+		    3 Query	SELECT * from s2_enforcement where `from` = 43435
+		    3 Query	SELECT * from s2_units where vref = 43435
+		    3 Query	SELECT * from s2_enforcement where vref = 43435
+		    3 Query	SELECT * FROM s2_vdata where wref = 43435
+		    3 Query	SELECT tribe FROM s2_users where id = '6'
+		    3 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.from = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 3 ORDER BY endtime ASC
+		    3 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.to = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 4 ORDER BY endtime ASC
+		    3 Query	SELECT * FROM s2_movement where s2_movement.from = 43435 and sort_type = 5 and proc = 0 ORDER BY endtime ASC
+		    3 Query	SELECT * from s2_tdata where vref = 43435
+		    3 Query	SELECT * FROM s2_abdata where vref = 43435
+		    3 Query	SELECT * FROM s2_research where vref = 43435
+		    3 Query	SELECT * FROM s2_bdata where wid = 43435 and master = 1 order by master,timestamp ASC
+		    3 Query	SELECT * FROM s2_bdata where wid = 43435 order by master,timestamp ASC
+		    3 Query	SELECT timestamp from s2_deleting where uid = 6
+		    3 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.to = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 4 ORDER BY endtime ASC
+		    3 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.from = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 4 ORDER BY endtime ASC
+		    3 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.to = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 3 ORDER BY endtime ASC
+		    3 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.from = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 3 ORDER BY endtime ASC
+		    3 Query	SELECT * FROM s2_movement where s2_movement.to = 43435 and sort_type = 4 and ref = 0 and proc = 0 ORDER BY endtime ASC
+		    3 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.to = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 3 and s2_attacks.attack_type = 1 ORDER BY endtime ASC
+		    3 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.to = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 4 ORDER BY endtime ASC
+		    3 Query	SELECT * FROM s2_movement where s2_movement.to = 43435 and sort_type = 4 and ref = 0 and proc = 0 ORDER BY endtime ASC
+		    3 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.to = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 4 ORDER BY endtime ASC
+		    3 Query	SELECT * FROM s2_movement where s2_movement.to = 43435 and sort_type = 4 and ref = 0 and proc = 0 ORDER BY endtime ASC
+		    3 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.to = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 3 ORDER BY endtime ASC
+		    3 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.to = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 3 ORDER BY endtime ASC
+		    3 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.to = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 3 ORDER BY endtime ASC
+		    3 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.to = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 3 ORDER BY endtime ASC
+		    3 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.to = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 3 ORDER BY endtime ASC
+		    3 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.from = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 3 ORDER BY endtime ASC
+		    3 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.from = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 3 ORDER BY endtime ASC
+		    3 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.from = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 3 ORDER BY endtime ASC
+		    3 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.from = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 3 ORDER BY endtime ASC
+		    3 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.from = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 3 ORDER BY endtime ASC
+		    3 Query	SELECT * from s2_units where vref = 43435
+		    3 Query	SELECT * from s2_enforcement where vref = 43435
+		    3 Query	SELECT * from s2_units where vref = 43435
+		    3 Query	SELECT * FROM `s2_links` WHERE `userid` = 6 ORDER BY `pos` ASC
+		    3 Query	SELECT * from s2_fdata where vref = 43435
+		    3 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND owner != 3 AND type = 4 AND size=3
+		    3 Query	SELECT * FROM s2_artefacts WHERE vref = 43435 AND owner != 3 AND type = 4 AND size=1
+		    3 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND owner != 3 AND type = 4 AND size=2
+		    3 Quit	
+120716  3:29:30	    4 Connect	root@localhost on 
+		    4 Init DB	s2
+		    4 Query	DELETE from s2_users where timestamp >= 1342380570 and act != ''
+		    4 Query	SELECT * FROM s2_odata WHERE wood < 800 OR clay < 800 OR iron < 800 OR crop < 800
+		    4 Query	SELECT * FROM s2_vdata WHERE maxstore < 800 OR maxcrop < 800
+		    4 Query	SELECT * FROM s2_vdata WHERE wood > maxstore OR clay > maxstore OR iron > maxstore OR crop > maxstore
+		    4 Query	SELECT * FROM s2_vdata WHERE wood < 0 OR clay < 0 OR iron < 0 OR crop < 0
+		    4 Query	SELECT * FROM s2_odata WHERE maxstore < 800 OR maxcrop < 800
+		    4 Query	SELECT * FROM s2_odata WHERE wood > maxstore OR clay > maxstore OR iron > maxstore OR crop > maxstore
+		    4 Query	SELECT * FROM s2_odata WHERE wood < 0 OR clay < 0 OR iron < 0 OR crop < 0
+		    4 Query	SELECT * FROM `s2_ww_attacks` WHERE `attack_time` <= 1342380570
+		    4 Query	SELECT id, lastupdate FROM s2_users WHERE lastupdate < 1342379970
+		    4 Query	SELECT * FROM s2_hero
+		    4 Query	SELECT uid FROM s2_deleting where timestamp < 1342380570
+		    4 Query	SELECT * FROM s2_bdata where timestamp < 1342380570 and master = 0
+		    4 Query	SELECT * FROM s2_bdata WHERE master = 1
+		    4 Query	SELECT * FROM s2_demolition WHERE timetofinish<=1342380570
+		    4 Query	SELECT * FROM `s2_fdata`
+		    4 Query	UPDATE `s2_vdata` SET `maxstore` = 11800, `maxcrop` = 5000 WHERE `wref` = 43435
+		    4 Query	UPDATE `s2_vdata` SET `maxstore` = 800, `maxcrop` = 1200 WHERE `wref` = 74687
+		    4 Query	UPDATE `s2_vdata` SET `maxstore` = 1700, `maxcrop` = 1200 WHERE `wref` = 4930
+		    4 Query	UPDATE `s2_vdata` SET `maxstore` = 800, `maxcrop` = 800 WHERE `wref` = 122531
+		    4 Query	DELETE from s2_route where timeleft < 1342380570
+		    4 Query	SELECT * FROM s2_route where timestamp < 1342380570
+		    4 Query	SELECT * FROM s2_movement, s2_send where s2_movement.ref = s2_send.id and s2_movement.proc = 0 and sort_type = 0 and endtime < 1342380570
+		    4 Query	SELECT * FROM s2_movement where proc = 0 and sort_type = 2 and endtime < 1342380570
+		    4 Query	SELECT * FROM s2_research where timestamp < 1342380570
+		    4 Query	SELECT * FROM s2_training where vref != ''
+		    4 Query	SELECT * FROM s2_vdata where starv != 0
+		    4 Query	SELECT * FROM s2_vdata where celebration < 1342380570 AND celebration != 0
+		    4 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.ref = s2_attacks.id and s2_movement.proc = '0' and s2_movement.sort_type = '3' and s2_attacks.attack_type != '2' and endtime < 1342380570 ORDER BY endtime ASC
+		    4 Query	SELECT * FROM s2_vdata WHERE loyalty<>100
+		    4 Query	SELECT * FROM s2_odata WHERE loyalty<>100
+		    4 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.ref = s2_attacks.id and s2_movement.proc = '0' and s2_movement.sort_type = '3' and s2_attacks.attack_type = '2' and endtime < 1342380570
+		    4 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.ref = s2_attacks.id and s2_movement.proc = '0' and s2_movement.sort_type = '4' and endtime < 1342380570
+		    4 Query	SELECT * FROM s2_movement, s2_send where s2_movement.ref = s2_send.id and s2_movement.proc = 0 and sort_type = 6 and endtime < 1342380570
+		    4 Query	SELECT * FROM s2_vdata WHERE maxstore < 800 OR maxcrop < 800
+		    4 Query	SELECT * FROM s2_vdata WHERE wood > maxstore OR clay > maxstore OR iron > maxstore OR crop > maxstore
+		    4 Query	SELECT * FROM s2_vdata WHERE wood < 0 OR clay < 0 OR iron < 0 OR crop < 0
+		    4 Query	SELECT * FROM s2_movement where ref = 0 and proc = '0' and sort_type = '4' and endtime < 1342380570
+		    4 Query	SELECT * FROM s2_movement where proc = 0 and sort_type = 5 and endtime < 1342380570
+		    4 Query	SELECT * FROM s2_general WHERE shown = 1
+		    4 Query	SELECT * FROM s2_users WHERE invited != 0
+		    4 Query	SELECT * FROM `s2_fdata`
+		    4 Query	UPDATE `s2_vdata` SET `maxstore` = 11800, `maxcrop` = 5000 WHERE `wref` = 43435
+		    4 Query	UPDATE `s2_vdata` SET `maxstore` = 800, `maxcrop` = 1200 WHERE `wref` = 74687
+		    4 Query	UPDATE `s2_vdata` SET `maxstore` = 1700, `maxcrop` = 1200 WHERE `wref` = 4930
+		    4 Query	UPDATE `s2_vdata` SET `maxstore` = 800, `maxcrop` = 800 WHERE `wref` = 122531
+		    4 Query	SELECT * FROM s2_users WHERE access < 8
+		    4 Query	SELECT count(id) FROM s2_users where id > 5
+		    4 Query	SELECT s2_users.id userid, s2_users.username username,s2_users.alliance alliance, (
+
+			SELECT SUM( s2_vdata.pop )
+			FROM s2_vdata
+			WHERE s2_vdata.owner = userid
+			)totalpop, (
+
+			SELECT COUNT( s2_vdata.wref )
+			FROM s2_vdata
+			WHERE s2_vdata.owner = userid AND type != 99
+			)totalvillages, (
+
+			SELECT s2_alidata.tag
+			FROM s2_alidata, s2_users
+			WHERE s2_alidata.id = s2_users.alliance
+			AND s2_users.id = userid
+			)allitag
+			FROM s2_users
+			WHERE s2_users.access < 8
+			ORDER BY totalpop DESC, totalvillages DESC
+		    4 Query	SELECT * FROM s2_medal order by week DESC LIMIT 0, 1
+		    4 Query	UPDATE s2_users set clp = '4' where id = 6
+		    4 Query	UPDATE s2_users set oldrank = '1' where id = 6
+		    4 Query	UPDATE s2_users set oldrank = '1' where id = 6
+		    4 Query	UPDATE s2_users set clp = '3' where id = 7
+		    4 Query	UPDATE s2_users set oldrank = '2' where id = 7
+		    4 Query	UPDATE s2_users set oldrank = '2' where id = 7
+		    4 Query	UPDATE s2_users set clp = '2' where id = 8
+		    4 Query	UPDATE s2_users set oldrank = '3' where id = 8
+		    4 Query	UPDATE s2_users set oldrank = '3' where id = 8
+		    4 Query	UPDATE s2_users set clp = '1' where id = 9
+		    4 Query	UPDATE s2_users set oldrank = '4' where id = 9
+		    4 Query	UPDATE s2_users set oldrank = '4' where id = 9
+		    4 Query	SELECT id,name,tag FROM s2_alidata where id != '' ORDER BY id DESC
+		    4 Query	SELECT id,name,tag FROM s2_alidata where id != '' ORDER BY id DESC
+		    4 Query	SELECT * FROM s2_banlist WHERE active = 1 and end < 1342380570
+		    4 Query	SELECT username FROM s2_users where username = 'benny' and sessid = '9e674bc03e21bcf8cb620ed5c4d2141f' LIMIT 1
+		    4 Query	SELECT * FROM s2_users where username = 'benny'
+		    4 Query	SELECT wref from s2_vdata where owner = 6 order by capital DESC,pop DESC
+		    4 Query	SELECT sit FROM s2_online where uid = 6
+		    4 Query	REPLACE into s2_active values ('benny',1342380570)
+		    4 Query	UPDATE s2_users set timestamp = '1342380570' where username = 'benny'
+		    4 Query	SELECT * FROM s2_mdata WHERE target = 6 and send = 0 and archived = 0 ORDER BY time DESC
+		    4 Query	SELECT * FROM s2_mdata WHERE owner = 6 ORDER BY time DESC
+		    4 Query	SELECT * FROM s2_mdata WHERE target = 6 and send = 0 and archived = 0 and deltarget = 0 ORDER BY time DESC
+		    4 Query	SELECT * FROM s2_mdata WHERE owner = 6 and delowner = 0 ORDER BY time DESC
+		    4 Query	SELECT * FROM s2_ndata where uid = 6 ORDER BY time DESC
+		    4 Query	SELECT * FROM s2_ndata where uid = 6 and del = 0 ORDER BY time DESC
+		    4 Query	SELECT * FROM s2_vdata where wref = 43435
+		    4 Query	SELECT * from s2_fdata where vref = 43435
+		    4 Query	SELECT x,y FROM s2_wdata where id = 43435
+		    4 Query	SELECT id, fieldtype FROM s2_wdata where id = 43435
+		    4 Query	SELECT * FROM s2_odata where conqured = 43435
+		    4 Query	SELECT * from s2_units where vref = 43435
+		    4 Query	SELECT * from s2_enforcement where vref = 43435
+		    4 Query	SELECT * from s2_enforcement where `from` = 43435
+		    4 Query	SELECT * from s2_units where vref = 43435
+		    4 Query	SELECT * from s2_enforcement where vref = 43435
+		    4 Query	SELECT * FROM s2_vdata where wref = 43435
+		    4 Query	SELECT tribe FROM s2_users where id = '6'
+		    4 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.from = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 3 ORDER BY endtime ASC
+		    4 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.to = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 4 ORDER BY endtime ASC
+		    4 Query	SELECT * FROM s2_movement where s2_movement.from = 43435 and sort_type = 5 and proc = 0 ORDER BY endtime ASC
+		    4 Query	SELECT * from s2_tdata where vref = 43435
+		    4 Query	SELECT * FROM s2_abdata where vref = 43435
+		    4 Query	SELECT * FROM s2_research where vref = 43435
+		    4 Query	SELECT * FROM s2_bdata where wid = 43435 and master = 1 order by master,timestamp ASC
+		    4 Query	SELECT * FROM s2_artefacts WHERE vref = 43435 AND type = 4 order by size
+		    4 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND type = 4 AND size=2
+		    4 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND type = 4 AND size=3
+		    4 Query	SELECT * from s2_fdata where vref = 43435
+		    4 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND owner != 3 AND type = 4 AND size=3
+		    4 Query	SELECT * FROM s2_artefacts WHERE vref = 43435 AND owner != 3 AND type = 4 AND size=1
+		    4 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND owner != 3 AND type = 4 AND size=2
+		    4 Query	UPDATE s2_vdata set wood = wood + 2.725, clay = clay + 3.175, iron = iron + 1.475, crop = crop + 1.4241666666667 where wref = 43435
+		    4 Query	UPDATE s2_vdata set lastupdate = 1342380570 where wref = 43435
+		    4 Query	SELECT * FROM s2_vdata where wref = 43435
+		    4 Query	SELECT * from s2_fdata where vref = 43435
+		    4 Query	SELECT x,y FROM s2_wdata where id = 43435
+		    4 Query	SELECT id, fieldtype FROM s2_wdata where id = 43435
+		    4 Query	SELECT * FROM s2_odata where conqured = 43435
+		    4 Query	SELECT * from s2_units where vref = 43435
+		    4 Query	SELECT * from s2_enforcement where vref = 43435
+		    4 Query	SELECT * from s2_enforcement where `from` = 43435
+		    4 Query	SELECT * from s2_units where vref = 43435
+		    4 Query	SELECT * from s2_enforcement where vref = 43435
+		    4 Query	SELECT * FROM s2_vdata where wref = 43435
+		    4 Query	SELECT tribe FROM s2_users where id = '6'
+		    4 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.from = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 3 ORDER BY endtime ASC
+		    4 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.to = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 4 ORDER BY endtime ASC
+		    4 Query	SELECT * FROM s2_movement where s2_movement.from = 43435 and sort_type = 5 and proc = 0 ORDER BY endtime ASC
+		    4 Query	SELECT * from s2_tdata where vref = 43435
+		    4 Query	SELECT * FROM s2_abdata where vref = 43435
+		    4 Query	SELECT * FROM s2_research where vref = 43435
+		    4 Query	SELECT * FROM s2_bdata where wid = 43435 and master = 1 order by master,timestamp ASC
+		    4 Query	SELECT * FROM s2_bdata where wid = 43435 order by master,timestamp ASC
+		    4 Query	SELECT * FROM s2_movement, s2_send where s2_movement.to = 43435 and s2_movement.ref = s2_send.id and s2_movement.proc = 0 and s2_movement.sort_type = 0 ORDER BY endtime ASC
+		    4 Query	SELECT * FROM s2_movement, s2_send where s2_movement.from = 43435 and s2_movement.ref = s2_send.id and s2_movement.proc = 0 and s2_movement.sort_type = 0 ORDER BY endtime ASC
+		    4 Query	SELECT * FROM s2_movement where s2_movement.to = 43435 and s2_movement.proc = 0 and s2_movement.sort_type = 2 ORDER BY endtime ASC
+		    4 Query	SELECT sum(s2_send.merchant) from s2_send, s2_movement where s2_movement.from = 43435 and s2_send.id = s2_movement.ref and s2_movement.proc = 0 and sort_type = 0
+		    4 Query	SELECT sum(ref) from s2_movement where sort_type = 2 and s2_movement.to = 43435 and proc = 0
+		    4 Query	SELECT sum(merchant) from s2_market where vref = 43435 and accept = 0
+		    4 Query	SELECT owner FROM s2_vdata where wref = 43435
+		    4 Query	SELECT alliance FROM s2_users where id = '6'
+		    4 Query	SELECT * FROM s2_market where vref = 43435 and accept = 0
+		    4 Query	SELECT vref FROM s2_fdata WHERE f99 = '100' and f99t = '40'
+		    4 Query	SELECT timestamp from s2_deleting where uid = 6
+		    4 Query	SELECT * FROM s2_bdata where wid = 43435 and field = 6 and master = 1 order by master,timestamp ASC
+		    4 Query	SELECT * FROM s2_demolition WHERE vref=43435
+		    4 Query	SELECT * FROM s2_bdata where wid = 43435 order by master,timestamp ASC
+		    4 Query	SELECT * FROM s2_bdata where wid = 43435 and field = 6 and master = 1 order by master,timestamp ASC
+		    4 Query	SELECT * FROM `s2_links` WHERE `userid` = 6 ORDER BY `pos` ASC
+		    4 Query	SELECT * from s2_fdata where vref = 43435
+		    4 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND owner != 3 AND type = 4 AND size=3
+		    4 Query	SELECT * FROM s2_artefacts WHERE vref = 43435 AND owner != 3 AND type = 4 AND size=1
+		    4 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND owner != 3 AND type = 4 AND size=2
+		    4 Quit	
+120716  3:29:32	    5 Connect	root@localhost on 
+		    5 Init DB	s2
+		    5 Query	DELETE from s2_users where timestamp >= 1342380572 and act != ''
+		    5 Query	SELECT * FROM s2_odata WHERE wood < 800 OR clay < 800 OR iron < 800 OR crop < 800
+		    5 Query	SELECT * FROM s2_vdata WHERE maxstore < 800 OR maxcrop < 800
+		    5 Query	SELECT * FROM s2_vdata WHERE wood > maxstore OR clay > maxstore OR iron > maxstore OR crop > maxstore
+		    5 Query	SELECT * FROM s2_vdata WHERE wood < 0 OR clay < 0 OR iron < 0 OR crop < 0
+		    5 Query	SELECT * FROM s2_odata WHERE maxstore < 800 OR maxcrop < 800
+		    5 Query	SELECT * FROM s2_odata WHERE wood > maxstore OR clay > maxstore OR iron > maxstore OR crop > maxstore
+		    5 Query	SELECT * FROM s2_odata WHERE wood < 0 OR clay < 0 OR iron < 0 OR crop < 0
+		    5 Query	SELECT * FROM `s2_ww_attacks` WHERE `attack_time` <= 1342380572
+		    5 Query	SELECT id, lastupdate FROM s2_users WHERE lastupdate < 1342379972
+		    5 Query	SELECT * FROM s2_hero
+		    5 Query	SELECT uid FROM s2_deleting where timestamp < 1342380572
+		    5 Query	SELECT * FROM s2_bdata where timestamp < 1342380572 and master = 0
+		    5 Query	SELECT * FROM s2_bdata WHERE master = 1
+		    5 Query	SELECT * FROM s2_demolition WHERE timetofinish<=1342380572
+		    5 Query	SELECT * FROM `s2_fdata`
+		    5 Query	UPDATE `s2_vdata` SET `maxstore` = 11800, `maxcrop` = 5000 WHERE `wref` = 43435
+		    5 Query	UPDATE `s2_vdata` SET `maxstore` = 800, `maxcrop` = 1200 WHERE `wref` = 74687
+		    5 Query	UPDATE `s2_vdata` SET `maxstore` = 1700, `maxcrop` = 1200 WHERE `wref` = 4930
+		    5 Query	UPDATE `s2_vdata` SET `maxstore` = 800, `maxcrop` = 800 WHERE `wref` = 122531
+		    5 Query	DELETE from s2_route where timeleft < 1342380572
+		    5 Query	SELECT * FROM s2_route where timestamp < 1342380572
+		    5 Query	SELECT * FROM s2_movement, s2_send where s2_movement.ref = s2_send.id and s2_movement.proc = 0 and sort_type = 0 and endtime < 1342380572
+		    5 Query	SELECT * FROM s2_movement where proc = 0 and sort_type = 2 and endtime < 1342380572
+		    5 Query	SELECT * FROM s2_research where timestamp < 1342380572
+		    5 Query	SELECT * FROM s2_training where vref != ''
+		    5 Query	SELECT * FROM s2_vdata where starv != 0
+		    5 Query	SELECT * FROM s2_vdata where celebration < 1342380572 AND celebration != 0
+		    5 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.ref = s2_attacks.id and s2_movement.proc = '0' and s2_movement.sort_type = '3' and s2_attacks.attack_type != '2' and endtime < 1342380572 ORDER BY endtime ASC
+		    5 Query	SELECT * FROM s2_vdata WHERE loyalty<>100
+		    5 Query	SELECT * FROM s2_odata WHERE loyalty<>100
+		    5 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.ref = s2_attacks.id and s2_movement.proc = '0' and s2_movement.sort_type = '3' and s2_attacks.attack_type = '2' and endtime < 1342380572
+		    5 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.ref = s2_attacks.id and s2_movement.proc = '0' and s2_movement.sort_type = '4' and endtime < 1342380572
+		    5 Query	SELECT * FROM s2_movement, s2_send where s2_movement.ref = s2_send.id and s2_movement.proc = 0 and sort_type = 6 and endtime < 1342380572
+		    5 Query	SELECT * FROM s2_vdata WHERE maxstore < 800 OR maxcrop < 800
+		    5 Query	SELECT * FROM s2_vdata WHERE wood > maxstore OR clay > maxstore OR iron > maxstore OR crop > maxstore
+		    5 Query	SELECT * FROM s2_vdata WHERE wood < 0 OR clay < 0 OR iron < 0 OR crop < 0
+		    5 Query	SELECT * FROM s2_movement where ref = 0 and proc = '0' and sort_type = '4' and endtime < 1342380572
+		    5 Query	SELECT * FROM s2_movement where proc = 0 and sort_type = 5 and endtime < 1342380572
+		    5 Query	SELECT * FROM s2_general WHERE shown = 1
+		    5 Query	SELECT * FROM s2_users WHERE invited != 0
+		    5 Query	SELECT * FROM `s2_fdata`
+		    5 Query	UPDATE `s2_vdata` SET `maxstore` = 11800, `maxcrop` = 5000 WHERE `wref` = 43435
+		    5 Query	UPDATE `s2_vdata` SET `maxstore` = 800, `maxcrop` = 1200 WHERE `wref` = 74687
+		    5 Query	UPDATE `s2_vdata` SET `maxstore` = 1700, `maxcrop` = 1200 WHERE `wref` = 4930
+		    5 Query	UPDATE `s2_vdata` SET `maxstore` = 800, `maxcrop` = 800 WHERE `wref` = 122531
+		    5 Query	SELECT * FROM s2_users WHERE access < 8
+		    5 Query	SELECT count(id) FROM s2_users where id > 5
+		    5 Query	SELECT s2_users.id userid, s2_users.username username,s2_users.alliance alliance, (
+
+			SELECT SUM( s2_vdata.pop )
+			FROM s2_vdata
+			WHERE s2_vdata.owner = userid
+			)totalpop, (
+
+			SELECT COUNT( s2_vdata.wref )
+			FROM s2_vdata
+			WHERE s2_vdata.owner = userid AND type != 99
+			)totalvillages, (
+
+			SELECT s2_alidata.tag
+			FROM s2_alidata, s2_users
+			WHERE s2_alidata.id = s2_users.alliance
+			AND s2_users.id = userid
+			)allitag
+			FROM s2_users
+			WHERE s2_users.access < 8
+			ORDER BY totalpop DESC, totalvillages DESC
+		    5 Query	SELECT * FROM s2_medal order by week DESC LIMIT 0, 1
+		    5 Query	UPDATE s2_users set clp = '4' where id = 6
+		    5 Query	UPDATE s2_users set oldrank = '1' where id = 6
+		    5 Query	UPDATE s2_users set oldrank = '1' where id = 6
+		    5 Query	UPDATE s2_users set clp = '3' where id = 7
+		    5 Query	UPDATE s2_users set oldrank = '2' where id = 7
+		    5 Query	UPDATE s2_users set oldrank = '2' where id = 7
+		    5 Query	UPDATE s2_users set clp = '2' where id = 8
+		    5 Query	UPDATE s2_users set oldrank = '3' where id = 8
+		    5 Query	UPDATE s2_users set oldrank = '3' where id = 8
+		    5 Query	UPDATE s2_users set clp = '1' where id = 9
+		    5 Query	UPDATE s2_users set oldrank = '4' where id = 9
+		    5 Query	UPDATE s2_users set oldrank = '4' where id = 9
+		    5 Query	SELECT id,name,tag FROM s2_alidata where id != '' ORDER BY id DESC
+		    5 Query	SELECT id,name,tag FROM s2_alidata where id != '' ORDER BY id DESC
+		    5 Query	SELECT * FROM s2_banlist WHERE active = 1 and end < 1342380572
+		    5 Query	SELECT username FROM s2_users where username = 'benny' and sessid = '9e674bc03e21bcf8cb620ed5c4d2141f' LIMIT 1
+		    5 Query	SELECT * FROM s2_users where username = 'benny'
+		    5 Query	SELECT wref from s2_vdata where owner = 6 order by capital DESC,pop DESC
+		    5 Query	SELECT sit FROM s2_online where uid = 6
+		    5 Query	REPLACE into s2_active values ('benny',1342380572)
+		    5 Query	UPDATE s2_users set timestamp = '1342380572' where username = 'benny'
+		    5 Query	SELECT * FROM s2_mdata WHERE target = 6 and send = 0 and archived = 0 ORDER BY time DESC
+		    5 Query	SELECT * FROM s2_mdata WHERE owner = 6 ORDER BY time DESC
+		    5 Query	SELECT * FROM s2_mdata WHERE target = 6 and send = 0 and archived = 0 and deltarget = 0 ORDER BY time DESC
+		    5 Query	SELECT * FROM s2_mdata WHERE owner = 6 and delowner = 0 ORDER BY time DESC
+		    5 Query	SELECT * FROM s2_ndata where uid = 6 ORDER BY time DESC
+		    5 Query	SELECT * FROM s2_ndata where uid = 6 and del = 0 ORDER BY time DESC
+		    5 Query	SELECT * FROM s2_vdata where wref = 43435
+		    5 Query	SELECT * from s2_fdata where vref = 43435
+		    5 Query	SELECT x,y FROM s2_wdata where id = 43435
+		    5 Query	SELECT id, fieldtype FROM s2_wdata where id = 43435
+		    5 Query	SELECT * FROM s2_odata where conqured = 43435
+		    5 Query	SELECT * from s2_units where vref = 43435
+		    5 Query	SELECT * from s2_enforcement where vref = 43435
+		    5 Query	SELECT * from s2_enforcement where `from` = 43435
+		    5 Query	SELECT * from s2_units where vref = 43435
+		    5 Query	SELECT * from s2_enforcement where vref = 43435
+		    5 Query	SELECT * FROM s2_vdata where wref = 43435
+		    5 Query	SELECT tribe FROM s2_users where id = '6'
+		    5 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.from = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 3 ORDER BY endtime ASC
+		    5 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.to = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 4 ORDER BY endtime ASC
+		    5 Query	SELECT * FROM s2_movement where s2_movement.from = 43435 and sort_type = 5 and proc = 0 ORDER BY endtime ASC
+		    5 Query	SELECT * from s2_tdata where vref = 43435
+		    5 Query	SELECT * FROM s2_abdata where vref = 43435
+		    5 Query	SELECT * FROM s2_research where vref = 43435
+		    5 Query	SELECT * FROM s2_bdata where wid = 43435 and master = 1 order by master,timestamp ASC
+		    5 Query	SELECT * FROM s2_artefacts WHERE vref = 43435 AND type = 4 order by size
+		    5 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND type = 4 AND size=2
+		    5 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND type = 4 AND size=3
+		    5 Query	SELECT * from s2_fdata where vref = 43435
+		    5 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND owner != 3 AND type = 4 AND size=3
+		    5 Query	SELECT * FROM s2_artefacts WHERE vref = 43435 AND owner != 3 AND type = 4 AND size=1
+		    5 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND owner != 3 AND type = 4 AND size=2
+		    5 Query	UPDATE s2_vdata set wood = wood + 1.8166666666667, clay = clay + 2.1166666666667, iron = iron + 0.98333333333333, crop = crop + 0.94944444444444 where wref = 43435
+		    5 Query	UPDATE s2_vdata set lastupdate = 1342380572 where wref = 43435
+		    5 Query	SELECT * FROM s2_vdata where wref = 43435
+		    5 Query	SELECT * from s2_fdata where vref = 43435
+		    5 Query	SELECT x,y FROM s2_wdata where id = 43435
+		    5 Query	SELECT id, fieldtype FROM s2_wdata where id = 43435
+		    5 Query	SELECT * FROM s2_odata where conqured = 43435
+		    5 Query	SELECT * from s2_units where vref = 43435
+		    5 Query	SELECT * from s2_enforcement where vref = 43435
+		    5 Query	SELECT * from s2_enforcement where `from` = 43435
+		    5 Query	SELECT * from s2_units where vref = 43435
+		    5 Query	SELECT * from s2_enforcement where vref = 43435
+		    5 Query	SELECT * FROM s2_vdata where wref = 43435
+		    5 Query	SELECT tribe FROM s2_users where id = '6'
+		    5 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.from = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 3 ORDER BY endtime ASC
+		    5 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.to = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 4 ORDER BY endtime ASC
+		    5 Query	SELECT * FROM s2_movement where s2_movement.from = 43435 and sort_type = 5 and proc = 0 ORDER BY endtime ASC
+		    5 Query	SELECT * from s2_tdata where vref = 43435
+		    5 Query	SELECT * FROM s2_abdata where vref = 43435
+		    5 Query	SELECT * FROM s2_research where vref = 43435
+		    5 Query	SELECT * FROM s2_bdata where wid = 43435 and master = 1 order by master,timestamp ASC
+		    5 Query	SELECT * FROM s2_bdata where wid = 43435 order by master,timestamp ASC
+		    5 Query	SELECT * FROM s2_demolition WHERE vref=43435
+		    5 Query	SELECT * FROM s2_bdata where wid = 43435 order by master,timestamp ASC
+		    5 Query	SELECT * from s2_fdata where vref = 43435
+		    5 Query	SELECT * FROM s2_bdata where wid = 43435 and field = 6 and master = 0
+		    5 Query	UPDATE s2_fdata SET f6t=2 WHERE vref=43435
+		    5 Query	INSERT into s2_bdata values (0,43435,6,2,0,1342380603,0,3)
+		    5 Query	UPDATE s2_vdata set wood = wood - 225, clay = clay - 110, iron = iron - 225, crop = crop - 140 where wref = 43435
+		    5 Query	SELECT timestamp from s2_deleting where uid = 6
+		    5 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.to = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 4 ORDER BY endtime ASC
+		    5 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.from = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 4 ORDER BY endtime ASC
+		    5 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.to = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 3 ORDER BY endtime ASC
+		    5 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.from = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 3 ORDER BY endtime ASC
+		    5 Query	SELECT * FROM s2_movement where s2_movement.to = 43435 and sort_type = 4 and ref = 0 and proc = 0 ORDER BY endtime ASC
+		    5 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.to = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 3 and s2_attacks.attack_type = 1 ORDER BY endtime ASC
+		    5 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.to = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 4 ORDER BY endtime ASC
+		    5 Query	SELECT * FROM s2_movement where s2_movement.to = 43435 and sort_type = 4 and ref = 0 and proc = 0 ORDER BY endtime ASC
+		    5 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.to = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 4 ORDER BY endtime ASC
+		    5 Query	SELECT * FROM s2_movement where s2_movement.to = 43435 and sort_type = 4 and ref = 0 and proc = 0 ORDER BY endtime ASC
+		    5 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.to = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 3 ORDER BY endtime ASC
+		    5 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.to = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 3 ORDER BY endtime ASC
+		    5 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.to = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 3 ORDER BY endtime ASC
+		    5 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.to = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 3 ORDER BY endtime ASC
+		    5 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.to = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 3 ORDER BY endtime ASC
+		    5 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.from = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 3 ORDER BY endtime ASC
+		    5 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.from = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 3 ORDER BY endtime ASC
+		    5 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.from = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 3 ORDER BY endtime ASC
+		    5 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.from = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 3 ORDER BY endtime ASC
+		    5 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.from = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 3 ORDER BY endtime ASC
+		    5 Query	SELECT * from s2_units where vref = 43435
+		    5 Query	SELECT * from s2_enforcement where vref = 43435
+		    5 Query	SELECT * from s2_units where vref = 43435
+		    5 Query	SELECT * FROM `s2_links` WHERE `userid` = 6 ORDER BY `pos` ASC
+		    5 Query	SELECT * from s2_fdata where vref = 43435
+		    5 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND owner != 3 AND type = 4 AND size=3
+		    5 Query	SELECT * FROM s2_artefacts WHERE vref = 43435 AND owner != 3 AND type = 4 AND size=1
+		    5 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND owner != 3 AND type = 4 AND size=2
+		    5 Quit	
+		    6 Connect	root@localhost on 
+		    6 Init DB	s2
+		    6 Query	DELETE from s2_users where timestamp >= 1342380572 and act != ''
+		    6 Query	SELECT * FROM s2_odata WHERE wood < 800 OR clay < 800 OR iron < 800 OR crop < 800
+		    6 Query	SELECT * FROM s2_vdata WHERE maxstore < 800 OR maxcrop < 800
+		    6 Query	SELECT * FROM s2_vdata WHERE wood > maxstore OR clay > maxstore OR iron > maxstore OR crop > maxstore
+		    6 Query	SELECT * FROM s2_vdata WHERE wood < 0 OR clay < 0 OR iron < 0 OR crop < 0
+		    6 Query	SELECT * FROM s2_odata WHERE maxstore < 800 OR maxcrop < 800
+		    6 Query	SELECT * FROM s2_odata WHERE wood > maxstore OR clay > maxstore OR iron > maxstore OR crop > maxstore
+		    6 Query	SELECT * FROM s2_odata WHERE wood < 0 OR clay < 0 OR iron < 0 OR crop < 0
+		    6 Query	SELECT * FROM `s2_ww_attacks` WHERE `attack_time` <= 1342380572
+		    6 Query	SELECT id, lastupdate FROM s2_users WHERE lastupdate < 1342379972
+		    6 Query	SELECT * FROM s2_hero
+		    6 Query	SELECT uid FROM s2_deleting where timestamp < 1342380572
+		    6 Query	SELECT * FROM s2_bdata where timestamp < 1342380572 and master = 0
+		    6 Query	SELECT * FROM s2_bdata WHERE master = 1
+		    6 Query	SELECT * FROM s2_demolition WHERE timetofinish<=1342380572
+		    6 Query	SELECT * FROM `s2_fdata`
+		    6 Query	UPDATE `s2_vdata` SET `maxstore` = 11800, `maxcrop` = 5000 WHERE `wref` = 43435
+		    6 Query	UPDATE `s2_vdata` SET `maxstore` = 800, `maxcrop` = 1200 WHERE `wref` = 74687
+		    6 Query	UPDATE `s2_vdata` SET `maxstore` = 1700, `maxcrop` = 1200 WHERE `wref` = 4930
+		    6 Query	UPDATE `s2_vdata` SET `maxstore` = 800, `maxcrop` = 800 WHERE `wref` = 122531
+		    6 Query	DELETE from s2_route where timeleft < 1342380572
+		    6 Query	SELECT * FROM s2_route where timestamp < 1342380572
+		    6 Query	SELECT * FROM s2_movement, s2_send where s2_movement.ref = s2_send.id and s2_movement.proc = 0 and sort_type = 0 and endtime < 1342380572
+		    6 Query	SELECT * FROM s2_movement where proc = 0 and sort_type = 2 and endtime < 1342380572
+		    6 Query	SELECT * FROM s2_research where timestamp < 1342380572
+		    6 Query	SELECT * FROM s2_training where vref != ''
+		    6 Query	SELECT * FROM s2_vdata where starv != 0
+		    6 Query	SELECT * FROM s2_vdata where celebration < 1342380572 AND celebration != 0
+		    6 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.ref = s2_attacks.id and s2_movement.proc = '0' and s2_movement.sort_type = '3' and s2_attacks.attack_type != '2' and endtime < 1342380572 ORDER BY endtime ASC
+		    6 Query	SELECT * FROM s2_vdata WHERE loyalty<>100
+		    6 Query	SELECT * FROM s2_odata WHERE loyalty<>100
+		    6 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.ref = s2_attacks.id and s2_movement.proc = '0' and s2_movement.sort_type = '3' and s2_attacks.attack_type = '2' and endtime < 1342380572
+		    6 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.ref = s2_attacks.id and s2_movement.proc = '0' and s2_movement.sort_type = '4' and endtime < 1342380572
+		    6 Query	SELECT * FROM s2_movement, s2_send where s2_movement.ref = s2_send.id and s2_movement.proc = 0 and sort_type = 6 and endtime < 1342380572
+		    6 Query	SELECT * FROM s2_vdata WHERE maxstore < 800 OR maxcrop < 800
+		    6 Query	SELECT * FROM s2_vdata WHERE wood > maxstore OR clay > maxstore OR iron > maxstore OR crop > maxstore
+		    6 Query	SELECT * FROM s2_vdata WHERE wood < 0 OR clay < 0 OR iron < 0 OR crop < 0
+		    6 Query	SELECT * FROM s2_movement where ref = 0 and proc = '0' and sort_type = '4' and endtime < 1342380572
+		    6 Query	SELECT * FROM s2_movement where proc = 0 and sort_type = 5 and endtime < 1342380572
+		    6 Query	SELECT * FROM s2_general WHERE shown = 1
+		    6 Query	SELECT * FROM s2_users WHERE invited != 0
+		    6 Query	SELECT * FROM `s2_fdata`
+		    6 Query	UPDATE `s2_vdata` SET `maxstore` = 11800, `maxcrop` = 5000 WHERE `wref` = 43435
+		    6 Query	UPDATE `s2_vdata` SET `maxstore` = 800, `maxcrop` = 1200 WHERE `wref` = 74687
+		    6 Query	UPDATE `s2_vdata` SET `maxstore` = 1700, `maxcrop` = 1200 WHERE `wref` = 4930
+		    6 Query	UPDATE `s2_vdata` SET `maxstore` = 800, `maxcrop` = 800 WHERE `wref` = 122531
+		    6 Query	SELECT * FROM s2_users WHERE access < 8
+		    6 Query	SELECT count(id) FROM s2_users where id > 5
+		    6 Query	SELECT s2_users.id userid, s2_users.username username,s2_users.alliance alliance, (
+
+			SELECT SUM( s2_vdata.pop )
+			FROM s2_vdata
+			WHERE s2_vdata.owner = userid
+			)totalpop, (
+
+			SELECT COUNT( s2_vdata.wref )
+			FROM s2_vdata
+			WHERE s2_vdata.owner = userid AND type != 99
+			)totalvillages, (
+
+			SELECT s2_alidata.tag
+			FROM s2_alidata, s2_users
+			WHERE s2_alidata.id = s2_users.alliance
+			AND s2_users.id = userid
+			)allitag
+			FROM s2_users
+			WHERE s2_users.access < 8
+			ORDER BY totalpop DESC, totalvillages DESC
+		    6 Query	SELECT * FROM s2_medal order by week DESC LIMIT 0, 1
+		    6 Query	UPDATE s2_users set clp = '4' where id = 6
+		    6 Query	UPDATE s2_users set oldrank = '1' where id = 6
+		    6 Query	UPDATE s2_users set oldrank = '1' where id = 6
+		    6 Query	UPDATE s2_users set clp = '3' where id = 7
+		    6 Query	UPDATE s2_users set oldrank = '2' where id = 7
+		    6 Query	UPDATE s2_users set oldrank = '2' where id = 7
+		    6 Query	UPDATE s2_users set clp = '2' where id = 8
+		    6 Query	UPDATE s2_users set oldrank = '3' where id = 8
+		    6 Query	UPDATE s2_users set oldrank = '3' where id = 8
+		    6 Query	UPDATE s2_users set clp = '1' where id = 9
+		    6 Query	UPDATE s2_users set oldrank = '4' where id = 9
+		    6 Query	UPDATE s2_users set oldrank = '4' where id = 9
+		    6 Query	SELECT id,name,tag FROM s2_alidata where id != '' ORDER BY id DESC
+		    6 Query	SELECT id,name,tag FROM s2_alidata where id != '' ORDER BY id DESC
+		    6 Query	SELECT * FROM s2_banlist WHERE active = 1 and end < 1342380572
+		    6 Query	SELECT username FROM s2_users where username = 'benny' and sessid = '9e674bc03e21bcf8cb620ed5c4d2141f' LIMIT 1
+		    6 Query	SELECT * FROM s2_users where username = 'benny'
+		    6 Query	SELECT wref from s2_vdata where owner = 6 order by capital DESC,pop DESC
+		    6 Query	SELECT sit FROM s2_online where uid = 6
+		    6 Query	REPLACE into s2_active values ('benny',1342380572)
+		    6 Query	UPDATE s2_users set timestamp = '1342380572' where username = 'benny'
+		    6 Query	SELECT * FROM s2_mdata WHERE target = 6 and send = 0 and archived = 0 ORDER BY time DESC
+		    6 Query	SELECT * FROM s2_mdata WHERE owner = 6 ORDER BY time DESC
+		    6 Query	SELECT * FROM s2_mdata WHERE target = 6 and send = 0 and archived = 0 and deltarget = 0 ORDER BY time DESC
+		    6 Query	SELECT * FROM s2_mdata WHERE owner = 6 and delowner = 0 ORDER BY time DESC
+		    6 Query	SELECT * FROM s2_ndata where uid = 6 ORDER BY time DESC
+		    6 Query	SELECT * FROM s2_ndata where uid = 6 and del = 0 ORDER BY time DESC
+		    6 Query	SELECT * FROM s2_vdata where wref = 43435
+		    6 Query	SELECT * from s2_fdata where vref = 43435
+		    6 Query	SELECT x,y FROM s2_wdata where id = 43435
+		    6 Query	SELECT id, fieldtype FROM s2_wdata where id = 43435
+		    6 Query	SELECT * FROM s2_odata where conqured = 43435
+		    6 Query	SELECT * from s2_units where vref = 43435
+		    6 Query	SELECT * from s2_enforcement where vref = 43435
+		    6 Query	SELECT * from s2_enforcement where `from` = 43435
+		    6 Query	SELECT * from s2_units where vref = 43435
+		    6 Query	SELECT * from s2_enforcement where vref = 43435
+		    6 Query	SELECT * FROM s2_vdata where wref = 43435
+		    6 Query	SELECT tribe FROM s2_users where id = '6'
+		    6 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.from = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 3 ORDER BY endtime ASC
+		    6 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.to = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 4 ORDER BY endtime ASC
+		    6 Query	SELECT * FROM s2_movement where s2_movement.from = 43435 and sort_type = 5 and proc = 0 ORDER BY endtime ASC
+		    6 Query	SELECT * from s2_tdata where vref = 43435
+		    6 Query	SELECT * FROM s2_abdata where vref = 43435
+		    6 Query	SELECT * FROM s2_research where vref = 43435
+		    6 Query	SELECT * FROM s2_bdata where wid = 43435 and master = 1 order by master,timestamp ASC
+		    6 Query	SELECT * FROM s2_artefacts WHERE vref = 43435 AND type = 4 order by size
+		    6 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND type = 4 AND size=2
+		    6 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND type = 4 AND size=3
+		    6 Query	SELECT * from s2_fdata where vref = 43435
+		    6 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND owner != 3 AND type = 4 AND size=3
+		    6 Query	SELECT * FROM s2_artefacts WHERE vref = 43435 AND owner != 3 AND type = 4 AND size=1
+		    6 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND owner != 3 AND type = 4 AND size=2
+		    6 Query	UPDATE s2_vdata set wood = wood + 0, clay = clay + 0, iron = iron + 0, crop = crop + 0 where wref = 43435
+		    6 Query	UPDATE s2_vdata set lastupdate = 1342380572 where wref = 43435
+		    6 Query	SELECT * FROM s2_vdata where wref = 43435
+		    6 Query	SELECT * from s2_fdata where vref = 43435
+		    6 Query	SELECT x,y FROM s2_wdata where id = 43435
+		    6 Query	SELECT id, fieldtype FROM s2_wdata where id = 43435
+		    6 Query	SELECT * FROM s2_odata where conqured = 43435
+		    6 Query	SELECT * from s2_units where vref = 43435
+		    6 Query	SELECT * from s2_enforcement where vref = 43435
+		    6 Query	SELECT * from s2_enforcement where `from` = 43435
+		    6 Query	SELECT * from s2_units where vref = 43435
+		    6 Query	SELECT * from s2_enforcement where vref = 43435
+		    6 Query	SELECT * FROM s2_vdata where wref = 43435
+		    6 Query	SELECT tribe FROM s2_users where id = '6'
+		    6 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.from = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 3 ORDER BY endtime ASC
+		    6 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.to = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 4 ORDER BY endtime ASC
+		    6 Query	SELECT * FROM s2_movement where s2_movement.from = 43435 and sort_type = 5 and proc = 0 ORDER BY endtime ASC
+		    6 Query	SELECT * from s2_tdata where vref = 43435
+		    6 Query	SELECT * FROM s2_abdata where vref = 43435
+		    6 Query	SELECT * FROM s2_research where vref = 43435
+		    6 Query	SELECT * FROM s2_bdata where wid = 43435 and master = 1 order by master,timestamp ASC
+		    6 Query	SELECT * FROM s2_bdata where wid = 43435 order by master,timestamp ASC
+		    6 Query	SELECT timestamp from s2_deleting where uid = 6
+		    6 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.to = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 4 ORDER BY endtime ASC
+		    6 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.from = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 4 ORDER BY endtime ASC
+		    6 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.to = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 3 ORDER BY endtime ASC
+		    6 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.from = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 3 ORDER BY endtime ASC
+		    6 Query	SELECT * FROM s2_movement where s2_movement.to = 43435 and sort_type = 4 and ref = 0 and proc = 0 ORDER BY endtime ASC
+		    6 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.to = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 3 and s2_attacks.attack_type = 1 ORDER BY endtime ASC
+		    6 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.to = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 4 ORDER BY endtime ASC
+		    6 Query	SELECT * FROM s2_movement where s2_movement.to = 43435 and sort_type = 4 and ref = 0 and proc = 0 ORDER BY endtime ASC
+		    6 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.to = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 4 ORDER BY endtime ASC
+		    6 Query	SELECT * FROM s2_movement where s2_movement.to = 43435 and sort_type = 4 and ref = 0 and proc = 0 ORDER BY endtime ASC
+		    6 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.to = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 3 ORDER BY endtime ASC
+		    6 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.to = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 3 ORDER BY endtime ASC
+		    6 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.to = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 3 ORDER BY endtime ASC
+		    6 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.to = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 3 ORDER BY endtime ASC
+		    6 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.to = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 3 ORDER BY endtime ASC
+		    6 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.from = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 3 ORDER BY endtime ASC
+		    6 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.from = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 3 ORDER BY endtime ASC
+		    6 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.from = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 3 ORDER BY endtime ASC
+		    6 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.from = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 3 ORDER BY endtime ASC
+		    6 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.from = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 3 ORDER BY endtime ASC
+		    6 Query	SELECT * from s2_units where vref = 43435
+		    6 Query	SELECT * from s2_enforcement where vref = 43435
+		    6 Query	SELECT * from s2_units where vref = 43435
+		    6 Query	SELECT * FROM `s2_links` WHERE `userid` = 6 ORDER BY `pos` ASC
+		    6 Query	SELECT * from s2_fdata where vref = 43435
+		    6 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND owner != 3 AND type = 4 AND size=3
+		    6 Query	SELECT * FROM s2_artefacts WHERE vref = 43435 AND owner != 3 AND type = 4 AND size=1
+		    6 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND owner != 3 AND type = 4 AND size=2
+120716  3:29:33	    6 Quit	
+120716  3:29:34	    7 Connect	root@localhost on 
+		    7 Init DB	s2
+		    7 Query	DELETE from s2_users where timestamp >= 1342380574 and act != ''
+		    7 Query	SELECT * FROM s2_odata WHERE wood < 800 OR clay < 800 OR iron < 800 OR crop < 800
+		    7 Query	SELECT * FROM s2_vdata WHERE maxstore < 800 OR maxcrop < 800
+		    7 Query	SELECT * FROM s2_vdata WHERE wood > maxstore OR clay > maxstore OR iron > maxstore OR crop > maxstore
+		    7 Query	SELECT * FROM s2_vdata WHERE wood < 0 OR clay < 0 OR iron < 0 OR crop < 0
+		    7 Query	SELECT * FROM s2_odata WHERE maxstore < 800 OR maxcrop < 800
+		    7 Query	SELECT * FROM s2_odata WHERE wood > maxstore OR clay > maxstore OR iron > maxstore OR crop > maxstore
+		    7 Query	SELECT * FROM s2_odata WHERE wood < 0 OR clay < 0 OR iron < 0 OR crop < 0
+		    7 Query	SELECT * FROM `s2_ww_attacks` WHERE `attack_time` <= 1342380574
+		    7 Query	SELECT id, lastupdate FROM s2_users WHERE lastupdate < 1342379974
+		    7 Query	SELECT * FROM s2_hero
+		    7 Query	SELECT uid FROM s2_deleting where timestamp < 1342380574
+		    7 Query	SELECT * FROM s2_bdata where timestamp < 1342380574 and master = 0
+		    7 Query	SELECT * FROM s2_bdata WHERE master = 1
+		    7 Query	SELECT * FROM s2_demolition WHERE timetofinish<=1342380574
+		    7 Query	SELECT * FROM `s2_fdata`
+		    7 Query	UPDATE `s2_vdata` SET `maxstore` = 11800, `maxcrop` = 5000 WHERE `wref` = 43435
+		    7 Query	UPDATE `s2_vdata` SET `maxstore` = 800, `maxcrop` = 1200 WHERE `wref` = 74687
+		    7 Query	UPDATE `s2_vdata` SET `maxstore` = 1700, `maxcrop` = 1200 WHERE `wref` = 4930
+		    7 Query	UPDATE `s2_vdata` SET `maxstore` = 800, `maxcrop` = 800 WHERE `wref` = 122531
+		    7 Query	DELETE from s2_route where timeleft < 1342380574
+		    7 Query	SELECT * FROM s2_route where timestamp < 1342380574
+		    7 Query	SELECT * FROM s2_movement, s2_send where s2_movement.ref = s2_send.id and s2_movement.proc = 0 and sort_type = 0 and endtime < 1342380574
+		    7 Query	SELECT * FROM s2_movement where proc = 0 and sort_type = 2 and endtime < 1342380574
+		    7 Query	SELECT * FROM s2_research where timestamp < 1342380574
+		    7 Query	SELECT * FROM s2_training where vref != ''
+		    7 Query	SELECT * FROM s2_vdata where starv != 0
+		    7 Query	SELECT * FROM s2_vdata where celebration < 1342380574 AND celebration != 0
+		    7 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.ref = s2_attacks.id and s2_movement.proc = '0' and s2_movement.sort_type = '3' and s2_attacks.attack_type != '2' and endtime < 1342380574 ORDER BY endtime ASC
+		    7 Query	SELECT * FROM s2_vdata WHERE loyalty<>100
+		    7 Query	SELECT * FROM s2_odata WHERE loyalty<>100
+		    7 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.ref = s2_attacks.id and s2_movement.proc = '0' and s2_movement.sort_type = '3' and s2_attacks.attack_type = '2' and endtime < 1342380574
+		    7 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.ref = s2_attacks.id and s2_movement.proc = '0' and s2_movement.sort_type = '4' and endtime < 1342380574
+		    7 Query	SELECT * FROM s2_movement, s2_send where s2_movement.ref = s2_send.id and s2_movement.proc = 0 and sort_type = 6 and endtime < 1342380574
+		    7 Query	SELECT * FROM s2_vdata WHERE maxstore < 800 OR maxcrop < 800
+		    7 Query	SELECT * FROM s2_vdata WHERE wood > maxstore OR clay > maxstore OR iron > maxstore OR crop > maxstore
+		    7 Query	SELECT * FROM s2_vdata WHERE wood < 0 OR clay < 0 OR iron < 0 OR crop < 0
+		    7 Query	SELECT * FROM s2_movement where ref = 0 and proc = '0' and sort_type = '4' and endtime < 1342380574
+		    7 Query	SELECT * FROM s2_movement where proc = 0 and sort_type = 5 and endtime < 1342380574
+		    7 Query	SELECT * FROM s2_general WHERE shown = 1
+		    7 Query	SELECT * FROM s2_users WHERE invited != 0
+		    7 Query	SELECT * FROM `s2_fdata`
+		    7 Query	UPDATE `s2_vdata` SET `maxstore` = 11800, `maxcrop` = 5000 WHERE `wref` = 43435
+		    7 Query	UPDATE `s2_vdata` SET `maxstore` = 800, `maxcrop` = 1200 WHERE `wref` = 74687
+		    7 Query	UPDATE `s2_vdata` SET `maxstore` = 1700, `maxcrop` = 1200 WHERE `wref` = 4930
+		    7 Query	UPDATE `s2_vdata` SET `maxstore` = 800, `maxcrop` = 800 WHERE `wref` = 122531
+		    7 Query	SELECT * FROM s2_users WHERE access < 8
+		    7 Query	SELECT count(id) FROM s2_users where id > 5
+		    7 Query	SELECT s2_users.id userid, s2_users.username username,s2_users.alliance alliance, (
+
+			SELECT SUM( s2_vdata.pop )
+			FROM s2_vdata
+			WHERE s2_vdata.owner = userid
+			)totalpop, (
+
+			SELECT COUNT( s2_vdata.wref )
+			FROM s2_vdata
+			WHERE s2_vdata.owner = userid AND type != 99
+			)totalvillages, (
+
+			SELECT s2_alidata.tag
+			FROM s2_alidata, s2_users
+			WHERE s2_alidata.id = s2_users.alliance
+			AND s2_users.id = userid
+			)allitag
+			FROM s2_users
+			WHERE s2_users.access < 8
+			ORDER BY totalpop DESC, totalvillages DESC
+		    7 Query	SELECT * FROM s2_medal order by week DESC LIMIT 0, 1
+		    7 Query	UPDATE s2_users set clp = '4' where id = 6
+		    7 Query	UPDATE s2_users set oldrank = '1' where id = 6
+		    7 Query	UPDATE s2_users set oldrank = '1' where id = 6
+		    7 Query	UPDATE s2_users set clp = '3' where id = 7
+		    7 Query	UPDATE s2_users set oldrank = '2' where id = 7
+		    7 Query	UPDATE s2_users set oldrank = '2' where id = 7
+		    7 Query	UPDATE s2_users set clp = '2' where id = 8
+		    7 Query	UPDATE s2_users set oldrank = '3' where id = 8
+		    7 Query	UPDATE s2_users set oldrank = '3' where id = 8
+		    7 Query	UPDATE s2_users set clp = '1' where id = 9
+		    7 Query	UPDATE s2_users set oldrank = '4' where id = 9
+		    7 Query	UPDATE s2_users set oldrank = '4' where id = 9
+		    7 Query	SELECT id,name,tag FROM s2_alidata where id != '' ORDER BY id DESC
+		    7 Query	SELECT id,name,tag FROM s2_alidata where id != '' ORDER BY id DESC
+		    7 Query	SELECT * FROM s2_banlist WHERE active = 1 and end < 1342380574
+		    7 Query	SELECT username FROM s2_users where username = 'benny' and sessid = '9e674bc03e21bcf8cb620ed5c4d2141f' LIMIT 1
+		    7 Query	SELECT * FROM s2_users where username = 'benny'
+		    7 Query	SELECT wref from s2_vdata where owner = 6 order by capital DESC,pop DESC
+		    7 Query	SELECT sit FROM s2_online where uid = 6
+		    7 Query	REPLACE into s2_active values ('benny',1342380574)
+		    7 Query	UPDATE s2_users set timestamp = '1342380574' where username = 'benny'
+		    7 Query	SELECT * FROM s2_mdata WHERE target = 6 and send = 0 and archived = 0 ORDER BY time DESC
+		    7 Query	SELECT * FROM s2_mdata WHERE owner = 6 ORDER BY time DESC
+		    7 Query	SELECT * FROM s2_mdata WHERE target = 6 and send = 0 and archived = 0 and deltarget = 0 ORDER BY time DESC
+		    7 Query	SELECT * FROM s2_mdata WHERE owner = 6 and delowner = 0 ORDER BY time DESC
+		    7 Query	SELECT * FROM s2_ndata where uid = 6 ORDER BY time DESC
+		    7 Query	SELECT * FROM s2_ndata where uid = 6 and del = 0 ORDER BY time DESC
+		    7 Query	SELECT * FROM s2_vdata where wref = 43435
+		    7 Query	SELECT * from s2_fdata where vref = 43435
+		    7 Query	SELECT x,y FROM s2_wdata where id = 43435
+		    7 Query	SELECT id, fieldtype FROM s2_wdata where id = 43435
+		    7 Query	SELECT * FROM s2_odata where conqured = 43435
+		    7 Query	SELECT * from s2_units where vref = 43435
+		    7 Query	SELECT * from s2_enforcement where vref = 43435
+		    7 Query	SELECT * from s2_enforcement where `from` = 43435
+		    7 Query	SELECT * from s2_units where vref = 43435
+		    7 Query	SELECT * from s2_enforcement where vref = 43435
+		    7 Query	SELECT * FROM s2_vdata where wref = 43435
+		    7 Query	SELECT tribe FROM s2_users where id = '6'
+		    7 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.from = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 3 ORDER BY endtime ASC
+		    7 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.to = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 4 ORDER BY endtime ASC
+		    7 Query	SELECT * FROM s2_movement where s2_movement.from = 43435 and sort_type = 5 and proc = 0 ORDER BY endtime ASC
+		    7 Query	SELECT * from s2_tdata where vref = 43435
+		    7 Query	SELECT * FROM s2_abdata where vref = 43435
+		    7 Query	SELECT * FROM s2_research where vref = 43435
+		    7 Query	SELECT * FROM s2_bdata where wid = 43435 and master = 1 order by master,timestamp ASC
+		    7 Query	SELECT * FROM s2_artefacts WHERE vref = 43435 AND type = 4 order by size
+		    7 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND type = 4 AND size=2
+		    7 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND type = 4 AND size=3
+		    7 Query	SELECT * from s2_fdata where vref = 43435
+		    7 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND owner != 3 AND type = 4 AND size=3
+		    7 Query	SELECT * FROM s2_artefacts WHERE vref = 43435 AND owner != 3 AND type = 4 AND size=1
+		    7 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND owner != 3 AND type = 4 AND size=2
+		    7 Query	UPDATE s2_vdata set wood = wood + 1.8166666666667, clay = clay + 2.1166666666667, iron = iron + 0.98333333333333, crop = crop + 0.94944444444444 where wref = 43435
+		    7 Query	UPDATE s2_vdata set lastupdate = 1342380574 where wref = 43435
+		    7 Query	SELECT * FROM s2_vdata where wref = 43435
+		    7 Query	SELECT * from s2_fdata where vref = 43435
+		    7 Query	SELECT x,y FROM s2_wdata where id = 43435
+		    7 Query	SELECT id, fieldtype FROM s2_wdata where id = 43435
+		    7 Query	SELECT * FROM s2_odata where conqured = 43435
+		    7 Query	SELECT * from s2_units where vref = 43435
+		    7 Query	SELECT * from s2_enforcement where vref = 43435
+		    7 Query	SELECT * from s2_enforcement where `from` = 43435
+		    7 Query	SELECT * from s2_units where vref = 43435
+		    7 Query	SELECT * from s2_enforcement where vref = 43435
+		    7 Query	SELECT * FROM s2_vdata where wref = 43435
+		    7 Query	SELECT tribe FROM s2_users where id = '6'
+		    7 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.from = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 3 ORDER BY endtime ASC
+		    7 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.to = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 4 ORDER BY endtime ASC
+		    7 Query	SELECT * FROM s2_movement where s2_movement.from = 43435 and sort_type = 5 and proc = 0 ORDER BY endtime ASC
+		    7 Query	SELECT * from s2_tdata where vref = 43435
+		    7 Query	SELECT * FROM s2_abdata where vref = 43435
+		    7 Query	SELECT * FROM s2_research where vref = 43435
+		    7 Query	SELECT * FROM s2_bdata where wid = 43435 and master = 1 order by master,timestamp ASC
+		    7 Query	SELECT * FROM s2_bdata where wid = 43435 order by master,timestamp ASC
+		    7 Query	SELECT timestamp from s2_deleting where uid = 6
+		    7 Query	SELECT * FROM `s2_links` WHERE `userid` = 6 ORDER BY `pos` ASC
+		    7 Query	SELECT * from s2_fdata where vref = 43435
+		    7 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND owner != 3 AND type = 4 AND size=3
+		    7 Query	SELECT * FROM s2_artefacts WHERE vref = 43435 AND owner != 3 AND type = 4 AND size=1
+		    7 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND owner != 3 AND type = 4 AND size=2
+		    7 Quit	
+120716  3:29:38	    8 Connect	root@localhost on 
+		    8 Init DB	s2
+		    8 Query	DELETE from s2_users where timestamp >= 1342380578 and act != ''
+		    8 Query	SELECT * FROM s2_odata WHERE wood < 800 OR clay < 800 OR iron < 800 OR crop < 800
+		    8 Query	SELECT * FROM s2_vdata WHERE maxstore < 800 OR maxcrop < 800
+		    8 Query	SELECT * FROM s2_vdata WHERE wood > maxstore OR clay > maxstore OR iron > maxstore OR crop > maxstore
+		    8 Query	SELECT * FROM s2_vdata WHERE wood < 0 OR clay < 0 OR iron < 0 OR crop < 0
+		    8 Query	SELECT * FROM s2_odata WHERE maxstore < 800 OR maxcrop < 800
+		    8 Query	SELECT * FROM s2_odata WHERE wood > maxstore OR clay > maxstore OR iron > maxstore OR crop > maxstore
+		    8 Query	SELECT * FROM s2_odata WHERE wood < 0 OR clay < 0 OR iron < 0 OR crop < 0
+		    8 Query	SELECT * FROM `s2_ww_attacks` WHERE `attack_time` <= 1342380578
+		    8 Query	SELECT id, lastupdate FROM s2_users WHERE lastupdate < 1342379978
+		    8 Query	SELECT * FROM s2_hero
+		    8 Query	SELECT uid FROM s2_deleting where timestamp < 1342380578
+		    8 Query	SELECT * FROM s2_bdata where timestamp < 1342380578 and master = 0
+		    8 Query	SELECT * FROM s2_bdata WHERE master = 1
+		    8 Query	SELECT * FROM s2_demolition WHERE timetofinish<=1342380578
+		    8 Query	SELECT * FROM `s2_fdata`
+		    8 Query	UPDATE `s2_vdata` SET `maxstore` = 11800, `maxcrop` = 5000 WHERE `wref` = 43435
+		    8 Query	UPDATE `s2_vdata` SET `maxstore` = 800, `maxcrop` = 1200 WHERE `wref` = 74687
+		    8 Query	UPDATE `s2_vdata` SET `maxstore` = 1700, `maxcrop` = 1200 WHERE `wref` = 4930
+		    8 Query	UPDATE `s2_vdata` SET `maxstore` = 800, `maxcrop` = 800 WHERE `wref` = 122531
+		    8 Query	DELETE from s2_route where timeleft < 1342380578
+		    8 Query	SELECT * FROM s2_route where timestamp < 1342380578
+		    8 Query	SELECT * FROM s2_movement, s2_send where s2_movement.ref = s2_send.id and s2_movement.proc = 0 and sort_type = 0 and endtime < 1342380578
+		    8 Query	SELECT * FROM s2_movement where proc = 0 and sort_type = 2 and endtime < 1342380578
+		    8 Query	SELECT * FROM s2_research where timestamp < 1342380578
+		    8 Query	SELECT * FROM s2_training where vref != ''
+		    8 Query	SELECT * FROM s2_vdata where starv != 0
+		    8 Query	SELECT * FROM s2_vdata where celebration < 1342380578 AND celebration != 0
+		    8 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.ref = s2_attacks.id and s2_movement.proc = '0' and s2_movement.sort_type = '3' and s2_attacks.attack_type != '2' and endtime < 1342380578 ORDER BY endtime ASC
+		    8 Query	SELECT * FROM s2_vdata WHERE loyalty<>100
+		    8 Query	SELECT * FROM s2_odata WHERE loyalty<>100
+		    8 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.ref = s2_attacks.id and s2_movement.proc = '0' and s2_movement.sort_type = '3' and s2_attacks.attack_type = '2' and endtime < 1342380578
+		    8 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.ref = s2_attacks.id and s2_movement.proc = '0' and s2_movement.sort_type = '4' and endtime < 1342380578
+		    8 Query	SELECT * FROM s2_movement, s2_send where s2_movement.ref = s2_send.id and s2_movement.proc = 0 and sort_type = 6 and endtime < 1342380578
+		    8 Query	SELECT * FROM s2_vdata WHERE maxstore < 800 OR maxcrop < 800
+		    8 Query	SELECT * FROM s2_vdata WHERE wood > maxstore OR clay > maxstore OR iron > maxstore OR crop > maxstore
+		    8 Query	SELECT * FROM s2_vdata WHERE wood < 0 OR clay < 0 OR iron < 0 OR crop < 0
+		    8 Query	SELECT * FROM s2_movement where ref = 0 and proc = '0' and sort_type = '4' and endtime < 1342380578
+		    8 Query	SELECT * FROM s2_movement where proc = 0 and sort_type = 5 and endtime < 1342380578
+		    8 Query	SELECT * FROM s2_general WHERE shown = 1
+		    8 Query	SELECT * FROM s2_users WHERE invited != 0
+		    8 Query	SELECT * FROM `s2_fdata`
+		    8 Query	UPDATE `s2_vdata` SET `maxstore` = 11800, `maxcrop` = 5000 WHERE `wref` = 43435
+		    8 Query	UPDATE `s2_vdata` SET `maxstore` = 800, `maxcrop` = 1200 WHERE `wref` = 74687
+		    8 Query	UPDATE `s2_vdata` SET `maxstore` = 1700, `maxcrop` = 1200 WHERE `wref` = 4930
+		    8 Query	UPDATE `s2_vdata` SET `maxstore` = 800, `maxcrop` = 800 WHERE `wref` = 122531
+		    8 Query	SELECT * FROM s2_users WHERE access < 8
+		    8 Query	SELECT count(id) FROM s2_users where id > 5
+		    8 Query	SELECT s2_users.id userid, s2_users.username username,s2_users.alliance alliance, (
+
+			SELECT SUM( s2_vdata.pop )
+			FROM s2_vdata
+			WHERE s2_vdata.owner = userid
+			)totalpop, (
+
+			SELECT COUNT( s2_vdata.wref )
+			FROM s2_vdata
+			WHERE s2_vdata.owner = userid AND type != 99
+			)totalvillages, (
+
+			SELECT s2_alidata.tag
+			FROM s2_alidata, s2_users
+			WHERE s2_alidata.id = s2_users.alliance
+			AND s2_users.id = userid
+			)allitag
+			FROM s2_users
+			WHERE s2_users.access < 8
+			ORDER BY totalpop DESC, totalvillages DESC
+		    8 Query	SELECT * FROM s2_medal order by week DESC LIMIT 0, 1
+		    8 Query	UPDATE s2_users set clp = '4' where id = 6
+		    8 Query	UPDATE s2_users set oldrank = '1' where id = 6
+		    8 Query	UPDATE s2_users set oldrank = '1' where id = 6
+		    8 Query	UPDATE s2_users set clp = '3' where id = 7
+		    8 Query	UPDATE s2_users set oldrank = '2' where id = 7
+		    8 Query	UPDATE s2_users set oldrank = '2' where id = 7
+		    8 Query	UPDATE s2_users set clp = '2' where id = 8
+		    8 Query	UPDATE s2_users set oldrank = '3' where id = 8
+		    8 Query	UPDATE s2_users set oldrank = '3' where id = 8
+		    8 Query	UPDATE s2_users set clp = '1' where id = 9
+		    8 Query	UPDATE s2_users set oldrank = '4' where id = 9
+		    8 Query	UPDATE s2_users set oldrank = '4' where id = 9
+		    8 Query	SELECT id,name,tag FROM s2_alidata where id != '' ORDER BY id DESC
+		    8 Query	SELECT id,name,tag FROM s2_alidata where id != '' ORDER BY id DESC
+		    8 Query	SELECT * FROM s2_banlist WHERE active = 1 and end < 1342380578
+		    8 Query	SELECT username FROM s2_users where username = 'benny' and sessid = '9e674bc03e21bcf8cb620ed5c4d2141f' LIMIT 1
+		    8 Query	SELECT * FROM s2_users where username = 'benny'
+		    8 Query	SELECT wref from s2_vdata where owner = 6 order by capital DESC,pop DESC
+		    8 Query	SELECT sit FROM s2_online where uid = 6
+		    8 Query	REPLACE into s2_active values ('benny',1342380578)
+		    8 Query	UPDATE s2_users set timestamp = '1342380578' where username = 'benny'
+		    8 Query	SELECT * FROM s2_mdata WHERE target = 6 and send = 0 and archived = 0 ORDER BY time DESC
+		    8 Query	SELECT * FROM s2_mdata WHERE owner = 6 ORDER BY time DESC
+		    8 Query	SELECT * FROM s2_mdata WHERE target = 6 and send = 0 and archived = 0 and deltarget = 0 ORDER BY time DESC
+		    8 Query	SELECT * FROM s2_mdata WHERE owner = 6 and delowner = 0 ORDER BY time DESC
+		    8 Query	SELECT * FROM s2_ndata where uid = 6 ORDER BY time DESC
+		    8 Query	SELECT * FROM s2_ndata where uid = 6 and del = 0 ORDER BY time DESC
+		    8 Query	SELECT * FROM s2_vdata where wref = 43435
+		    8 Query	SELECT * from s2_fdata where vref = 43435
+		    8 Query	SELECT x,y FROM s2_wdata where id = 43435
+		    8 Query	SELECT id, fieldtype FROM s2_wdata where id = 43435
+		    8 Query	SELECT * FROM s2_odata where conqured = 43435
+		    8 Query	SELECT * from s2_units where vref = 43435
+		    8 Query	SELECT * from s2_enforcement where vref = 43435
+		    8 Query	SELECT * from s2_enforcement where `from` = 43435
+		    8 Query	SELECT * from s2_units where vref = 43435
+		    8 Query	SELECT * from s2_enforcement where vref = 43435
+		    8 Query	SELECT * FROM s2_vdata where wref = 43435
+		    8 Query	SELECT tribe FROM s2_users where id = '6'
+		    8 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.from = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 3 ORDER BY endtime ASC
+		    8 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.to = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 4 ORDER BY endtime ASC
+		    8 Query	SELECT * FROM s2_movement where s2_movement.from = 43435 and sort_type = 5 and proc = 0 ORDER BY endtime ASC
+		    8 Query	SELECT * from s2_tdata where vref = 43435
+		    8 Query	SELECT * FROM s2_abdata where vref = 43435
+		    8 Query	SELECT * FROM s2_research where vref = 43435
+		    8 Query	SELECT * FROM s2_bdata where wid = 43435 and master = 1 order by master,timestamp ASC
+		    8 Query	SELECT * FROM s2_artefacts WHERE vref = 43435 AND type = 4 order by size
+		    8 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND type = 4 AND size=2
+		    8 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND type = 4 AND size=3
+		    8 Query	SELECT * from s2_fdata where vref = 43435
+		    8 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND owner != 3 AND type = 4 AND size=3
+		    8 Query	SELECT * FROM s2_artefacts WHERE vref = 43435 AND owner != 3 AND type = 4 AND size=1
+		    8 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND owner != 3 AND type = 4 AND size=2
+		    8 Query	UPDATE s2_vdata set wood = wood + 3.6333333333333, clay = clay + 4.2333333333333, iron = iron + 1.9666666666667, crop = crop + 1.8988888888889 where wref = 43435
+		    8 Query	UPDATE s2_vdata set lastupdate = 1342380578 where wref = 43435
+		    8 Query	SELECT * FROM s2_vdata where wref = 43435
+		    8 Query	SELECT * from s2_fdata where vref = 43435
+		    8 Query	SELECT x,y FROM s2_wdata where id = 43435
+		    8 Query	SELECT id, fieldtype FROM s2_wdata where id = 43435
+		    8 Query	SELECT * FROM s2_odata where conqured = 43435
+		    8 Query	SELECT * from s2_units where vref = 43435
+		    8 Query	SELECT * from s2_enforcement where vref = 43435
+		    8 Query	SELECT * from s2_enforcement where `from` = 43435
+		    8 Query	SELECT * from s2_units where vref = 43435
+		    8 Query	SELECT * from s2_enforcement where vref = 43435
+		    8 Query	SELECT * FROM s2_vdata where wref = 43435
+		    8 Query	SELECT tribe FROM s2_users where id = '6'
+		    8 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.from = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 3 ORDER BY endtime ASC
+		    8 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.to = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 4 ORDER BY endtime ASC
+		    8 Query	SELECT * FROM s2_movement where s2_movement.from = 43435 and sort_type = 5 and proc = 0 ORDER BY endtime ASC
+		    8 Query	SELECT * from s2_tdata where vref = 43435
+		    8 Query	SELECT * FROM s2_abdata where vref = 43435
+		    8 Query	SELECT * FROM s2_research where vref = 43435
+		    8 Query	SELECT * FROM s2_bdata where wid = 43435 and master = 1 order by master,timestamp ASC
+		    8 Query	SELECT * FROM s2_bdata where wid = 43435 order by master,timestamp ASC
+		    8 Query	SELECT * FROM s2_movement, s2_send where s2_movement.to = 43435 and s2_movement.ref = s2_send.id and s2_movement.proc = 0 and s2_movement.sort_type = 0 ORDER BY endtime ASC
+		    8 Query	SELECT * FROM s2_movement, s2_send where s2_movement.from = 43435 and s2_movement.ref = s2_send.id and s2_movement.proc = 0 and s2_movement.sort_type = 0 ORDER BY endtime ASC
+		    8 Query	SELECT * FROM s2_movement where s2_movement.to = 43435 and s2_movement.proc = 0 and s2_movement.sort_type = 2 ORDER BY endtime ASC
+		    8 Query	SELECT sum(s2_send.merchant) from s2_send, s2_movement where s2_movement.from = 43435 and s2_send.id = s2_movement.ref and s2_movement.proc = 0 and sort_type = 0
+		    8 Query	SELECT sum(ref) from s2_movement where sort_type = 2 and s2_movement.to = 43435 and proc = 0
+		    8 Query	SELECT sum(merchant) from s2_market where vref = 43435 and accept = 0
+		    8 Query	SELECT owner FROM s2_vdata where wref = 43435
+		    8 Query	SELECT alliance FROM s2_users where id = '6'
+		    8 Query	SELECT * FROM s2_market where vref = 43435 and accept = 0
+		    8 Query	SELECT vref FROM s2_fdata WHERE f99 = '100' and f99t = '40'
+		    8 Query	SELECT timestamp from s2_deleting where uid = 6
+		    8 Query	SELECT * FROM s2_bdata where wid = 43435 and field = 26 and master = 1 order by master,timestamp ASC
+		    8 Query	SELECT * FROM s2_demolition WHERE vref=43435
+		    8 Query	SELECT * FROM s2_bdata where wid = 43435 order by master,timestamp ASC
+		    8 Query	SELECT f6 from s2_fdata where vref = 43435
+		    8 Query	SELECT * FROM s2_bdata where wid = 43435 and field = 26 and master = 1 order by master,timestamp ASC
+		    8 Query	SELECT * FROM `s2_links` WHERE `userid` = 6 ORDER BY `pos` ASC
+		    8 Query	SELECT * from s2_fdata where vref = 43435
+		    8 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND owner != 3 AND type = 4 AND size=3
+		    8 Query	SELECT * FROM s2_artefacts WHERE vref = 43435 AND owner != 3 AND type = 4 AND size=1
+		    8 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND owner != 3 AND type = 4 AND size=2
+		    8 Quit	
+120716  3:29:40	    9 Connect	root@localhost on 
+		    9 Init DB	s2
+		    9 Query	DELETE from s2_users where timestamp >= 1342380580 and act != ''
+		    9 Query	SELECT * FROM s2_odata WHERE wood < 800 OR clay < 800 OR iron < 800 OR crop < 800
+		    9 Query	SELECT * FROM s2_vdata WHERE maxstore < 800 OR maxcrop < 800
+		    9 Query	SELECT * FROM s2_vdata WHERE wood > maxstore OR clay > maxstore OR iron > maxstore OR crop > maxstore
+		    9 Query	SELECT * FROM s2_vdata WHERE wood < 0 OR clay < 0 OR iron < 0 OR crop < 0
+		    9 Query	SELECT * FROM s2_odata WHERE maxstore < 800 OR maxcrop < 800
+		    9 Query	SELECT * FROM s2_odata WHERE wood > maxstore OR clay > maxstore OR iron > maxstore OR crop > maxstore
+		    9 Query	SELECT * FROM s2_odata WHERE wood < 0 OR clay < 0 OR iron < 0 OR crop < 0
+		    9 Query	SELECT * FROM `s2_ww_attacks` WHERE `attack_time` <= 1342380580
+		    9 Query	SELECT id, lastupdate FROM s2_users WHERE lastupdate < 1342379980
+		    9 Query	SELECT * FROM s2_hero
+		    9 Query	SELECT uid FROM s2_deleting where timestamp < 1342380580
+		    9 Query	SELECT * FROM s2_bdata where timestamp < 1342380580 and master = 0
+		    9 Query	SELECT * FROM s2_bdata WHERE master = 1
+		    9 Query	SELECT * FROM s2_demolition WHERE timetofinish<=1342380580
+		    9 Query	SELECT * FROM `s2_fdata`
+		    9 Query	UPDATE `s2_vdata` SET `maxstore` = 11800, `maxcrop` = 5000 WHERE `wref` = 43435
+		    9 Query	UPDATE `s2_vdata` SET `maxstore` = 800, `maxcrop` = 1200 WHERE `wref` = 74687
+		    9 Query	UPDATE `s2_vdata` SET `maxstore` = 1700, `maxcrop` = 1200 WHERE `wref` = 4930
+		    9 Query	UPDATE `s2_vdata` SET `maxstore` = 800, `maxcrop` = 800 WHERE `wref` = 122531
+		    9 Query	DELETE from s2_route where timeleft < 1342380580
+		    9 Query	SELECT * FROM s2_route where timestamp < 1342380580
+		    9 Query	SELECT * FROM s2_movement, s2_send where s2_movement.ref = s2_send.id and s2_movement.proc = 0 and sort_type = 0 and endtime < 1342380580
+		    9 Query	SELECT * FROM s2_movement where proc = 0 and sort_type = 2 and endtime < 1342380580
+		    9 Query	SELECT * FROM s2_research where timestamp < 1342380580
+		    9 Query	SELECT * FROM s2_training where vref != ''
+		    9 Query	SELECT * FROM s2_vdata where starv != 0
+		    9 Query	SELECT * FROM s2_vdata where celebration < 1342380580 AND celebration != 0
+		    9 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.ref = s2_attacks.id and s2_movement.proc = '0' and s2_movement.sort_type = '3' and s2_attacks.attack_type != '2' and endtime < 1342380580 ORDER BY endtime ASC
+		    9 Query	SELECT * FROM s2_vdata WHERE loyalty<>100
+		    9 Query	SELECT * FROM s2_odata WHERE loyalty<>100
+		    9 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.ref = s2_attacks.id and s2_movement.proc = '0' and s2_movement.sort_type = '3' and s2_attacks.attack_type = '2' and endtime < 1342380580
+		    9 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.ref = s2_attacks.id and s2_movement.proc = '0' and s2_movement.sort_type = '4' and endtime < 1342380580
+		    9 Query	SELECT * FROM s2_movement, s2_send where s2_movement.ref = s2_send.id and s2_movement.proc = 0 and sort_type = 6 and endtime < 1342380580
+		    9 Query	SELECT * FROM s2_vdata WHERE maxstore < 800 OR maxcrop < 800
+		    9 Query	SELECT * FROM s2_vdata WHERE wood > maxstore OR clay > maxstore OR iron > maxstore OR crop > maxstore
+		    9 Query	SELECT * FROM s2_vdata WHERE wood < 0 OR clay < 0 OR iron < 0 OR crop < 0
+		    9 Query	SELECT * FROM s2_movement where ref = 0 and proc = '0' and sort_type = '4' and endtime < 1342380580
+		    9 Query	SELECT * FROM s2_movement where proc = 0 and sort_type = 5 and endtime < 1342380580
+		    9 Query	SELECT * FROM s2_general WHERE shown = 1
+		    9 Query	SELECT * FROM s2_users WHERE invited != 0
+		    9 Query	SELECT * FROM `s2_fdata`
+		    9 Query	UPDATE `s2_vdata` SET `maxstore` = 11800, `maxcrop` = 5000 WHERE `wref` = 43435
+		    9 Query	UPDATE `s2_vdata` SET `maxstore` = 800, `maxcrop` = 1200 WHERE `wref` = 74687
+		    9 Query	UPDATE `s2_vdata` SET `maxstore` = 1700, `maxcrop` = 1200 WHERE `wref` = 4930
+		    9 Query	UPDATE `s2_vdata` SET `maxstore` = 800, `maxcrop` = 800 WHERE `wref` = 122531
+		    9 Query	SELECT * FROM s2_users WHERE access < 8
+		    9 Query	SELECT count(id) FROM s2_users where id > 5
+		    9 Query	SELECT s2_users.id userid, s2_users.username username,s2_users.alliance alliance, (
+
+			SELECT SUM( s2_vdata.pop )
+			FROM s2_vdata
+			WHERE s2_vdata.owner = userid
+			)totalpop, (
+
+			SELECT COUNT( s2_vdata.wref )
+			FROM s2_vdata
+			WHERE s2_vdata.owner = userid AND type != 99
+			)totalvillages, (
+
+			SELECT s2_alidata.tag
+			FROM s2_alidata, s2_users
+			WHERE s2_alidata.id = s2_users.alliance
+			AND s2_users.id = userid
+			)allitag
+			FROM s2_users
+			WHERE s2_users.access < 8
+			ORDER BY totalpop DESC, totalvillages DESC
+		    9 Query	SELECT * FROM s2_medal order by week DESC LIMIT 0, 1
+		    9 Query	UPDATE s2_users set clp = '4' where id = 6
+		    9 Query	UPDATE s2_users set oldrank = '1' where id = 6
+		    9 Query	UPDATE s2_users set oldrank = '1' where id = 6
+		    9 Query	UPDATE s2_users set clp = '3' where id = 7
+		    9 Query	UPDATE s2_users set oldrank = '2' where id = 7
+		    9 Query	UPDATE s2_users set oldrank = '2' where id = 7
+		    9 Query	UPDATE s2_users set clp = '2' where id = 8
+		    9 Query	UPDATE s2_users set oldrank = '3' where id = 8
+		    9 Query	UPDATE s2_users set oldrank = '3' where id = 8
+		    9 Query	UPDATE s2_users set clp = '1' where id = 9
+		    9 Query	UPDATE s2_users set oldrank = '4' where id = 9
+		    9 Query	UPDATE s2_users set oldrank = '4' where id = 9
+		    9 Query	SELECT id,name,tag FROM s2_alidata where id != '' ORDER BY id DESC
+		    9 Query	SELECT id,name,tag FROM s2_alidata where id != '' ORDER BY id DESC
+		    9 Query	SELECT * FROM s2_banlist WHERE active = 1 and end < 1342380580
+		    9 Query	SELECT username FROM s2_users where username = 'benny' and sessid = '9e674bc03e21bcf8cb620ed5c4d2141f' LIMIT 1
+		    9 Query	SELECT * FROM s2_users where username = 'benny'
+		    9 Query	SELECT wref from s2_vdata where owner = 6 order by capital DESC,pop DESC
+		    9 Query	SELECT sit FROM s2_online where uid = 6
+		    9 Query	REPLACE into s2_active values ('benny',1342380580)
+		    9 Query	UPDATE s2_users set timestamp = '1342380580' where username = 'benny'
+		    9 Query	SELECT * FROM s2_mdata WHERE target = 6 and send = 0 and archived = 0 ORDER BY time DESC
+		    9 Query	SELECT * FROM s2_mdata WHERE owner = 6 ORDER BY time DESC
+		    9 Query	SELECT * FROM s2_mdata WHERE target = 6 and send = 0 and archived = 0 and deltarget = 0 ORDER BY time DESC
+		    9 Query	SELECT * FROM s2_mdata WHERE owner = 6 and delowner = 0 ORDER BY time DESC
+		    9 Query	SELECT * FROM s2_ndata where uid = 6 ORDER BY time DESC
+		    9 Query	SELECT * FROM s2_ndata where uid = 6 and del = 0 ORDER BY time DESC
+		    9 Query	SELECT * FROM s2_vdata where wref = 43435
+		    9 Query	SELECT * from s2_fdata where vref = 43435
+		    9 Query	SELECT x,y FROM s2_wdata where id = 43435
+		    9 Query	SELECT id, fieldtype FROM s2_wdata where id = 43435
+		    9 Query	SELECT * FROM s2_odata where conqured = 43435
+		    9 Query	SELECT * from s2_units where vref = 43435
+		    9 Query	SELECT * from s2_enforcement where vref = 43435
+		    9 Query	SELECT * from s2_enforcement where `from` = 43435
+		    9 Query	SELECT * from s2_units where vref = 43435
+		    9 Query	SELECT * from s2_enforcement where vref = 43435
+		    9 Query	SELECT * FROM s2_vdata where wref = 43435
+		    9 Query	SELECT tribe FROM s2_users where id = '6'
+		    9 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.from = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 3 ORDER BY endtime ASC
+		    9 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.to = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 4 ORDER BY endtime ASC
+		    9 Query	SELECT * FROM s2_movement where s2_movement.from = 43435 and sort_type = 5 and proc = 0 ORDER BY endtime ASC
+		    9 Query	SELECT * from s2_tdata where vref = 43435
+		    9 Query	SELECT * FROM s2_abdata where vref = 43435
+		    9 Query	SELECT * FROM s2_research where vref = 43435
+		    9 Query	SELECT * FROM s2_bdata where wid = 43435 and master = 1 order by master,timestamp ASC
+		    9 Query	SELECT * FROM s2_artefacts WHERE vref = 43435 AND type = 4 order by size
+		    9 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND type = 4 AND size=2
+		    9 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND type = 4 AND size=3
+		    9 Query	SELECT * from s2_fdata where vref = 43435
+		    9 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND owner != 3 AND type = 4 AND size=3
+		    9 Query	SELECT * FROM s2_artefacts WHERE vref = 43435 AND owner != 3 AND type = 4 AND size=1
+		    9 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND owner != 3 AND type = 4 AND size=2
+		    9 Query	UPDATE s2_vdata set wood = wood + 1.8166666666667, clay = clay + 2.1166666666667, iron = iron + 0.98333333333333, crop = crop + 0.94944444444444 where wref = 43435
+		    9 Query	UPDATE s2_vdata set lastupdate = 1342380580 where wref = 43435
+		    9 Query	SELECT * FROM s2_vdata where wref = 43435
+		    9 Query	SELECT * from s2_fdata where vref = 43435
+		    9 Query	SELECT x,y FROM s2_wdata where id = 43435
+		    9 Query	SELECT id, fieldtype FROM s2_wdata where id = 43435
+		    9 Query	SELECT * FROM s2_odata where conqured = 43435
+		    9 Query	SELECT * from s2_units where vref = 43435
+		    9 Query	SELECT * from s2_enforcement where vref = 43435
+		    9 Query	SELECT * from s2_enforcement where `from` = 43435
+		    9 Query	SELECT * from s2_units where vref = 43435
+		    9 Query	SELECT * from s2_enforcement where vref = 43435
+		    9 Query	SELECT * FROM s2_vdata where wref = 43435
+		    9 Query	SELECT tribe FROM s2_users where id = '6'
+		    9 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.from = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 3 ORDER BY endtime ASC
+		    9 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.to = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 4 ORDER BY endtime ASC
+		    9 Query	SELECT * FROM s2_movement where s2_movement.from = 43435 and sort_type = 5 and proc = 0 ORDER BY endtime ASC
+		    9 Query	SELECT * from s2_tdata where vref = 43435
+		    9 Query	SELECT * FROM s2_abdata where vref = 43435
+		    9 Query	SELECT * FROM s2_research where vref = 43435
+		    9 Query	SELECT * FROM s2_bdata where wid = 43435 and master = 1 order by master,timestamp ASC
+		    9 Query	SELECT * FROM s2_bdata where wid = 43435 order by master,timestamp ASC
+		    9 Query	SELECT * FROM s2_demolition WHERE vref=43435
+		    9 Query	SELECT * FROM s2_bdata where wid = 43435 order by master,timestamp ASC
+		    9 Query	SELECT f6 from s2_fdata where vref = 43435
+		    9 Query	SELECT * from s2_fdata where vref = 43435
+		    9 Query	SELECT * FROM s2_bdata where wid = 43435 and field = 26 and master = 0
+		    9 Query	UPDATE s2_fdata SET f26t=15 WHERE vref=43435
+		    9 Query	INSERT into s2_bdata values (0,43435,26,15,0,1342380790,0,6)
+		    9 Query	UPDATE s2_vdata set wood = wood - 240, clay = clay - 135, iron = iron - 205, crop = crop - 70 where wref = 43435
+		    9 Query	SELECT timestamp from s2_deleting where uid = 6
+		    9 Query	SELECT * FROM `s2_links` WHERE `userid` = 6 ORDER BY `pos` ASC
+		    9 Query	SELECT * from s2_fdata where vref = 43435
+		    9 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND owner != 3 AND type = 4 AND size=3
+		    9 Query	SELECT * FROM s2_artefacts WHERE vref = 43435 AND owner != 3 AND type = 4 AND size=1
+		    9 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND owner != 3 AND type = 4 AND size=2
+		    9 Quit	
+120716  3:29:41	   10 Connect	root@localhost on 
+		   10 Init DB	s2
+		   10 Query	DELETE from s2_users where timestamp >= 1342380581 and act != ''
+		   10 Query	SELECT * FROM s2_odata WHERE wood < 800 OR clay < 800 OR iron < 800 OR crop < 800
+		   10 Query	SELECT * FROM s2_vdata WHERE maxstore < 800 OR maxcrop < 800
+		   10 Query	SELECT * FROM s2_vdata WHERE wood > maxstore OR clay > maxstore OR iron > maxstore OR crop > maxstore
+		   10 Query	SELECT * FROM s2_vdata WHERE wood < 0 OR clay < 0 OR iron < 0 OR crop < 0
+		   10 Query	SELECT * FROM s2_odata WHERE maxstore < 800 OR maxcrop < 800
+		   10 Query	SELECT * FROM s2_odata WHERE wood > maxstore OR clay > maxstore OR iron > maxstore OR crop > maxstore
+		   10 Query	SELECT * FROM s2_odata WHERE wood < 0 OR clay < 0 OR iron < 0 OR crop < 0
+		   10 Query	SELECT * FROM `s2_ww_attacks` WHERE `attack_time` <= 1342380581
+		   10 Query	SELECT id, lastupdate FROM s2_users WHERE lastupdate < 1342379981
+		   10 Query	SELECT * FROM s2_hero
+		   10 Query	SELECT uid FROM s2_deleting where timestamp < 1342380581
+		   10 Query	SELECT * FROM s2_bdata where timestamp < 1342380581 and master = 0
+		   10 Query	SELECT * FROM s2_bdata WHERE master = 1
+		   10 Query	SELECT * FROM s2_demolition WHERE timetofinish<=1342380581
+		   10 Query	SELECT * FROM `s2_fdata`
+		   10 Query	UPDATE `s2_vdata` SET `maxstore` = 11800, `maxcrop` = 5000 WHERE `wref` = 43435
+		   10 Query	UPDATE `s2_vdata` SET `maxstore` = 800, `maxcrop` = 1200 WHERE `wref` = 74687
+		   10 Query	UPDATE `s2_vdata` SET `maxstore` = 1700, `maxcrop` = 1200 WHERE `wref` = 4930
+		   10 Query	UPDATE `s2_vdata` SET `maxstore` = 800, `maxcrop` = 800 WHERE `wref` = 122531
+		   10 Query	DELETE from s2_route where timeleft < 1342380581
+		   10 Query	SELECT * FROM s2_route where timestamp < 1342380581
+		   10 Query	SELECT * FROM s2_movement, s2_send where s2_movement.ref = s2_send.id and s2_movement.proc = 0 and sort_type = 0 and endtime < 1342380581
+		   10 Query	SELECT * FROM s2_movement where proc = 0 and sort_type = 2 and endtime < 1342380581
+		   10 Query	SELECT * FROM s2_research where timestamp < 1342380581
+		   10 Query	SELECT * FROM s2_training where vref != ''
+		   10 Query	SELECT * FROM s2_vdata where starv != 0
+		   10 Query	SELECT * FROM s2_vdata where celebration < 1342380581 AND celebration != 0
+		   10 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.ref = s2_attacks.id and s2_movement.proc = '0' and s2_movement.sort_type = '3' and s2_attacks.attack_type != '2' and endtime < 1342380581 ORDER BY endtime ASC
+		   10 Query	SELECT * FROM s2_vdata WHERE loyalty<>100
+		   10 Query	SELECT * FROM s2_odata WHERE loyalty<>100
+		   10 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.ref = s2_attacks.id and s2_movement.proc = '0' and s2_movement.sort_type = '3' and s2_attacks.attack_type = '2' and endtime < 1342380581
+		   10 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.ref = s2_attacks.id and s2_movement.proc = '0' and s2_movement.sort_type = '4' and endtime < 1342380581
+		   10 Query	SELECT * FROM s2_movement, s2_send where s2_movement.ref = s2_send.id and s2_movement.proc = 0 and sort_type = 6 and endtime < 1342380581
+		   10 Query	SELECT * FROM s2_vdata WHERE maxstore < 800 OR maxcrop < 800
+		   10 Query	SELECT * FROM s2_vdata WHERE wood > maxstore OR clay > maxstore OR iron > maxstore OR crop > maxstore
+		   10 Query	SELECT * FROM s2_vdata WHERE wood < 0 OR clay < 0 OR iron < 0 OR crop < 0
+		   10 Query	SELECT * FROM s2_movement where ref = 0 and proc = '0' and sort_type = '4' and endtime < 1342380581
+		   10 Query	SELECT * FROM s2_movement where proc = 0 and sort_type = 5 and endtime < 1342380581
+		   10 Query	SELECT * FROM s2_general WHERE shown = 1
+		   10 Query	SELECT * FROM s2_users WHERE invited != 0
+		   10 Query	SELECT * FROM `s2_fdata`
+		   10 Query	UPDATE `s2_vdata` SET `maxstore` = 11800, `maxcrop` = 5000 WHERE `wref` = 43435
+		   10 Query	UPDATE `s2_vdata` SET `maxstore` = 800, `maxcrop` = 1200 WHERE `wref` = 74687
+		   10 Query	UPDATE `s2_vdata` SET `maxstore` = 1700, `maxcrop` = 1200 WHERE `wref` = 4930
+		   10 Query	UPDATE `s2_vdata` SET `maxstore` = 800, `maxcrop` = 800 WHERE `wref` = 122531
+		   10 Query	SELECT * FROM s2_users WHERE access < 8
+		   10 Query	SELECT count(id) FROM s2_users where id > 5
+		   10 Query	SELECT s2_users.id userid, s2_users.username username,s2_users.alliance alliance, (
+
+			SELECT SUM( s2_vdata.pop )
+			FROM s2_vdata
+			WHERE s2_vdata.owner = userid
+			)totalpop, (
+
+			SELECT COUNT( s2_vdata.wref )
+			FROM s2_vdata
+			WHERE s2_vdata.owner = userid AND type != 99
+			)totalvillages, (
+
+			SELECT s2_alidata.tag
+			FROM s2_alidata, s2_users
+			WHERE s2_alidata.id = s2_users.alliance
+			AND s2_users.id = userid
+			)allitag
+			FROM s2_users
+			WHERE s2_users.access < 8
+			ORDER BY totalpop DESC, totalvillages DESC
+		   10 Query	SELECT * FROM s2_medal order by week DESC LIMIT 0, 1
+		   10 Query	UPDATE s2_users set clp = '4' where id = 6
+		   10 Query	UPDATE s2_users set oldrank = '1' where id = 6
+		   10 Query	UPDATE s2_users set oldrank = '1' where id = 6
+		   10 Query	UPDATE s2_users set clp = '3' where id = 7
+		   10 Query	UPDATE s2_users set oldrank = '2' where id = 7
+		   10 Query	UPDATE s2_users set oldrank = '2' where id = 7
+		   10 Query	UPDATE s2_users set clp = '2' where id = 8
+		   10 Query	UPDATE s2_users set oldrank = '3' where id = 8
+		   10 Query	UPDATE s2_users set oldrank = '3' where id = 8
+		   10 Query	UPDATE s2_users set clp = '1' where id = 9
+		   10 Query	UPDATE s2_users set oldrank = '4' where id = 9
+		   10 Query	UPDATE s2_users set oldrank = '4' where id = 9
+		   10 Query	SELECT id,name,tag FROM s2_alidata where id != '' ORDER BY id DESC
+		   10 Query	SELECT id,name,tag FROM s2_alidata where id != '' ORDER BY id DESC
+		   10 Query	SELECT * FROM s2_banlist WHERE active = 1 and end < 1342380581
+		   10 Query	SELECT username FROM s2_users where username = 'benny' and sessid = '9e674bc03e21bcf8cb620ed5c4d2141f' LIMIT 1
+		   10 Query	SELECT * FROM s2_users where username = 'benny'
+		   10 Query	SELECT wref from s2_vdata where owner = 6 order by capital DESC,pop DESC
+		   10 Query	SELECT sit FROM s2_online where uid = 6
+		   10 Query	REPLACE into s2_active values ('benny',1342380581)
+		   10 Query	UPDATE s2_users set timestamp = '1342380581' where username = 'benny'
+		   10 Query	SELECT * FROM s2_mdata WHERE target = 6 and send = 0 and archived = 0 ORDER BY time DESC
+		   10 Query	SELECT * FROM s2_mdata WHERE owner = 6 ORDER BY time DESC
+		   10 Query	SELECT * FROM s2_mdata WHERE target = 6 and send = 0 and archived = 0 and deltarget = 0 ORDER BY time DESC
+		   10 Query	SELECT * FROM s2_mdata WHERE owner = 6 and delowner = 0 ORDER BY time DESC
+		   10 Query	SELECT * FROM s2_ndata where uid = 6 ORDER BY time DESC
+		   10 Query	SELECT * FROM s2_ndata where uid = 6 and del = 0 ORDER BY time DESC
+		   10 Query	SELECT * FROM s2_vdata where wref = 43435
+		   10 Query	SELECT * from s2_fdata where vref = 43435
+		   10 Query	SELECT x,y FROM s2_wdata where id = 43435
+		   10 Query	SELECT id, fieldtype FROM s2_wdata where id = 43435
+		   10 Query	SELECT * FROM s2_odata where conqured = 43435
+		   10 Query	SELECT * from s2_units where vref = 43435
+		   10 Query	SELECT * from s2_enforcement where vref = 43435
+		   10 Query	SELECT * from s2_enforcement where `from` = 43435
+		   10 Query	SELECT * from s2_units where vref = 43435
+		   10 Query	SELECT * from s2_enforcement where vref = 43435
+		   10 Query	SELECT * FROM s2_vdata where wref = 43435
+		   10 Query	SELECT tribe FROM s2_users where id = '6'
+		   10 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.from = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 3 ORDER BY endtime ASC
+		   10 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.to = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 4 ORDER BY endtime ASC
+		   10 Query	SELECT * FROM s2_movement where s2_movement.from = 43435 and sort_type = 5 and proc = 0 ORDER BY endtime ASC
+		   10 Query	SELECT * from s2_tdata where vref = 43435
+		   10 Query	SELECT * FROM s2_abdata where vref = 43435
+		   10 Query	SELECT * FROM s2_research where vref = 43435
+		   10 Query	SELECT * FROM s2_bdata where wid = 43435 and master = 1 order by master,timestamp ASC
+		   10 Query	SELECT * FROM s2_artefacts WHERE vref = 43435 AND type = 4 order by size
+		   10 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND type = 4 AND size=2
+		   10 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND type = 4 AND size=3
+		   10 Query	SELECT * from s2_fdata where vref = 43435
+		   10 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND owner != 3 AND type = 4 AND size=3
+		   10 Query	SELECT * FROM s2_artefacts WHERE vref = 43435 AND owner != 3 AND type = 4 AND size=1
+		   10 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND owner != 3 AND type = 4 AND size=2
+		   10 Query	UPDATE s2_vdata set wood = wood + 0.90833333333333, clay = clay + 1.0583333333333, iron = iron + 0.49166666666667, crop = crop + 0.47472222222222 where wref = 43435
+		   10 Query	UPDATE s2_vdata set lastupdate = 1342380581 where wref = 43435
+		   10 Query	SELECT * FROM s2_vdata where wref = 43435
+		   10 Query	SELECT * from s2_fdata where vref = 43435
+		   10 Query	SELECT x,y FROM s2_wdata where id = 43435
+		   10 Query	SELECT id, fieldtype FROM s2_wdata where id = 43435
+		   10 Query	SELECT * FROM s2_odata where conqured = 43435
+		   10 Query	SELECT * from s2_units where vref = 43435
+		   10 Query	SELECT * from s2_enforcement where vref = 43435
+		   10 Query	SELECT * from s2_enforcement where `from` = 43435
+		   10 Query	SELECT * from s2_units where vref = 43435
+		   10 Query	SELECT * from s2_enforcement where vref = 43435
+		   10 Query	SELECT * FROM s2_vdata where wref = 43435
+		   10 Query	SELECT tribe FROM s2_users where id = '6'
+		   10 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.from = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 3 ORDER BY endtime ASC
+		   10 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.to = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 4 ORDER BY endtime ASC
+		   10 Query	SELECT * FROM s2_movement where s2_movement.from = 43435 and sort_type = 5 and proc = 0 ORDER BY endtime ASC
+		   10 Query	SELECT * from s2_tdata where vref = 43435
+		   10 Query	SELECT * FROM s2_abdata where vref = 43435
+		   10 Query	SELECT * FROM s2_research where vref = 43435
+		   10 Query	SELECT * FROM s2_bdata where wid = 43435 and master = 1 order by master,timestamp ASC
+		   10 Query	SELECT * FROM s2_bdata where wid = 43435 order by master,timestamp ASC
+		   10 Query	SELECT timestamp from s2_deleting where uid = 6
+		   10 Query	SELECT * FROM `s2_links` WHERE `userid` = 6 ORDER BY `pos` ASC
+		   10 Query	SELECT * from s2_fdata where vref = 43435
+		   10 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND owner != 3 AND type = 4 AND size=3
+		   10 Query	SELECT * FROM s2_artefacts WHERE vref = 43435 AND owner != 3 AND type = 4 AND size=1
+		   10 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND owner != 3 AND type = 4 AND size=2
+		   10 Quit	
+120716  3:29:43	   11 Connect	root@localhost on 
+		   11 Init DB	s2
+		   11 Query	DELETE from s2_users where timestamp >= 1342380583 and act != ''
+		   11 Query	SELECT * FROM s2_odata WHERE wood < 800 OR clay < 800 OR iron < 800 OR crop < 800
+		   11 Query	SELECT * FROM s2_vdata WHERE maxstore < 800 OR maxcrop < 800
+		   11 Query	SELECT * FROM s2_vdata WHERE wood > maxstore OR clay > maxstore OR iron > maxstore OR crop > maxstore
+		   11 Query	SELECT * FROM s2_vdata WHERE wood < 0 OR clay < 0 OR iron < 0 OR crop < 0
+		   11 Query	SELECT * FROM s2_odata WHERE maxstore < 800 OR maxcrop < 800
+		   11 Query	SELECT * FROM s2_odata WHERE wood > maxstore OR clay > maxstore OR iron > maxstore OR crop > maxstore
+		   11 Query	SELECT * FROM s2_odata WHERE wood < 0 OR clay < 0 OR iron < 0 OR crop < 0
+		   11 Query	SELECT * FROM `s2_ww_attacks` WHERE `attack_time` <= 1342380583
+		   11 Query	SELECT id, lastupdate FROM s2_users WHERE lastupdate < 1342379983
+		   11 Query	SELECT * FROM s2_hero
+		   11 Query	SELECT uid FROM s2_deleting where timestamp < 1342380583
+		   11 Query	SELECT * FROM s2_bdata where timestamp < 1342380583 and master = 0
+		   11 Query	SELECT * FROM s2_bdata WHERE master = 1
+		   11 Query	SELECT * FROM s2_demolition WHERE timetofinish<=1342380583
+		   11 Query	SELECT * FROM `s2_fdata`
+		   11 Query	UPDATE `s2_vdata` SET `maxstore` = 11800, `maxcrop` = 5000 WHERE `wref` = 43435
+		   11 Query	UPDATE `s2_vdata` SET `maxstore` = 800, `maxcrop` = 1200 WHERE `wref` = 74687
+		   11 Query	UPDATE `s2_vdata` SET `maxstore` = 1700, `maxcrop` = 1200 WHERE `wref` = 4930
+		   11 Query	UPDATE `s2_vdata` SET `maxstore` = 800, `maxcrop` = 800 WHERE `wref` = 122531
+		   11 Query	DELETE from s2_route where timeleft < 1342380583
+		   11 Query	SELECT * FROM s2_route where timestamp < 1342380583
+		   11 Query	SELECT * FROM s2_movement, s2_send where s2_movement.ref = s2_send.id and s2_movement.proc = 0 and sort_type = 0 and endtime < 1342380583
+		   11 Query	SELECT * FROM s2_movement where proc = 0 and sort_type = 2 and endtime < 1342380583
+		   11 Query	SELECT * FROM s2_research where timestamp < 1342380583
+		   11 Query	SELECT * FROM s2_training where vref != ''
+		   11 Query	SELECT * FROM s2_vdata where starv != 0
+		   11 Query	SELECT * FROM s2_vdata where celebration < 1342380583 AND celebration != 0
+		   11 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.ref = s2_attacks.id and s2_movement.proc = '0' and s2_movement.sort_type = '3' and s2_attacks.attack_type != '2' and endtime < 1342380583 ORDER BY endtime ASC
+		   11 Query	SELECT * FROM s2_vdata WHERE loyalty<>100
+		   11 Query	SELECT * FROM s2_odata WHERE loyalty<>100
+		   11 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.ref = s2_attacks.id and s2_movement.proc = '0' and s2_movement.sort_type = '3' and s2_attacks.attack_type = '2' and endtime < 1342380583
+		   11 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.ref = s2_attacks.id and s2_movement.proc = '0' and s2_movement.sort_type = '4' and endtime < 1342380583
+		   11 Query	SELECT * FROM s2_movement, s2_send where s2_movement.ref = s2_send.id and s2_movement.proc = 0 and sort_type = 6 and endtime < 1342380583
+		   11 Query	SELECT * FROM s2_vdata WHERE maxstore < 800 OR maxcrop < 800
+		   11 Query	SELECT * FROM s2_vdata WHERE wood > maxstore OR clay > maxstore OR iron > maxstore OR crop > maxstore
+		   11 Query	SELECT * FROM s2_vdata WHERE wood < 0 OR clay < 0 OR iron < 0 OR crop < 0
+		   11 Query	SELECT * FROM s2_movement where ref = 0 and proc = '0' and sort_type = '4' and endtime < 1342380583
+		   11 Query	SELECT * FROM s2_movement where proc = 0 and sort_type = 5 and endtime < 1342380583
+		   11 Query	SELECT * FROM s2_general WHERE shown = 1
+		   11 Query	SELECT * FROM s2_users WHERE invited != 0
+		   11 Query	SELECT * FROM `s2_fdata`
+		   11 Query	UPDATE `s2_vdata` SET `maxstore` = 11800, `maxcrop` = 5000 WHERE `wref` = 43435
+		   11 Query	UPDATE `s2_vdata` SET `maxstore` = 800, `maxcrop` = 1200 WHERE `wref` = 74687
+		   11 Query	UPDATE `s2_vdata` SET `maxstore` = 1700, `maxcrop` = 1200 WHERE `wref` = 4930
+		   11 Query	UPDATE `s2_vdata` SET `maxstore` = 800, `maxcrop` = 800 WHERE `wref` = 122531
+		   11 Query	SELECT * FROM s2_users WHERE access < 8
+		   11 Query	SELECT count(id) FROM s2_users where id > 5
+		   11 Query	SELECT s2_users.id userid, s2_users.username username,s2_users.alliance alliance, (
+
+			SELECT SUM( s2_vdata.pop )
+			FROM s2_vdata
+			WHERE s2_vdata.owner = userid
+			)totalpop, (
+
+			SELECT COUNT( s2_vdata.wref )
+			FROM s2_vdata
+			WHERE s2_vdata.owner = userid AND type != 99
+			)totalvillages, (
+
+			SELECT s2_alidata.tag
+			FROM s2_alidata, s2_users
+			WHERE s2_alidata.id = s2_users.alliance
+			AND s2_users.id = userid
+			)allitag
+			FROM s2_users
+			WHERE s2_users.access < 8
+			ORDER BY totalpop DESC, totalvillages DESC
+		   11 Query	SELECT * FROM s2_medal order by week DESC LIMIT 0, 1
+		   11 Query	UPDATE s2_users set clp = '4' where id = 6
+		   11 Query	UPDATE s2_users set oldrank = '1' where id = 6
+		   11 Query	UPDATE s2_users set oldrank = '1' where id = 6
+		   11 Query	UPDATE s2_users set clp = '3' where id = 7
+		   11 Query	UPDATE s2_users set oldrank = '2' where id = 7
+		   11 Query	UPDATE s2_users set oldrank = '2' where id = 7
+		   11 Query	UPDATE s2_users set clp = '2' where id = 8
+		   11 Query	UPDATE s2_users set oldrank = '3' where id = 8
+		   11 Query	UPDATE s2_users set oldrank = '3' where id = 8
+		   11 Query	UPDATE s2_users set clp = '1' where id = 9
+		   11 Query	UPDATE s2_users set oldrank = '4' where id = 9
+		   11 Query	UPDATE s2_users set oldrank = '4' where id = 9
+		   11 Query	SELECT id,name,tag FROM s2_alidata where id != '' ORDER BY id DESC
+		   11 Query	SELECT id,name,tag FROM s2_alidata where id != '' ORDER BY id DESC
+		   11 Query	SELECT * FROM s2_banlist WHERE active = 1 and end < 1342380583
+		   11 Query	SELECT username FROM s2_users where username = 'benny' and sessid = '9e674bc03e21bcf8cb620ed5c4d2141f' LIMIT 1
+		   11 Query	SELECT * FROM s2_users where username = 'benny'
+		   11 Query	SELECT wref from s2_vdata where owner = 6 order by capital DESC,pop DESC
+		   11 Query	SELECT sit FROM s2_online where uid = 6
+		   11 Query	REPLACE into s2_active values ('benny',1342380583)
+		   11 Query	UPDATE s2_users set timestamp = '1342380583' where username = 'benny'
+		   11 Query	SELECT * FROM s2_mdata WHERE target = 6 and send = 0 and archived = 0 ORDER BY time DESC
+		   11 Query	SELECT * FROM s2_mdata WHERE owner = 6 ORDER BY time DESC
+		   11 Query	SELECT * FROM s2_mdata WHERE target = 6 and send = 0 and archived = 0 and deltarget = 0 ORDER BY time DESC
+		   11 Query	SELECT * FROM s2_mdata WHERE owner = 6 and delowner = 0 ORDER BY time DESC
+		   11 Query	SELECT * FROM s2_ndata where uid = 6 ORDER BY time DESC
+		   11 Query	SELECT * FROM s2_ndata where uid = 6 and del = 0 ORDER BY time DESC
+		   11 Query	SELECT * FROM s2_vdata where wref = 43435
+		   11 Query	SELECT * from s2_fdata where vref = 43435
+		   11 Query	SELECT x,y FROM s2_wdata where id = 43435
+		   11 Query	SELECT id, fieldtype FROM s2_wdata where id = 43435
+		   11 Query	SELECT * FROM s2_odata where conqured = 43435
+		   11 Query	SELECT * from s2_units where vref = 43435
+		   11 Query	SELECT * from s2_enforcement where vref = 43435
+		   11 Query	SELECT * from s2_enforcement where `from` = 43435
+		   11 Query	SELECT * from s2_units where vref = 43435
+		   11 Query	SELECT * from s2_enforcement where vref = 43435
+		   11 Query	SELECT * FROM s2_vdata where wref = 43435
+		   11 Query	SELECT tribe FROM s2_users where id = '6'
+		   11 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.from = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 3 ORDER BY endtime ASC
+		   11 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.to = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 4 ORDER BY endtime ASC
+		   11 Query	SELECT * FROM s2_movement where s2_movement.from = 43435 and sort_type = 5 and proc = 0 ORDER BY endtime ASC
+		   11 Query	SELECT * from s2_tdata where vref = 43435
+		   11 Query	SELECT * FROM s2_abdata where vref = 43435
+		   11 Query	SELECT * FROM s2_research where vref = 43435
+		   11 Query	SELECT * FROM s2_bdata where wid = 43435 and master = 1 order by master,timestamp ASC
+		   11 Query	SELECT * FROM s2_artefacts WHERE vref = 43435 AND type = 4 order by size
+		   11 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND type = 4 AND size=2
+		   11 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND type = 4 AND size=3
+		   11 Query	SELECT * from s2_fdata where vref = 43435
+		   11 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND owner != 3 AND type = 4 AND size=3
+		   11 Query	SELECT * FROM s2_artefacts WHERE vref = 43435 AND owner != 3 AND type = 4 AND size=1
+		   11 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND owner != 3 AND type = 4 AND size=2
+		   11 Query	UPDATE s2_vdata set wood = wood + 1.8166666666667, clay = clay + 2.1166666666667, iron = iron + 0.98333333333333, crop = crop + 0.94944444444444 where wref = 43435
+		   11 Query	UPDATE s2_vdata set lastupdate = 1342380583 where wref = 43435
+		   11 Query	SELECT * FROM s2_vdata where wref = 43435
+		   11 Query	SELECT * from s2_fdata where vref = 43435
+		   11 Query	SELECT x,y FROM s2_wdata where id = 43435
+		   11 Query	SELECT id, fieldtype FROM s2_wdata where id = 43435
+		   11 Query	SELECT * FROM s2_odata where conqured = 43435
+		   11 Query	SELECT * from s2_units where vref = 43435
+		   11 Query	SELECT * from s2_enforcement where vref = 43435
+		   11 Query	SELECT * from s2_enforcement where `from` = 43435
+		   11 Query	SELECT * from s2_units where vref = 43435
+		   11 Query	SELECT * from s2_enforcement where vref = 43435
+		   11 Query	SELECT * FROM s2_vdata where wref = 43435
+		   11 Query	SELECT tribe FROM s2_users where id = '6'
+		   11 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.from = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 3 ORDER BY endtime ASC
+		   11 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.to = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 4 ORDER BY endtime ASC
+		   11 Query	SELECT * FROM s2_movement where s2_movement.from = 43435 and sort_type = 5 and proc = 0 ORDER BY endtime ASC
+		   11 Query	SELECT * from s2_tdata where vref = 43435
+		   11 Query	SELECT * FROM s2_abdata where vref = 43435
+		   11 Query	SELECT * FROM s2_research where vref = 43435
+		   11 Query	SELECT * FROM s2_bdata where wid = 43435 and master = 1 order by master,timestamp ASC
+		   11 Query	SELECT * FROM s2_bdata where wid = 43435 order by master,timestamp ASC
+		   11 Query	SELECT * FROM s2_movement, s2_send where s2_movement.to = 43435 and s2_movement.ref = s2_send.id and s2_movement.proc = 0 and s2_movement.sort_type = 0 ORDER BY endtime ASC
+		   11 Query	SELECT * FROM s2_movement, s2_send where s2_movement.from = 43435 and s2_movement.ref = s2_send.id and s2_movement.proc = 0 and s2_movement.sort_type = 0 ORDER BY endtime ASC
+		   11 Query	SELECT * FROM s2_movement where s2_movement.to = 43435 and s2_movement.proc = 0 and s2_movement.sort_type = 2 ORDER BY endtime ASC
+		   11 Query	SELECT sum(s2_send.merchant) from s2_send, s2_movement where s2_movement.from = 43435 and s2_send.id = s2_movement.ref and s2_movement.proc = 0 and sort_type = 0
+		   11 Query	SELECT sum(ref) from s2_movement where sort_type = 2 and s2_movement.to = 43435 and proc = 0
+		   11 Query	SELECT sum(merchant) from s2_market where vref = 43435 and accept = 0
+		   11 Query	SELECT owner FROM s2_vdata where wref = 43435
+		   11 Query	SELECT alliance FROM s2_users where id = '6'
+		   11 Query	SELECT * FROM s2_market where vref = 43435 and accept = 0
+		   11 Query	SELECT vref FROM s2_fdata WHERE f99 = '100' and f99t = '40'
+		   11 Query	SELECT timestamp from s2_deleting where uid = 6
+		   11 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND owner != 3 AND type = 5 AND size=3
+		   11 Query	SELECT * FROM s2_artefacts WHERE vref = 43435 AND owner != 3 AND type = 5 AND size=1
+		   11 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND owner != 3 AND type = 5 AND size=2
+		   11 Query	SELECT maxstore, maxcrop, wood, clay, iron, crop FROM s2_vdata WHERE wref = 43435
+		   11 Query	SELECT maxstore, maxcrop, wood, clay, iron, crop FROM s2_vdata WHERE wref = 43435
+		   11 Query	SELECT * FROM s2_training where vref = 43435 ORDER BY id
+		   11 Query	SELECT * FROM s2_demolition WHERE vref=43435
+		   11 Query	SELECT * FROM s2_bdata where wid = 43435 order by master,timestamp ASC
+		   11 Query	SELECT f6 from s2_fdata where vref = 43435
+		   11 Query	SELECT f26 from s2_fdata where vref = 43435
+		   11 Query	SELECT * FROM s2_bdata where wid = 43435 and field = 19 and master = 1 order by master,timestamp ASC
+		   11 Query	SELECT * FROM `s2_links` WHERE `userid` = 6 ORDER BY `pos` ASC
+		   11 Query	SELECT * from s2_fdata where vref = 43435
+		   11 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND owner != 3 AND type = 4 AND size=3
+		   11 Query	SELECT * FROM s2_artefacts WHERE vref = 43435 AND owner != 3 AND type = 4 AND size=1
+		   11 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND owner != 3 AND type = 4 AND size=2
+		   11 Quit	
+120716  3:29:47	   12 Connect	root@localhost on 
+		   12 Init DB	s2
+		   12 Query	DELETE from s2_users where timestamp >= 1342380587 and act != ''
+		   12 Query	SELECT * FROM s2_odata WHERE wood < 800 OR clay < 800 OR iron < 800 OR crop < 800
+		   12 Query	SELECT * FROM s2_vdata WHERE maxstore < 800 OR maxcrop < 800
+		   12 Query	SELECT * FROM s2_vdata WHERE wood > maxstore OR clay > maxstore OR iron > maxstore OR crop > maxstore
+		   12 Query	SELECT * FROM s2_vdata WHERE wood < 0 OR clay < 0 OR iron < 0 OR crop < 0
+		   12 Query	SELECT * FROM s2_odata WHERE maxstore < 800 OR maxcrop < 800
+		   12 Query	SELECT * FROM s2_odata WHERE wood > maxstore OR clay > maxstore OR iron > maxstore OR crop > maxstore
+		   12 Query	SELECT * FROM s2_odata WHERE wood < 0 OR clay < 0 OR iron < 0 OR crop < 0
+		   12 Query	SELECT * FROM `s2_ww_attacks` WHERE `attack_time` <= 1342380587
+		   12 Query	SELECT id, lastupdate FROM s2_users WHERE lastupdate < 1342379987
+		   12 Query	SELECT * FROM s2_hero
+		   12 Query	SELECT uid FROM s2_deleting where timestamp < 1342380587
+		   12 Query	SELECT * FROM s2_bdata where timestamp < 1342380587 and master = 0
+		   12 Query	SELECT * FROM s2_bdata WHERE master = 1
+		   12 Query	SELECT * FROM s2_demolition WHERE timetofinish<=1342380587
+		   12 Query	SELECT * FROM `s2_fdata`
+		   12 Query	UPDATE `s2_vdata` SET `maxstore` = 11800, `maxcrop` = 5000 WHERE `wref` = 43435
+		   12 Query	UPDATE `s2_vdata` SET `maxstore` = 800, `maxcrop` = 1200 WHERE `wref` = 74687
+		   12 Query	UPDATE `s2_vdata` SET `maxstore` = 1700, `maxcrop` = 1200 WHERE `wref` = 4930
+		   12 Query	UPDATE `s2_vdata` SET `maxstore` = 800, `maxcrop` = 800 WHERE `wref` = 122531
+		   12 Query	DELETE from s2_route where timeleft < 1342380587
+		   12 Query	SELECT * FROM s2_route where timestamp < 1342380587
+		   12 Query	SELECT * FROM s2_movement, s2_send where s2_movement.ref = s2_send.id and s2_movement.proc = 0 and sort_type = 0 and endtime < 1342380587
+		   12 Query	SELECT * FROM s2_movement where proc = 0 and sort_type = 2 and endtime < 1342380587
+		   12 Query	SELECT * FROM s2_research where timestamp < 1342380587
+		   12 Query	SELECT * FROM s2_training where vref != ''
+		   12 Query	SELECT * FROM s2_vdata where starv != 0
+		   12 Query	SELECT * FROM s2_vdata where celebration < 1342380587 AND celebration != 0
+		   12 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.ref = s2_attacks.id and s2_movement.proc = '0' and s2_movement.sort_type = '3' and s2_attacks.attack_type != '2' and endtime < 1342380587 ORDER BY endtime ASC
+		   12 Query	SELECT * FROM s2_vdata WHERE loyalty<>100
+		   12 Query	SELECT * FROM s2_odata WHERE loyalty<>100
+		   12 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.ref = s2_attacks.id and s2_movement.proc = '0' and s2_movement.sort_type = '3' and s2_attacks.attack_type = '2' and endtime < 1342380587
+		   12 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.ref = s2_attacks.id and s2_movement.proc = '0' and s2_movement.sort_type = '4' and endtime < 1342380587
+		   12 Query	SELECT * FROM s2_movement, s2_send where s2_movement.ref = s2_send.id and s2_movement.proc = 0 and sort_type = 6 and endtime < 1342380587
+		   12 Query	SELECT * FROM s2_vdata WHERE maxstore < 800 OR maxcrop < 800
+		   12 Query	SELECT * FROM s2_vdata WHERE wood > maxstore OR clay > maxstore OR iron > maxstore OR crop > maxstore
+		   12 Query	SELECT * FROM s2_vdata WHERE wood < 0 OR clay < 0 OR iron < 0 OR crop < 0
+		   12 Query	SELECT * FROM s2_movement where ref = 0 and proc = '0' and sort_type = '4' and endtime < 1342380587
+		   12 Query	SELECT * FROM s2_movement where proc = 0 and sort_type = 5 and endtime < 1342380587
+		   12 Query	SELECT * FROM s2_general WHERE shown = 1
+		   12 Query	SELECT * FROM s2_users WHERE invited != 0
+		   12 Query	SELECT * FROM `s2_fdata`
+		   12 Query	UPDATE `s2_vdata` SET `maxstore` = 11800, `maxcrop` = 5000 WHERE `wref` = 43435
+		   12 Query	UPDATE `s2_vdata` SET `maxstore` = 800, `maxcrop` = 1200 WHERE `wref` = 74687
+		   12 Query	UPDATE `s2_vdata` SET `maxstore` = 1700, `maxcrop` = 1200 WHERE `wref` = 4930
+		   12 Query	UPDATE `s2_vdata` SET `maxstore` = 800, `maxcrop` = 800 WHERE `wref` = 122531
+		   12 Query	SELECT * FROM s2_users WHERE access < 8
+		   12 Query	SELECT count(id) FROM s2_users where id > 5
+		   12 Query	SELECT s2_users.id userid, s2_users.username username,s2_users.alliance alliance, (
+
+			SELECT SUM( s2_vdata.pop )
+			FROM s2_vdata
+			WHERE s2_vdata.owner = userid
+			)totalpop, (
+
+			SELECT COUNT( s2_vdata.wref )
+			FROM s2_vdata
+			WHERE s2_vdata.owner = userid AND type != 99
+			)totalvillages, (
+
+			SELECT s2_alidata.tag
+			FROM s2_alidata, s2_users
+			WHERE s2_alidata.id = s2_users.alliance
+			AND s2_users.id = userid
+			)allitag
+			FROM s2_users
+			WHERE s2_users.access < 8
+			ORDER BY totalpop DESC, totalvillages DESC
+		   12 Query	SELECT * FROM s2_medal order by week DESC LIMIT 0, 1
+		   12 Query	UPDATE s2_users set clp = '4' where id = 6
+		   12 Query	UPDATE s2_users set oldrank = '1' where id = 6
+		   12 Query	UPDATE s2_users set oldrank = '1' where id = 6
+		   12 Query	UPDATE s2_users set clp = '3' where id = 7
+		   12 Query	UPDATE s2_users set oldrank = '2' where id = 7
+		   12 Query	UPDATE s2_users set oldrank = '2' where id = 7
+		   12 Query	UPDATE s2_users set clp = '2' where id = 8
+		   12 Query	UPDATE s2_users set oldrank = '3' where id = 8
+		   12 Query	UPDATE s2_users set oldrank = '3' where id = 8
+		   12 Query	UPDATE s2_users set clp = '1' where id = 9
+		   12 Query	UPDATE s2_users set oldrank = '4' where id = 9
+		   12 Query	UPDATE s2_users set oldrank = '4' where id = 9
+		   12 Query	SELECT id,name,tag FROM s2_alidata where id != '' ORDER BY id DESC
+		   12 Query	SELECT id,name,tag FROM s2_alidata where id != '' ORDER BY id DESC
+		   12 Query	SELECT * FROM s2_banlist WHERE active = 1 and end < 1342380587
+		   12 Query	SELECT username FROM s2_users where username = 'benny' and sessid = '9e674bc03e21bcf8cb620ed5c4d2141f' LIMIT 1
+		   12 Query	SELECT * FROM s2_users where username = 'benny'
+		   12 Query	SELECT wref from s2_vdata where owner = 6 order by capital DESC,pop DESC
+		   12 Query	SELECT sit FROM s2_online where uid = 6
+		   12 Query	REPLACE into s2_active values ('benny',1342380587)
+		   12 Query	UPDATE s2_users set timestamp = '1342380587' where username = 'benny'
+		   12 Query	SELECT * FROM s2_mdata WHERE target = 6 and send = 0 and archived = 0 ORDER BY time DESC
+		   12 Query	SELECT * FROM s2_mdata WHERE owner = 6 ORDER BY time DESC
+		   12 Query	SELECT * FROM s2_mdata WHERE target = 6 and send = 0 and archived = 0 and deltarget = 0 ORDER BY time DESC
+		   12 Query	SELECT * FROM s2_mdata WHERE owner = 6 and delowner = 0 ORDER BY time DESC
+		   12 Query	SELECT * FROM s2_ndata where uid = 6 ORDER BY time DESC
+		   12 Query	SELECT * FROM s2_ndata where uid = 6 and del = 0 ORDER BY time DESC
+		   12 Query	SELECT * FROM s2_vdata where wref = 43435
+		   12 Query	SELECT * from s2_fdata where vref = 43435
+		   12 Query	SELECT x,y FROM s2_wdata where id = 43435
+		   12 Query	SELECT id, fieldtype FROM s2_wdata where id = 43435
+		   12 Query	SELECT * FROM s2_odata where conqured = 43435
+		   12 Query	SELECT * from s2_units where vref = 43435
+		   12 Query	SELECT * from s2_enforcement where vref = 43435
+		   12 Query	SELECT * from s2_enforcement where `from` = 43435
+		   12 Query	SELECT * from s2_units where vref = 43435
+		   12 Query	SELECT * from s2_enforcement where vref = 43435
+		   12 Query	SELECT * FROM s2_vdata where wref = 43435
+		   12 Query	SELECT tribe FROM s2_users where id = '6'
+		   12 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.from = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 3 ORDER BY endtime ASC
+		   12 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.to = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 4 ORDER BY endtime ASC
+		   12 Query	SELECT * FROM s2_movement where s2_movement.from = 43435 and sort_type = 5 and proc = 0 ORDER BY endtime ASC
+		   12 Query	SELECT * from s2_tdata where vref = 43435
+		   12 Query	SELECT * FROM s2_abdata where vref = 43435
+		   12 Query	SELECT * FROM s2_research where vref = 43435
+		   12 Query	SELECT * FROM s2_bdata where wid = 43435 and master = 1 order by master,timestamp ASC
+		   12 Query	SELECT * FROM s2_artefacts WHERE vref = 43435 AND type = 4 order by size
+		   12 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND type = 4 AND size=2
+		   12 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND type = 4 AND size=3
+		   12 Query	SELECT * from s2_fdata where vref = 43435
+		   12 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND owner != 3 AND type = 4 AND size=3
+		   12 Query	SELECT * FROM s2_artefacts WHERE vref = 43435 AND owner != 3 AND type = 4 AND size=1
+		   12 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND owner != 3 AND type = 4 AND size=2
+		   12 Query	UPDATE s2_vdata set wood = wood + 3.6333333333333, clay = clay + 4.2333333333333, iron = iron + 1.9666666666667, crop = crop + 1.8988888888889 where wref = 43435
+120716  3:29:48	   12 Query	UPDATE s2_vdata set lastupdate = 1342380588 where wref = 43435
+		   12 Query	SELECT * FROM s2_vdata where wref = 43435
+		   12 Query	SELECT * from s2_fdata where vref = 43435
+		   12 Query	SELECT x,y FROM s2_wdata where id = 43435
+		   12 Query	SELECT id, fieldtype FROM s2_wdata where id = 43435
+		   12 Query	SELECT * FROM s2_odata where conqured = 43435
+		   12 Query	SELECT * from s2_units where vref = 43435
+		   12 Query	SELECT * from s2_enforcement where vref = 43435
+		   12 Query	SELECT * from s2_enforcement where `from` = 43435
+		   12 Query	SELECT * from s2_units where vref = 43435
+		   12 Query	SELECT * from s2_enforcement where vref = 43435
+		   12 Query	SELECT * FROM s2_vdata where wref = 43435
+		   12 Query	SELECT tribe FROM s2_users where id = '6'
+		   12 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.from = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 3 ORDER BY endtime ASC
+		   12 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.to = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 4 ORDER BY endtime ASC
+		   12 Query	SELECT * FROM s2_movement where s2_movement.from = 43435 and sort_type = 5 and proc = 0 ORDER BY endtime ASC
+		   12 Query	SELECT * from s2_tdata where vref = 43435
+		   12 Query	SELECT * FROM s2_abdata where vref = 43435
+		   12 Query	SELECT * FROM s2_research where vref = 43435
+		   12 Query	SELECT * FROM s2_bdata where wid = 43435 and master = 1 order by master,timestamp ASC
+		   12 Query	SELECT * FROM s2_bdata where wid = 43435 order by master,timestamp ASC
+		   12 Query	SELECT maxstore, maxcrop, wood, clay, iron, crop FROM s2_vdata WHERE wref = 43435
+		   12 Query	UPDATE s2_vdata set wood = wood - 360, clay = clay - 300, iron = iron - 450, crop = crop - 90 where wref = 43435
+		   12 Query	SELECT * FROM s2_training where vref = 43435 ORDER BY id
+		   12 Query	SELECT owner FROM s2_vdata where wref = 43435
+		   12 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND owner != 3 AND type = 5 AND size=3
+		   12 Query	SELECT * FROM s2_artefacts WHERE vref = 43435 AND owner != 3 AND type = 5 AND size=1
+		   12 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND owner != 3 AND type = 5 AND size=2
+		   12 Query	INSERT INTO s2_training values (0,43435,1,3,1,1342380732,48,1342380636)
+		   12 Query	SELECT * FROM s2_movement, s2_send where s2_movement.to = 43435 and s2_movement.ref = s2_send.id and s2_movement.proc = 0 and s2_movement.sort_type = 0 ORDER BY endtime ASC
+		   12 Query	SELECT * FROM s2_movement, s2_send where s2_movement.from = 43435 and s2_movement.ref = s2_send.id and s2_movement.proc = 0 and s2_movement.sort_type = 0 ORDER BY endtime ASC
+		   12 Query	SELECT * FROM s2_movement where s2_movement.to = 43435 and s2_movement.proc = 0 and s2_movement.sort_type = 2 ORDER BY endtime ASC
+		   12 Query	SELECT sum(s2_send.merchant) from s2_send, s2_movement where s2_movement.from = 43435 and s2_send.id = s2_movement.ref and s2_movement.proc = 0 and sort_type = 0
+		   12 Query	SELECT sum(ref) from s2_movement where sort_type = 2 and s2_movement.to = 43435 and proc = 0
+		   12 Query	SELECT sum(merchant) from s2_market where vref = 43435 and accept = 0
+		   12 Query	SELECT owner FROM s2_vdata where wref = 43435
+		   12 Query	SELECT alliance FROM s2_users where id = '6'
+		   12 Query	SELECT * FROM s2_market where vref = 43435 and accept = 0
+		   12 Query	SELECT vref FROM s2_fdata WHERE f99 = '100' and f99t = '40'
+		   12 Query	SELECT timestamp from s2_deleting where uid = 6
+		   12 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND owner != 3 AND type = 5 AND size=3
+		   12 Query	SELECT * FROM s2_artefacts WHERE vref = 43435 AND owner != 3 AND type = 5 AND size=1
+		   12 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND owner != 3 AND type = 5 AND size=2
+		   12 Query	SELECT maxstore, maxcrop, wood, clay, iron, crop FROM s2_vdata WHERE wref = 43435
+		   12 Query	SELECT maxstore, maxcrop, wood, clay, iron, crop FROM s2_vdata WHERE wref = 43435
+		   12 Query	SELECT * FROM s2_training where vref = 43435 ORDER BY id
+		   12 Query	SELECT * FROM s2_demolition WHERE vref=43435
+		   12 Query	SELECT * FROM s2_bdata where wid = 43435 order by master,timestamp ASC
+		   12 Query	SELECT f6 from s2_fdata where vref = 43435
+		   12 Query	SELECT f26 from s2_fdata where vref = 43435
+		   12 Query	SELECT * FROM s2_bdata where wid = 43435 and field = 19 and master = 1 order by master,timestamp ASC
+		   12 Query	SELECT * FROM `s2_links` WHERE `userid` = 6 ORDER BY `pos` ASC
+		   12 Query	SELECT * from s2_fdata where vref = 43435
+		   12 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND owner != 3 AND type = 4 AND size=3
+		   12 Query	SELECT * FROM s2_artefacts WHERE vref = 43435 AND owner != 3 AND type = 4 AND size=1
+		   12 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND owner != 3 AND type = 4 AND size=2
+		   12 Quit	
+		   13 Connect	root@localhost on 
+		   13 Init DB	s2
+		   13 Query	DELETE from s2_users where timestamp >= 1342380588 and act != ''
+		   13 Query	SELECT * FROM s2_odata WHERE wood < 800 OR clay < 800 OR iron < 800 OR crop < 800
+		   13 Query	SELECT * FROM s2_vdata WHERE maxstore < 800 OR maxcrop < 800
+		   13 Query	SELECT * FROM s2_vdata WHERE wood > maxstore OR clay > maxstore OR iron > maxstore OR crop > maxstore
+		   13 Query	SELECT * FROM s2_vdata WHERE wood < 0 OR clay < 0 OR iron < 0 OR crop < 0
+		   13 Query	SELECT * FROM s2_odata WHERE maxstore < 800 OR maxcrop < 800
+		   13 Query	SELECT * FROM s2_odata WHERE wood > maxstore OR clay > maxstore OR iron > maxstore OR crop > maxstore
+		   13 Query	SELECT * FROM s2_odata WHERE wood < 0 OR clay < 0 OR iron < 0 OR crop < 0
+		   13 Query	SELECT * FROM `s2_ww_attacks` WHERE `attack_time` <= 1342380588
+		   13 Query	SELECT id, lastupdate FROM s2_users WHERE lastupdate < 1342379988
+		   13 Query	SELECT * FROM s2_hero
+		   13 Query	SELECT uid FROM s2_deleting where timestamp < 1342380588
+		   13 Query	SELECT * FROM s2_bdata where timestamp < 1342380588 and master = 0
+		   13 Query	SELECT * FROM s2_bdata WHERE master = 1
+		   13 Query	SELECT * FROM s2_demolition WHERE timetofinish<=1342380588
+		   13 Query	SELECT * FROM `s2_fdata`
+		   13 Query	UPDATE `s2_vdata` SET `maxstore` = 11800, `maxcrop` = 5000 WHERE `wref` = 43435
+		   13 Query	UPDATE `s2_vdata` SET `maxstore` = 800, `maxcrop` = 1200 WHERE `wref` = 74687
+		   13 Query	UPDATE `s2_vdata` SET `maxstore` = 1700, `maxcrop` = 1200 WHERE `wref` = 4930
+		   13 Query	UPDATE `s2_vdata` SET `maxstore` = 800, `maxcrop` = 800 WHERE `wref` = 122531
+		   13 Query	DELETE from s2_route where timeleft < 1342380588
+		   13 Query	SELECT * FROM s2_route where timestamp < 1342380588
+		   13 Query	SELECT * FROM s2_movement, s2_send where s2_movement.ref = s2_send.id and s2_movement.proc = 0 and sort_type = 0 and endtime < 1342380588
+		   13 Query	SELECT * FROM s2_movement where proc = 0 and sort_type = 2 and endtime < 1342380588
+		   13 Query	SELECT * FROM s2_research where timestamp < 1342380588
+		   13 Query	SELECT * FROM s2_training where vref != ''
+		   13 Query	SELECT * FROM s2_vdata where starv != 0
+		   13 Query	SELECT * FROM s2_vdata where celebration < 1342380588 AND celebration != 0
+		   13 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.ref = s2_attacks.id and s2_movement.proc = '0' and s2_movement.sort_type = '3' and s2_attacks.attack_type != '2' and endtime < 1342380588 ORDER BY endtime ASC
+		   13 Query	SELECT * FROM s2_vdata WHERE loyalty<>100
+		   13 Query	SELECT * FROM s2_odata WHERE loyalty<>100
+		   13 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.ref = s2_attacks.id and s2_movement.proc = '0' and s2_movement.sort_type = '3' and s2_attacks.attack_type = '2' and endtime < 1342380588
+		   13 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.ref = s2_attacks.id and s2_movement.proc = '0' and s2_movement.sort_type = '4' and endtime < 1342380588
+		   13 Query	SELECT * FROM s2_movement, s2_send where s2_movement.ref = s2_send.id and s2_movement.proc = 0 and sort_type = 6 and endtime < 1342380588
+		   13 Query	SELECT * FROM s2_vdata WHERE maxstore < 800 OR maxcrop < 800
+		   13 Query	SELECT * FROM s2_vdata WHERE wood > maxstore OR clay > maxstore OR iron > maxstore OR crop > maxstore
+		   13 Query	SELECT * FROM s2_vdata WHERE wood < 0 OR clay < 0 OR iron < 0 OR crop < 0
+		   13 Query	SELECT * FROM s2_movement where ref = 0 and proc = '0' and sort_type = '4' and endtime < 1342380588
+		   13 Query	SELECT * FROM s2_movement where proc = 0 and sort_type = 5 and endtime < 1342380588
+		   13 Query	SELECT * FROM s2_general WHERE shown = 1
+		   13 Query	SELECT * FROM s2_users WHERE invited != 0
+		   13 Query	SELECT * FROM `s2_fdata`
+		   13 Query	UPDATE `s2_vdata` SET `maxstore` = 11800, `maxcrop` = 5000 WHERE `wref` = 43435
+		   13 Query	UPDATE `s2_vdata` SET `maxstore` = 800, `maxcrop` = 1200 WHERE `wref` = 74687
+		   13 Query	UPDATE `s2_vdata` SET `maxstore` = 1700, `maxcrop` = 1200 WHERE `wref` = 4930
+		   13 Query	UPDATE `s2_vdata` SET `maxstore` = 800, `maxcrop` = 800 WHERE `wref` = 122531
+		   13 Query	SELECT * FROM s2_users WHERE access < 8
+		   13 Query	SELECT count(id) FROM s2_users where id > 5
+		   13 Query	SELECT s2_users.id userid, s2_users.username username,s2_users.alliance alliance, (
+
+			SELECT SUM( s2_vdata.pop )
+			FROM s2_vdata
+			WHERE s2_vdata.owner = userid
+			)totalpop, (
+
+			SELECT COUNT( s2_vdata.wref )
+			FROM s2_vdata
+			WHERE s2_vdata.owner = userid AND type != 99
+			)totalvillages, (
+
+			SELECT s2_alidata.tag
+			FROM s2_alidata, s2_users
+			WHERE s2_alidata.id = s2_users.alliance
+			AND s2_users.id = userid
+			)allitag
+			FROM s2_users
+			WHERE s2_users.access < 8
+			ORDER BY totalpop DESC, totalvillages DESC
+		   13 Query	SELECT * FROM s2_medal order by week DESC LIMIT 0, 1
+		   13 Query	UPDATE s2_users set clp = '4' where id = 6
+		   13 Query	UPDATE s2_users set oldrank = '1' where id = 6
+		   13 Query	UPDATE s2_users set oldrank = '1' where id = 6
+		   13 Query	UPDATE s2_users set clp = '3' where id = 7
+		   13 Query	UPDATE s2_users set oldrank = '2' where id = 7
+		   13 Query	UPDATE s2_users set oldrank = '2' where id = 7
+		   13 Query	UPDATE s2_users set clp = '2' where id = 8
+		   13 Query	UPDATE s2_users set oldrank = '3' where id = 8
+		   13 Query	UPDATE s2_users set oldrank = '3' where id = 8
+		   13 Query	UPDATE s2_users set clp = '1' where id = 9
+		   13 Query	UPDATE s2_users set oldrank = '4' where id = 9
+		   13 Query	UPDATE s2_users set oldrank = '4' where id = 9
+		   13 Query	SELECT id,name,tag FROM s2_alidata where id != '' ORDER BY id DESC
+		   13 Query	SELECT id,name,tag FROM s2_alidata where id != '' ORDER BY id DESC
+		   13 Query	SELECT * FROM s2_banlist WHERE active = 1 and end < 1342380588
+		   13 Query	SELECT username FROM s2_users where username = 'benny' and sessid = '9e674bc03e21bcf8cb620ed5c4d2141f' LIMIT 1
+		   13 Query	SELECT * FROM s2_users where username = 'benny'
+		   13 Query	SELECT wref from s2_vdata where owner = 6 order by capital DESC,pop DESC
+		   13 Query	SELECT sit FROM s2_online where uid = 6
+		   13 Query	REPLACE into s2_active values ('benny',1342380588)
+		   13 Query	UPDATE s2_users set timestamp = '1342380588' where username = 'benny'
+		   13 Query	SELECT * FROM s2_mdata WHERE target = 6 and send = 0 and archived = 0 ORDER BY time DESC
+		   13 Query	SELECT * FROM s2_mdata WHERE owner = 6 ORDER BY time DESC
+		   13 Query	SELECT * FROM s2_mdata WHERE target = 6 and send = 0 and archived = 0 and deltarget = 0 ORDER BY time DESC
+		   13 Query	SELECT * FROM s2_mdata WHERE owner = 6 and delowner = 0 ORDER BY time DESC
+		   13 Query	SELECT * FROM s2_ndata where uid = 6 ORDER BY time DESC
+		   13 Query	SELECT * FROM s2_ndata where uid = 6 and del = 0 ORDER BY time DESC
+		   13 Query	SELECT * FROM s2_vdata where wref = 43435
+		   13 Query	SELECT * from s2_fdata where vref = 43435
+		   13 Query	SELECT x,y FROM s2_wdata where id = 43435
+		   13 Query	SELECT id, fieldtype FROM s2_wdata where id = 43435
+		   13 Query	SELECT * FROM s2_odata where conqured = 43435
+		   13 Query	SELECT * from s2_units where vref = 43435
+		   13 Query	SELECT * from s2_enforcement where vref = 43435
+		   13 Query	SELECT * from s2_enforcement where `from` = 43435
+		   13 Query	SELECT * from s2_units where vref = 43435
+		   13 Query	SELECT * from s2_enforcement where vref = 43435
+		   13 Query	SELECT * FROM s2_vdata where wref = 43435
+		   13 Query	SELECT tribe FROM s2_users where id = '6'
+		   13 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.from = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 3 ORDER BY endtime ASC
+		   13 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.to = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 4 ORDER BY endtime ASC
+		   13 Query	SELECT * FROM s2_movement where s2_movement.from = 43435 and sort_type = 5 and proc = 0 ORDER BY endtime ASC
+		   13 Query	SELECT * from s2_tdata where vref = 43435
+		   13 Query	SELECT * FROM s2_abdata where vref = 43435
+		   13 Query	SELECT * FROM s2_research where vref = 43435
+		   13 Query	SELECT * FROM s2_bdata where wid = 43435 and master = 1 order by master,timestamp ASC
+		   13 Query	SELECT * FROM s2_artefacts WHERE vref = 43435 AND type = 4 order by size
+		   13 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND type = 4 AND size=2
+		   13 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND type = 4 AND size=3
+		   13 Query	SELECT * from s2_fdata where vref = 43435
+		   13 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND owner != 3 AND type = 4 AND size=3
+		   13 Query	SELECT * FROM s2_artefacts WHERE vref = 43435 AND owner != 3 AND type = 4 AND size=1
+		   13 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND owner != 3 AND type = 4 AND size=2
+		   13 Query	UPDATE s2_vdata set wood = wood + 0, clay = clay + 0, iron = iron + 0, crop = crop + 0 where wref = 43435
+		   13 Query	UPDATE s2_vdata set lastupdate = 1342380588 where wref = 43435
+		   13 Query	SELECT * FROM s2_vdata where wref = 43435
+		   13 Query	SELECT * from s2_fdata where vref = 43435
+		   13 Query	SELECT x,y FROM s2_wdata where id = 43435
+		   13 Query	SELECT id, fieldtype FROM s2_wdata where id = 43435
+		   13 Query	SELECT * FROM s2_odata where conqured = 43435
+		   13 Query	SELECT * from s2_units where vref = 43435
+		   13 Query	SELECT * from s2_enforcement where vref = 43435
+		   13 Query	SELECT * from s2_enforcement where `from` = 43435
+		   13 Query	SELECT * from s2_units where vref = 43435
+		   13 Query	SELECT * from s2_enforcement where vref = 43435
+		   13 Query	SELECT * FROM s2_vdata where wref = 43435
+		   13 Query	SELECT tribe FROM s2_users where id = '6'
+		   13 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.from = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 3 ORDER BY endtime ASC
+		   13 Query	SELECT * FROM s2_movement, s2_attacks where s2_movement.to = 43435 and s2_movement.ref = s2_attacks.id and s2_movement.proc = 0 and s2_movement.sort_type = 4 ORDER BY endtime ASC
+		   13 Query	SELECT * FROM s2_movement where s2_movement.from = 43435 and sort_type = 5 and proc = 0 ORDER BY endtime ASC
+		   13 Query	SELECT * from s2_tdata where vref = 43435
+		   13 Query	SELECT * FROM s2_abdata where vref = 43435
+		   13 Query	SELECT * FROM s2_research where vref = 43435
+		   13 Query	SELECT * FROM s2_bdata where wid = 43435 and master = 1 order by master,timestamp ASC
+		   13 Query	SELECT * FROM s2_bdata where wid = 43435 order by master,timestamp ASC
+		   13 Query	SELECT * FROM s2_movement, s2_send where s2_movement.to = 43435 and s2_movement.ref = s2_send.id and s2_movement.proc = 0 and s2_movement.sort_type = 0 ORDER BY endtime ASC
+		   13 Query	SELECT * FROM s2_movement, s2_send where s2_movement.from = 43435 and s2_movement.ref = s2_send.id and s2_movement.proc = 0 and s2_movement.sort_type = 0 ORDER BY endtime ASC
+		   13 Query	SELECT * FROM s2_movement where s2_movement.to = 43435 and s2_movement.proc = 0 and s2_movement.sort_type = 2 ORDER BY endtime ASC
+		   13 Query	SELECT sum(s2_send.merchant) from s2_send, s2_movement where s2_movement.from = 43435 and s2_send.id = s2_movement.ref and s2_movement.proc = 0 and sort_type = 0
+		   13 Query	SELECT sum(ref) from s2_movement where sort_type = 2 and s2_movement.to = 43435 and proc = 0
+		   13 Query	SELECT sum(merchant) from s2_market where vref = 43435 and accept = 0
+		   13 Query	SELECT owner FROM s2_vdata where wref = 43435
+		   13 Query	SELECT alliance FROM s2_users where id = '6'
+		   13 Query	SELECT * FROM s2_market where vref = 43435 and accept = 0
+		   13 Query	SELECT vref FROM s2_fdata WHERE f99 = '100' and f99t = '40'
+		   13 Query	SELECT timestamp from s2_deleting where uid = 6
+		   13 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND owner != 3 AND type = 5 AND size=3
+		   13 Query	SELECT * FROM s2_artefacts WHERE vref = 43435 AND owner != 3 AND type = 5 AND size=1
+		   13 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND owner != 3 AND type = 5 AND size=2
+		   13 Query	SELECT maxstore, maxcrop, wood, clay, iron, crop FROM s2_vdata WHERE wref = 43435
+		   13 Query	SELECT maxstore, maxcrop, wood, clay, iron, crop FROM s2_vdata WHERE wref = 43435
+		   13 Query	SELECT * FROM s2_training where vref = 43435 ORDER BY id
+		   13 Query	SELECT * FROM s2_demolition WHERE vref=43435
+		   13 Query	SELECT * FROM s2_bdata where wid = 43435 order by master,timestamp ASC
+		   13 Query	SELECT f6 from s2_fdata where vref = 43435
+		   13 Query	SELECT f26 from s2_fdata where vref = 43435
+		   13 Query	SELECT * FROM s2_bdata where wid = 43435 and field = 19 and master = 1 order by master,timestamp ASC
+		   13 Query	SELECT * FROM `s2_links` WHERE `userid` = 6 ORDER BY `pos` ASC
+		   13 Query	SELECT * from s2_fdata where vref = 43435
+		   13 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND owner != 3 AND type = 4 AND size=3
+		   13 Query	SELECT * FROM s2_artefacts WHERE vref = 43435 AND owner != 3 AND type = 4 AND size=1
+		   13 Query	SELECT * FROM s2_artefacts WHERE owner = 6 AND owner != 3 AND type = 4 AND size=2
+		   13 Quit	

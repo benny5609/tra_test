@@ -12,6 +12,7 @@
 #include <ostream>
 #include <google/protobuf/io/zero_copy_stream_impl.h>
 #include <google/protobuf/io/gzip_stream.h>
+#include "entity.pb.h"
 
 #pragma comment(lib, "aced.lib")
 #pragma comment(lib,"libprotobuf_d.lib")
@@ -474,6 +475,16 @@ private:
 // 				msg.ParseFromZeroCopyStream(&istream);
 				
 				break;
+			}
+		case SMSG_LOAD_VILLAGES:
+			{
+				entity::Villages villages;
+				google::protobuf::io::ArrayInputStream istream (new_pct->contents(), new_pct->size());
+				villages.ParseFromZeroCopyStream(&istream);
+				for(int i=0;i<villages.vil_size(); i++)
+				{
+					entity::Village village = villages.vil(i);
+				}
 			}
 		default:
 			{

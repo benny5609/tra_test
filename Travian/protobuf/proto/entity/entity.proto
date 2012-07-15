@@ -21,7 +21,7 @@ message Village{
 	required float wood = 8;
 	required float clay = 9;
 	required float iron = 10;
-	required uint32 crop = 11;
+	required float crop = 11;
 	required uint32 maxstore = 12;
 	required uint32 maxcrop = 13;
 	required uint32 lastupdate = 14;
@@ -34,4 +34,8 @@ message Village{
 	optional uint32 evasion = 21;
 	required bytes name = 22;
 	required uint32 loyalty = 23;
+};
+
+message Villages{
+	repeated Village vil = 1;
 };

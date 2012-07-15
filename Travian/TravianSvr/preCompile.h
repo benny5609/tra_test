@@ -26,6 +26,7 @@
 #include "WorldSocketMgr.h"
 #include "WorldRunnable.h"
 #include "WorldPacket.h"
+#include "UpdateMask.h"
 #include "app.h"
 
 #endif  // end of guard preCompile.h
