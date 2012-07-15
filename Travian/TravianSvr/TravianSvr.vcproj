@@ -388,6 +388,14 @@
 			<File
 				RelativePath="..\protobuf\lang\cpp\entity.pb.cc"
 				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						UsePrecompiledHeader="0"
+					/>
+				</FileConfiguration>
 			</File>
 			<File
 				RelativePath="..\protobuf\lang\cpp\entity.pb.h"
