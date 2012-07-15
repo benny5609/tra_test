@@ -174,6 +174,7 @@ public:                                                 // opcodes handlers
 	void Handle_NULL(WorldPacket& recvPacket);          // not used
 	void HandlePlayerLoginOpcode(WorldPacket& recvPacket);
 	bool NewPlayer();
+	bool LogoutPlayer();
 	uint32 _accountId;
 	std::string m_Address;
 	Player *_player;

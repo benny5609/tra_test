@@ -386,6 +386,14 @@
 			Name="protobuf"
 			>
 			<File
+				RelativePath="..\protobuf\lang\cpp\entity.pb.cc"
+				>
+			</File>
+			<File
+				RelativePath="..\protobuf\lang\cpp\entity.pb.h"
+				>
+			</File>
+			<File
 				RelativePath="..\protobuf\lang\cpp\msg_login.pb.cc"
 				>
 				<FileConfiguration

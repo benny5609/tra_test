@@ -30,6 +30,7 @@ WorldSession::~WorldSession()
         m_Socket = NULL;
     }
 
+	LogoutPlayer();
     ///- empty incoming packet queue
     WorldPacket* packet;
     while(_recvQueue.next(packet))
@@ -55,6 +56,14 @@ bool WorldSession::NewPlayer()
 {
 	//new player and load the villages from db
 	_player = new Player(this);
+	return true;
+}
+
+//need to change , delete player in map
+bool WorldSession::LogoutPlayer()
+{
+	if(_player)
+		delete _player;
 	return true;
 }
 
