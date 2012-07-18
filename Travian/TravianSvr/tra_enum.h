@@ -41,7 +41,7 @@ enum E_RESOURCE{
 enum E_VillageFields{
 	VIL_FIELD_OWNER,
 	VIL_FIELD_CAPITAL,
-	VIL_FIELD_POP,
+	VIL_FIELD_POP ,
 	VIL_FIELD_CP,
 	VIL_FIELD_CELEBRATION,
 	VIL_FIELD_TYPE,
@@ -56,5 +56,10 @@ enum E_VillageFields{
 	VIL_FIELD_MAXSTORE,
 	VIL_FIELD_MAXCROP,
 	VIL_FIELD_LOYALTY,
+	VIL_FIELD_END,
+};
+
+enum E_UpdateType{
+	UPDATE_TYPE_VILLAGE,
 };
 #endif  // end of guard tra_enum.h

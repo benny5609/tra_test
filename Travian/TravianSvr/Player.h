@@ -22,6 +22,7 @@ public:
 	bool LoadVillages();
 	bool LoadHero();
 	uint32 GetID();
+	WorldSession* GetSession(){return m_session;}
 protected:
 	bool SendVillagesPacket();
 	WorldSession* m_session;

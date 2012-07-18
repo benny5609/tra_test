@@ -13,7 +13,7 @@
 #include <google/protobuf/io/zero_copy_stream_impl.h>
 #include <google/protobuf/io/gzip_stream.h>
 #include "entity.pb.h"
-
+#include "UpdateMask.h"
 #pragma comment(lib, "aced.lib")
 #pragma comment(lib,"libprotobuf_d.lib")
 
@@ -485,6 +485,39 @@ private:
 				{
 					entity::Village village = villages.vil(i);
 				}
+				break;
+			}
+		case SMSG_UPDATE_OBJECT:
+			{
+				WorldPacket pct = *new_pct;
+				
+				uint32 dataCount = 0;
+				uint8 block = 0;
+				UpdateMask updateMask;
+				pct>>dataCount;
+				pct>>block;
+				updateMask.SetCount(block<<4);
+				pct.read(updateMask.GetMask(), updateMask.GetLength());
+
+				for( uint16 index = 0; index < updateMask.GetCount(); ++index )
+				{
+					//where the bit is 1, need to update
+					if(updateMask.GetBit(index))
+					{
+						if(index == VIL_FIELD_POP)
+						{
+							uint32 pop;
+							pct>>pop;
+						}
+						else if(index == VIL_FIELD_WOOD)
+						{
+							float wood;
+							pct>>wood;
+						}
+					}
+				}
+
+				break;
 			}
 		default:
 			{

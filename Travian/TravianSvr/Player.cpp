@@ -37,7 +37,7 @@ bool Player::LoadVillages()
 	do
 	{
 		uint32 vid = result->Fetch()[0].GetUInt32();
-		Village* village = new Village(vid);
+		Village* village = new Village(vid, this);
 		m_villages.push_back(village);
 	}
 	while(result->NextRow());
@@ -78,6 +78,11 @@ bool Player::SendVillagesPacket()
 		//int byteSize = entityVil->ByteSize(); //92
 	}
 	m_session->SendPacket(SMSG_LOAD_VILLAGES,villages);
+
+	Village* village = m_villages[0];
+	village->wood  = 9999;
+	village->clay = 9999;
+	village->UpdateRes();
 	return true;
 }
 

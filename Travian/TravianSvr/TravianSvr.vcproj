@@ -234,6 +234,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\UpdateData.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\World.cpp"
 				>
 			</File>
@@ -309,6 +313,10 @@
 			</File>
 			<File
 				RelativePath=".\TravianSvr.h"
+				>
+			</File>
+			<File
+				RelativePath=".\UpdateData.h"
 				>
 			</File>
 			<File
