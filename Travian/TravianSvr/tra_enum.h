@@ -38,8 +38,18 @@ enum E_RESOURCE{
 };
 
 //data fields
+enum E_WorldPlaceFields{
+	PLA_FIELD_WREF,
+	PLA_FIELD_FIELDTYPE,
+	PLA_FIELD_OASISTYPE,
+	PLA_FIELD_X,
+	PLA_FIELD_Y,
+	PLA_FIELD_OCCUPIED,
+	PLA_FIELD_END,
+};
+
 enum E_VillageFields{
-	VIL_FIELD_OWNER,
+	VIL_FIELD_OWNER = PLA_FIELD_END +1,
 	VIL_FIELD_CAPITAL,
 	VIL_FIELD_POP ,
 	VIL_FIELD_CP,
@@ -60,6 +70,7 @@ enum E_VillageFields{
 };
 
 enum E_UpdateType{
+	UPDATE_TYPE_WORLDPLACE,
 	UPDATE_TYPE_VILLAGE,
 };
 #endif  // end of guard tra_enum.h

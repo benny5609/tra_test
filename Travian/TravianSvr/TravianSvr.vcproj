@@ -238,6 +238,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\UpdateObj.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\World.cpp"
 				>
 			</File>
@@ -321,6 +325,10 @@
 			</File>
 			<File
 				RelativePath=".\UpdateMask.h"
+				>
+			</File>
+			<File
+				RelativePath=".\UpdateObj.h"
 				>
 			</File>
 			<File

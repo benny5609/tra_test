@@ -10,12 +10,13 @@
 #ifndef __TRA_WORLDPLACE_H__
 #define __TRA_WORLDPLACE_H__
 #include "common.h"
+#include "UpdateObj.h"
 
-class WorldPlace
+class WorldPlace:public UpdateObj
 {
 public:
 	WorldPlace(uint32 wid);
-
+	void CreateForUpdate(uint16 valuesCount);
 	uint32 wref;
 	uint16 fieldtype;
 	uint16 oasistype;
