@@ -115,8 +115,8 @@ float Village::GetWoodProd()
 		if(placeField.fieldLevel != 0 
 			&& placeField.fieldType == Wood)
 		{
-			sumWood
+			sumWood += 500.0f * placeField.fieldLevel;
 		}
 	}
-	return 0.0f;
+	return sumWood;
 }

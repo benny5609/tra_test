@@ -125,7 +125,17 @@ void World::Update(uint32 diff)
 		else
 			m_timers[i].SetCurrent(0);
 	}
-    UpdateSessions(diff);
+
+	if (m_timers[WUPDATE_VILLAGE_PRODUCE].Passed())
+	{
+		m_timers[WUPDATE_VILLAGE_PRODUCE].Reset();
+	}
+
+	if (m_timers[WUPDATE_SESSIONS].Passed())
+	{
+		m_timers[WUPDATE_SESSIONS].Reset();
+		UpdateSessions(diff);
+	}
 }
 
 void World::UpdateSessions( uint32 diff )
@@ -153,6 +163,9 @@ void World::SetInitialWorldSettings()
 {
 	///- Initialize the random number generator
 	srand((unsigned int)time(NULL));
+
+	m_timers[WUPDATE_SESSIONS].SetInterval(0);
+	m_timers[WUPDATE_VILLAGE_PRODUCE].SetInterval(1*IN_MILLISECONDS);
 }
 
 World*

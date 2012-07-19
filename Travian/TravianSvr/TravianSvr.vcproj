@@ -390,6 +390,14 @@
 				>
 			</File>
 			<File
+				RelativePath=".\tra_oasis.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\tra_oasis.h"
+				>
+			</File>
+			<File
 				RelativePath=".\tra_village.cpp"
 				>
 			</File>
