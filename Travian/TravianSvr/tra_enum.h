@@ -37,6 +37,26 @@ enum E_RESOURCE{
 	Crop = 3
 };
 
+enum E_FIELD_TYPE{
+	TWood =1,
+	TClay = 2,
+	TIron = 3,
+	TCrop = 4,
+	TSawmill = 5,
+	TBrick = 6,
+	TFoundry = 7,
+	TGrainmill = 8,
+	TBakery = 9,
+};
+
+/// Timers for different object refresh rates
+enum WorldTimers
+{
+	WUPDATE_VILLAGE_PRODUCE,
+	WUPDATE_SESSIONS,
+	WUPDATE_COUNT
+};
+
 //data fields
 enum E_WorldPlaceFields{
 	PLA_FIELD_WREF,

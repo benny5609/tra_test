@@ -31,7 +31,8 @@ volatile bool World::m_stopEvent = false;
 /// World constructor
 World::World()
 {
-
+	m_gameTime=time(NULL);
+	m_startTime=m_gameTime;
 }
 
 /// World destructor
@@ -116,7 +117,14 @@ void World::KickAll()
 void World::Update(uint32 diff)
 {
     /// <li> Handle session updates when the timer has passed
-
+	///- Update the different timers
+	for(int i = 0; i < WUPDATE_COUNT; ++i)
+	{
+		if (m_timers[i].GetCurrent()>=0)
+			m_timers[i].Update(diff);
+		else
+			m_timers[i].SetCurrent(0);
+	}
     UpdateSessions(diff);
 }
 

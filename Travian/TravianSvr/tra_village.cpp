@@ -53,7 +53,27 @@ bool Village::LoadVillageData()
 	return true;
 }
 
+bool Village::LoadVillageField()
+{
+	QueryResult* res = sDB.Query("SELECT * FROM s2_fdata where vref= %d", wref);
+	if(res == NULL)
+		return false;
 
+	Field* field = res->Fetch();
+	PlaceField placeField;
+	for(size_t i=0; i<20; i++)
+	{
+		uint16 fLevel = field[2*i + 1].GetUInt16();
+		uint16 fType = field[2*i + 2].GetUInt16();
+		if(fLevel !=0)
+		{
+			placeField.fieldLevel = fLevel;
+			placeField.fieldType = fType;
+			placeFields[i] = placeField;
+		}
+	}
+	return true;
+}
 
 bool Village::UpdateRes()
 {
@@ -84,4 +104,19 @@ bool Village::UpdateRes()
 	updateData.BuildPacket(&packet);
 	_player->GetSession()->SendPacket(&packet);
 	return true;
+}
+
+float Village::GetWoodProd()
+{
+	float sumWood = 0.0f;
+	for(size_t i=0; i<placeFields.size();i++)
+	{
+		PlaceField placeField= placeFields[i];
+		if(placeField.fieldLevel != 0 
+			&& placeField.fieldType == Wood)
+		{
+			sumWood
+		}
+	}
+	return 0.0f;
 }

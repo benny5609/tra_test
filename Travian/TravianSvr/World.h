@@ -29,7 +29,7 @@
 #include <map>
 #include <set>
 #include <list>
-
+#include "timer.h"
 class WorldPacket;
 class WorldSession;
 
@@ -61,6 +61,11 @@ class World
         //sessions that are added async
         void AddSession_(WorldSession* s);
         ACE_Based::LockedQueue<WorldSession*, ACE_Thread_Mutex> addSessQueue;
+
+protected:
+	time_t m_startTime;
+	time_t m_gameTime;
+	IntervalTimer m_timers[WUPDATE_COUNT];
 
 };
 #define sWorld World::Instance ()

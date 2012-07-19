@@ -3,23 +3,15 @@
 #include "Common.h"
 #include "World.h"
 #include "WorldRunnable.h"
+#include "timer.h"
 #include <conio.h>
 #define WORLD_SLEEP_CONST 50
-
-inline uint32 getMSTimeDiff(uint32 oldMSTime, uint32 newMSTime)
-{
-	// getMSTime() have limited data range and this is case when it overflow in this tick
-	if (oldMSTime > newMSTime)
-		return (0xFFFFFFFF - oldMSTime) + newMSTime;
-	else
-		return newMSTime - oldMSTime;
-}
 
 /// Heartbeat for the World
 void WorldRunnable::run()
 {
     uint32 realCurrTime = 0;
-    uint32 realPrevTime = GetTickCount();
+    uint32 realPrevTime = getMSTime();
 
     uint32 prevSleepTime = 0;                               // used for balanced full tick time length near WORLD_SLEEP_CONST
 
@@ -35,7 +27,7 @@ void WorldRunnable::run()
 				ACE_Based::Thread::Sleep(50);
 			}
 		}
-        realCurrTime = GetTickCount();
+        realCurrTime = getMSTime();
 
         uint32 diff = getMSTimeDiff(realPrevTime,realCurrTime);
 

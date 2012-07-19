@@ -13,13 +13,22 @@
 #include "tra_worldPlace.h"
 
 class Player;
+
+struct PlaceField
+{
+	PlaceField():fieldType(0),fieldLevel(0){}
+	uint16 fieldType;
+	uint16 fieldLevel;
+};
+
 class Village:public WorldPlace
 {
 public:
 	Village(uint32 vid, Player* player);
 	bool LoadVillageData();
+	bool LoadVillageField();
 	bool UpdateRes();
-	
+	float GetWoodProd();
 	Player* _player;
 	uint32 owner;
 	uint32 capital;
@@ -43,6 +52,11 @@ public:
 	uint32 evasion;
 	std::string name;
 	uint32 loyalty;
+	float woodProd;
+	float clayProd;
+	float ironProd;
+	float cropProd;
+	std::map<uint16, PlaceField> placeFields;
 
 protected:
 };
