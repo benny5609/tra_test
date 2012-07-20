@@ -30,6 +30,7 @@
 #include <set>
 #include <list>
 #include "timer.h"
+#include "tra_village.h"
 class WorldPacket;
 class WorldSession;
 
@@ -39,9 +40,9 @@ class World
     public:
 		static volatile bool m_stopEvent;
 		typedef UNORDERED_MAP<uint32, WorldSession*> SessionMap;
-
+		typedef UNORDERED_MAP<uint32, Village*> VillageMap;
 		SessionMap m_sessions;
-
+		VillageMap m_vilMap;
         World();
         ~World();
 		void SetInitialWorldSettings();
@@ -49,23 +50,31 @@ class World
         WorldSession* FindSession(uint32 id) const;
         void AddSession(WorldSession *s);
         bool RemoveSession(uint32 id);
+
+		Village* FindVillage(uint32 id) ;
+		bool AddVillage(Village *s);
+		bool RemoveVillage(uint32 id);
      
+		void AddUpdateVillage(uint32 id);
 		void KickAll();
         static void StopNow(uint8 exitcode) { m_stopEvent = true; }
         static bool IsStopped() { return m_stopEvent; }
 
         void Update(uint32 diff);
         void UpdateSessions( uint32 diff );
+		void UpdateVillages( uint32 diff );
 		static World* Instance ();
 
         //sessions that are added async
         void AddSession_(WorldSession* s);
         ACE_Based::LockedQueue<WorldSession*, ACE_Thread_Mutex> addSessQueue;
+		ACE_Based::LockedQueue<uint32, ACE_Thread_Mutex> updateVilQueue;
 
 protected:
 	time_t m_startTime;
 	time_t m_gameTime;
 	IntervalTimer m_timers[WUPDATE_COUNT];
+	ACE_Thread_Mutex mMutex;
 
 };
 #define sWorld World::Instance ()

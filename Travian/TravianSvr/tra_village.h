@@ -29,6 +29,9 @@ public:
 	bool LoadVillageField();
 	bool UpdateRes();
 	float GetWoodProd();
+	float GetClayProd();
+	float GetIronProd();
+	float GetCropProd();
 	Player* _player;
 	uint32 owner;
 	uint32 capital;

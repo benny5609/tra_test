@@ -20,6 +20,7 @@ public:
 	explicit Player(WorldSession* session);
 	~Player();
 	bool LoadVillages();
+	Village* GetVillage(uint32 vid);
 	bool LoadHero();
 	uint32 GetID();
 	WorldSession* GetSession(){return m_session;}

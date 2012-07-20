@@ -45,6 +45,14 @@ World::~World()
         delete m_sessions.begin()->second;
         m_sessions.erase(m_sessions.begin());
     }
+
+	while (!m_vilMap.empty())
+	{
+		// not remove from queue, prevent loading new sessions
+		delete m_vilMap.begin()->second;
+		m_vilMap.erase(m_vilMap.begin());
+	}
+	
 }
 
 /// Find a session by its id
@@ -75,6 +83,40 @@ bool World::RemoveSession(uint32 id)
 void World::AddSession(WorldSession* s)
 {
     addSessQueue.add(s);
+}
+
+Village* World::FindVillage(uint32 id) 
+{
+	ACE_Guard<ACE_Thread_Mutex> add_village_guard(mMutex);
+	VillageMap::const_iterator itr = m_vilMap.find(id);
+
+	if(itr != m_vilMap.end())
+		return itr->second;                             
+	else
+		return NULL;
+}
+
+bool World::AddVillage(Village *s)
+{
+	if(!s)
+		return false;
+
+	if(FindVillage(s->wref) == NULL)
+	{
+		ACE_Guard<ACE_Thread_Mutex> add_village_guard(mMutex);
+		m_vilMap[s->wref] = s;
+	}
+	else
+		return false;
+
+	//add to update queue
+	AddUpdateVillage(s->wref);
+	return true;
+}
+
+bool World::RemoveVillage(uint32 id)
+{
+	return true;
 }
 
 void
@@ -128,6 +170,9 @@ void World::Update(uint32 diff)
 
 	if (m_timers[WUPDATE_VILLAGE_PRODUCE].Passed())
 	{
+		printf("WUPDATE_VILLAGE_PRODUCE at %d\n", GetTickCount());
+		UpdateVillages(diff);
+
 		m_timers[WUPDATE_VILLAGE_PRODUCE].Reset();
 	}
 
@@ -158,6 +203,23 @@ void World::UpdateSessions( uint32 diff )
 		}
 	}
 }
+
+void World::AddUpdateVillage(uint32 id)
+{
+	updateVilQueue.add(id);
+}
+
+void World::UpdateVillages( uint32 diff )
+{
+	uint32 vid;
+	while(updateVilQueue.next(vid))
+	{
+		Village* vil = m_vilMap[vid];
+		vil->UpdateRes();
+		//the update villages packet send to player
+	}
+}
+
 /// Initialize the World
 void World::SetInitialWorldSettings()
 {

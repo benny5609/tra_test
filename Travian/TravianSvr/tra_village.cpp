@@ -7,6 +7,7 @@ Village::Village(uint32 vid, Player* player):
 	WorldPlace(vid), _player(player)
 {
 	CreateForUpdate(VIL_FIELD_END);
+	LoadVillageField();
 	LoadVillageData();
 }
 
@@ -48,6 +49,10 @@ bool Village::LoadVillageData()
 	starv = field[28].GetUInt32();
 	evasion = field[29].GetUInt32();
 	
+	woodProd = GetWoodProd();
+	clayProd = GetClayProd();
+	ironProd = GetIronProd();
+	cropProd = GetCropProd();
 	res->Delete();
 	
 	return true;
@@ -77,20 +82,41 @@ bool Village::LoadVillageField()
 
 bool Village::UpdateRes()
 {
+	uint32 currTime = (uint32)(time(NULL));
+	assert(currTime >= lastupdate);
+	uint32 diffTime = currTime - lastupdate;
+	if(diffTime > 0)
+	{
+		wood += woodProd /3600 * diffTime;
+		clay += clay /3600 * diffTime;
+		iron += iron /3600 * diffTime;
+		crop += crop /3600 * diffTime;
+		if(wood > maxstore)
+			wood = maxstore;
+		if(clay > maxstore)
+			clay = maxstore;
+		if(iron > maxstore)
+			iron = maxstore;
+		if(crop > maxcrop)
+			crop = maxcrop;
+	}
+	lastupdate = currTime;
+
 	SetUInt32Value(VIL_FIELD_POP, pop);
 	SetFloatValue(VIL_FIELD_WOOD, wood);
 	SetFloatValue(VIL_FIELD_CLAY, clay);
 	SetFloatValue(VIL_FIELD_IRON, iron);
 	SetFloatValue(VIL_FIELD_CROP, crop);
 
-	SetFloatValue(VIL_FIELD_WOOD_HOUR, 11);
-	SetFloatValue(VIL_FIELD_CLAY_HOUR, 11);
-	SetFloatValue(VIL_FIELD_IRON_HOUR, 11);
-	SetFloatValue(VIL_FIELD_CROP_HOUR, 11);
+	SetFloatValue(VIL_FIELD_WOOD_HOUR, woodProd);
+	SetFloatValue(VIL_FIELD_CLAY_HOUR, clayProd);
+	SetFloatValue(VIL_FIELD_IRON_HOUR, ironProd);
+	SetFloatValue(VIL_FIELD_CROP_HOUR, cropProd);
 
-	SetUInt32Value(VIL_FIELD_MAXSTORE, 11);
-	SetUInt32Value(VIL_FIELD_MAXCROP, 11);
-	SetUInt32Value(VIL_FIELD_LOYALTY, 11);
+	SetUInt32Value(VIL_FIELD_MAXSTORE, maxstore);
+	SetUInt32Value(VIL_FIELD_MAXCROP, maxcrop);
+	SetUInt32Value(VIL_FIELD_LOYALTY, loyalty);
+	SetUInt32Value(VIL_FIELD_LASTUPDATE, lastupdate);
 
 	WorldPacket packet;
 	UpdateData updateData;
@@ -108,15 +134,60 @@ bool Village::UpdateRes()
 
 float Village::GetWoodProd()
 {
-	float sumWood = 0.0f;
+	float sum = 0.0f;
 	for(size_t i=0; i<placeFields.size();i++)
 	{
 		PlaceField placeField= placeFields[i];
 		if(placeField.fieldLevel != 0 
-			&& placeField.fieldType == Wood)
+			&& placeField.fieldType == TWood)
 		{
-			sumWood += 500.0f * placeField.fieldLevel;
+			sum += 50.0f * placeField.fieldLevel;
 		}
 	}
-	return sumWood;
+	return sum;
+}
+
+float Village::GetIronProd()
+{
+	float sum = 0.0f;
+	for(size_t i=0; i<placeFields.size();i++)
+	{
+		PlaceField placeField= placeFields[i];
+		if(placeField.fieldLevel != 0 
+			&& placeField.fieldType == TIron)
+		{
+			sum += 50.0f * placeField.fieldLevel;
+		}
+	}
+	return sum;
+}
+
+float Village::GetClayProd()
+{
+	float sum = 0.0f;
+	for(size_t i=0; i<placeFields.size();i++)
+	{
+		PlaceField placeField= placeFields[i];
+		if(placeField.fieldLevel != 0 
+			&& placeField.fieldType == TClay)
+		{
+			sum += 50.0f * placeField.fieldLevel;
+		}
+	}
+	return sum;
+}
+
+float Village::GetCropProd()
+{
+	float sum = 0.0f;
+	for(size_t i=0; i<placeFields.size();i++)
+	{
+		PlaceField placeField= placeFields[i];
+		if(placeField.fieldLevel != 0 
+			&& placeField.fieldType == TCrop)
+		{
+			sum += 50.0f * placeField.fieldLevel;
+		}
+	}
+	return sum;
 }

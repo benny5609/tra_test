@@ -4,7 +4,7 @@
 #include "tra_hero.h"
 #include "WorldSession.h"
 #include "entity.pb.h"
-
+#include "World.h"
 Player::Player(WorldSession* session):m_session(session)
 {
 	LoadVillages();
@@ -13,10 +13,10 @@ Player::Player(WorldSession* session):m_session(session)
 
 Player::~Player()
 {
-	for(size_t i=0; i<m_villages.size(); i++)
-	{
-		delete m_villages[i];
-	}
+// 	for(size_t i=0; i<m_villages.size(); i++)
+// 	{
+// 		delete m_villages[i];
+// 	}
 	m_villages.clear();
 }
 
@@ -36,14 +36,27 @@ bool Player::LoadVillages()
 
 	do
 	{
+		Village* village = NULL;
 		uint32 vid = result->Fetch()[0].GetUInt32();
-		Village* village = new Village(vid, this);
+		Village* vilInWord = sWorld->FindVillage(vid);
+		if(vilInWord)
+			village = vilInWord;
+		else
+		{
+			village = new Village(vid, this);
+			sWorld->AddVillage(village);
+		}
 		m_villages.push_back(village);
 	}
 	while(result->NextRow());
 
 	result->Delete();
 	return true;
+}
+
+Village* Player::GetVillage(uint32 vid)
+{
+	return sWorld->FindVillage(vid);
 }
 
 bool Player::SendVillagesPacket()
